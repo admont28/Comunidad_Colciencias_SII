@@ -1,0 +1,1330 @@
+2014/10/06 02:34:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:34:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:37:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Gii".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/Gii
+---
+2014/10/06 02:37:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:37:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/ind...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii/default/index
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/gii
+---
+2014/10/06 02:37:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/ind...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii/default/index
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/gii/default/index
+---
+2014/10/06 02:38:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:41:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:44:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:44:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/ind...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii/default/index
+---
+2014/10/06 02:44:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/ind...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii/default/index
+---
+2014/10/06 02:44:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:44:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/ind...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii/default/index
+---
+2014/10/06 02:44:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login.html".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('login.html')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('login.html')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii/default/login.html
+---
+2014/10/06 02:44:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 02:44:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/gii
+---
+2014/10/06 05:06:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "persona".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/persona
+---
+2014/10/06 05:07:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "persona".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/persona
+---
+2014/10/06 05:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Persona".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('Persona')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('Persona')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/Persona')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/site/Persona
+---
+2014/10/06 05:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "persona".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('persona')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('persona')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/persona')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/prueba/site/persona
+---
+2014/10/06 05:59:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`comunidad_colciencias_persona`.`persona`, CONSTRAINT `fk_Persona_DireccionPersonal1` FOREIGN KEY (`DireccionPersonal_idDireccionPersonal`) REFERENCES `DireccionPersonal` (`idDireccionPersonal). The SQL statement executed was: INSERT INTO `Persona` (`cedulaPersona`, `nombrePersona`, `primerApellidoPersona`, `segundoApellidoPersona`, `nombreCitasBliblioPersona`, `tipoDocumentoPersona`, `nacionalidadPais_idPais`, `expediciónPais_idPais`, `fechaExpedicionDoc`, `sexoPersona`, `nacimientoCiudad_idCiudad`, `fechaNacimientoPersona`, `usuarioSIICPersona`, `contraseñaSIICPersona`, `estadoCivilPersona`, `DireccionPersonal_idDireccionPersonal`, `DireccionProfesional_idDireccionProfesional`, `FormacionAcademica_idFormacionAcademica`, `Idioma_idIdioma`, `FormacionComplementaria_idFormacionComplementaria`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19).
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (73)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 05:59:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`comunidad_colciencias_persona`.`persona`, CONSTRAINT `fk_Persona_DireccionPersonal1` FOREIGN KEY (`DireccionPersonal_idDireccionPersonal`) REFERENCES `DireccionPersonal` (`idDireccionPersonal). The SQL statement executed was: INSERT INTO `Persona` (`cedulaPersona`, `nombrePersona`, `primerApellidoPersona`, `segundoApellidoPersona`, `nombreCitasBliblioPersona`, `tipoDocumentoPersona`, `nacionalidadPais_idPais`, `expediciónPais_idPais`, `fechaExpedicionDoc`, `sexoPersona`, `nacimientoCiudad_idCiudad`, `fechaNacimientoPersona`, `usuarioSIICPersona`, `contraseñaSIICPersona`, `estadoCivilPersona`, `DireccionPersonal_idDireccionPersonal`, `DireccionProfesional_idDireccionProfesional`, `FormacionAcademica_idFormacionAcademica`, `Idioma_idIdioma`, `FormacionComplementaria_idFormacionComplementaria`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(73): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/prueba/persona/create
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 06:06:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "formacionAcademica".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('formacionAcadem...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/formacionAcademica
+---
+2014/10/06 06:06:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "formacionacademica".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('formacionacadem...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/formacionacademica
+---
+2014/10/06 06:08:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "formacionacademica".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('formacionacadem...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/formacionacademica
+---
+2014/10/06 06:08:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "formacionAcademica".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('formacionAcadem...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/formacionAcademica
+---
+2014/10/06 07:29:50 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/index.php:25)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(128): PersonaController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/index.php (25)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (128)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 07:32:29 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/index.php(25): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(128): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/index.php (25)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (128)
+2014/10/06 07:34:37 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/index.php(25): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(128): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/index.php (25)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (128)
+2014/10/06 16:08:59 [error] [exception.CException] exception 'CException' with message 'Property "Persona._campo_" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('_campo_')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('_campo_')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(Persona), '_campo_')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(Persona), '_campo_', Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(54): CActiveForm->dropDownList(Object(Persona), '_campo_', Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(79): CController->render('create', Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 16:33:40 [error] [exception.CException] exception 'CException' with message 'Property "Persona.fecha_nacimiento" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('fecha_nacimient...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(84): CActiveRecord->__get('fecha_nacimient...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(79): CController->render('create', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 16:34:02 [error] [exception.CException] exception 'CException' with message 'Property "Persona.fecha_nacimiento" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('fecha_nacimient...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(84): CActiveRecord->__get('fecha_nacimient...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(79): CController->render('create', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 16:34:26 [error] [exception.CException] exception 'CException' with message 'Property "Persona.fecha_nacimiento" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('fecha_nacimient...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(84): CActiveRecord->__get('fecha_nacimient...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(79): CController->render('create', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 16:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 16:35:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 16:43:58 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textPasswordField".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(163): CComponent->__call('textPasswordFie...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(163): CActiveForm->textPasswordField(Object(Persona), 'contrase\xC3\xB1aSIIC...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(79): CController->render('create', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 16:46:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 16:49:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 16:53:40 [error] [exception.CException] exception 'CException' with message 'Property "Persona.idDireccionPersonal" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('idDireccionPers...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('idDireccionPers...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Persona), 'idDireccionPers...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Persona), 'idDireccionPers...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Persona), 'idDireccionPers...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(203): CActiveForm->textField(Object(Persona), 'idDireccionPers...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(79): CController->render('create', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 16:58:37 [error] [exception.CException] exception 'CException' with message 'Property "Persona.idDireccionPersonal" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('idDireccionPers...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('idDireccionPers...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Persona), 'idDireccionPers...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Persona), 'idDireccionPers...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Persona), 'idDireccionPers...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(203): CActiveForm->textField(Object(Persona), 'idDireccionPers...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(81): CController->render('create', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 17:02:59 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:199)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(81): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (199)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (81)
+2014/10/06 17:07:14 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:199)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(81): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (199)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (81)
+2014/10/06 17:11:29 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:199)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(83): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (199)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (83)
+2014/10/06 17:12:50 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(83): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (83)
+2014/10/06 17:14:07 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(83): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (83)
+2014/10/06 17:21:36 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(91): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (91)
+2014/10/06 17:21:56 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(91): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (91)
+2014/10/06 17:21:59 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(91): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (91)
+2014/10/06 17:23:01 [error] [php] Undefined variable: model2 (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php:20)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): PersonaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): PersonaController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): PersonaController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): PersonaController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(91): PersonaController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php (20)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (91)
+2014/10/06 17:24:29 [error] [exception.CException] exception 'CException' with message 'Property "Persona.telefonoFijo" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('telefonoFijo')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('telefonoFijo')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Persona), 'telefonoFijo')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Persona), 'telefonoFijo', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Persona), 'telefonoFijo', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/_form.php(215): CActiveForm->textField(Object(Persona), 'telefonoFijo')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/create.php(18): CController->renderPartial('_form', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(91): CController->render('create', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/prueba/persona/create
+---
+2014/10/06 17:25:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:27:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:40:00 [error] [php] Undefined variable: modelDireccionProfesional (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php:96)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (96)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 17:40:29 [error] [php] Undefined variable: modelDireccionProfesional (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php:96)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (96)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 17:42:05 [error] [php] Undefined variable: modelDireccionProfesional (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php:96)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (96)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 17:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:44:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:48:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:52:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 17:57:19 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/view.php(46): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(56): CController->render('view', Array)
+#7 [internal function]: PersonaController->actionView('1')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonaController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonaController), Object(ReflectionMethod), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/view')
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/prueba/persona/1
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:06:25 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/view.php(46): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(56): CController->render('view', Array)
+#7 [internal function]: PersonaController->actionView('1')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonaController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonaController), Object(ReflectionMethod), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/view')
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/prueba/persona/1
+---
+2014/10/06 18:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:06:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:08:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:09:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `DireccionPersonal` (`idDireccionPersonal`, `direccion`, `barrio`, `codigoPostal`, `Ciudad_idCiudad`, `telefonoFijo`, `telefonoMovil`, `apartadoPostal`, `email`, `sitioWeb`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (87)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 18:09:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `DireccionPersonal` (`idDireccionPersonal`, `direccion`, `barrio`, `codigoPostal`, `Ciudad_idCiudad`, `telefonoFijo`, `telefonoMovil`, `apartadoPostal`, `email`, `sitioWeb`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(87): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/prueba/persona/create
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:10:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:10:57 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/view.php(46): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(56): CController->render('view', Array)
+#7 [internal function]: PersonaController->actionView('3')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonaController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonaController), Object(ReflectionMethod), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/view')
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/prueba/persona/3
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:15:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:16:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`comunidad_colciencias_persona`.`persona`, CONSTRAINT `fk_Persona_DireccionProfesional1` FOREIGN KEY (`DireccionProfesional_idDireccionProfesional`) REFERENCES `DireccionProfesional` (`idDirec). The SQL statement executed was: INSERT INTO `Persona` (`cedulaPersona`, `nombrePersona`, `primerApellidoPersona`, `segundoApellidoPersona`, `nombreCitasBliblioPersona`, `tipoDocumentoPersona`, `nacionalidadPais_idPais`, `expediciónPais_idPais`, `fechaExpedicionDoc`, `sexoPersona`, `nacimientoCiudad_idCiudad`, `fechaNacimientoPersona`, `usuarioSIICPersona`, `contraseñaSIICPersona`, `DireccionPersonal_idDireccionPersonal`, `DireccionProfesional_idDireccionProfesional`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15).
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (87)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 18:16:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`comunidad_colciencias_persona`.`persona`, CONSTRAINT `fk_Persona_DireccionProfesional1` FOREIGN KEY (`DireccionProfesional_idDireccionProfesional`) REFERENCES `DireccionProfesional` (`idDirec). The SQL statement executed was: INSERT INTO `Persona` (`cedulaPersona`, `nombrePersona`, `primerApellidoPersona`, `segundoApellidoPersona`, `nombreCitasBliblioPersona`, `tipoDocumentoPersona`, `nacionalidadPais_idPais`, `expediciónPais_idPais`, `fechaExpedicionDoc`, `sexoPersona`, `nacimientoCiudad_idCiudad`, `fechaNacimientoPersona`, `usuarioSIICPersona`, `contraseñaSIICPersona`, `DireccionPersonal_idDireccionPersonal`, `DireccionProfesional_idDireccionProfesional`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(87): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/prueba/persona/create
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:17:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:18:03 [error] [php] Object of class DireccionProfesional could not be converted to string (/Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php:87)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): PersonaController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): PersonaController->filterAccessControl()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): PersonaController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): PersonaController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/prueba/persona/create
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (87)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 18:18:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:18:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `DireccionPersonal` (`idDireccionPersonal`, `direccion`, `barrio`, `codigoPostal`, `Ciudad_idCiudad`, `telefonoFijo`, `telefonoMovil`, `apartadoPostal`, `email`, `sitioWeb`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php (84)
+in /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php (13)
+2014/10/06 18:18:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `DireccionPersonal` (`idDireccionPersonal`, `direccion`, `barrio`, `codigoPostal`, `Ciudad_idCiudad`, `telefonoFijo`, `telefonoMovil`, `apartadoPostal`, `email`, `sitioWeb`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(84): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): PersonaController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/create')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/prueba/persona/create
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---
+2014/10/06 18:20:06 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/view.php(46): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(56): CController->render('view', Array)
+#7 [internal function]: PersonaController->actionView('1')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonaController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonaController), Object(ReflectionMethod), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/view')
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/prueba/persona/1
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/admin
+---
+2014/10/06 18:20:08 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/views/persona/view.php(46): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/protected/controllers/PersonaController.php(56): CController->render('view', Array)
+#7 [internal function]: PersonaController->actionView('6')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonaController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonaController), Object(ReflectionMethod), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('persona/view')
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/prueba/persona/6
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/admin
+---
+2014/10/06 18:21:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/prueba/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/prueba/images/calendario.jpg
+HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
+---

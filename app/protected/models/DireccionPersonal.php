@@ -37,11 +37,12 @@ class DireccionPersonal extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idDireccionPersonal, direccion, barrio, Ciudad_idCiudad, telefonoFijo, email', 'required'),
-			array('idDireccionPersonal, codigoPostal, Ciudad_idCiudad, telefonoFijo, telefonoMovil, apartadoPostal', 'numerical', 'integerOnly'=>true),
+			array('direccion, barrio, Ciudad_idCiudad, telefonoFijo, email', 'required'),
+			array('codigoPostal, Ciudad_idCiudad, telefonoFijo, telefonoMovil, apartadoPostal', 'numerical', 'integerOnly'=>true),
 			array('direccion', 'length', 'max'=>35),
 			array('barrio', 'length', 'max'=>50),
 			array('email, sitioWeb', 'length', 'max'=>100),
+			array('email', 'email'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idDireccionPersonal, direccion, barrio, codigoPostal, Ciudad_idCiudad, telefonoFijo, telefonoMovil, apartadoPostal, email, sitioWeb', 'safe', 'on'=>'search'),

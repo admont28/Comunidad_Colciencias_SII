@@ -38,11 +38,12 @@ class DireccionProfesional extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idDireccionProfesional, institucion, direccionInstitucion, barrio, Ciudad_idCiudad, telefonoFijo, emailInstitucional', 'required'),
-			array('idDireccionProfesional, codigoPostal, apartadoPostal, Ciudad_idCiudad, telefonoFijo, extension', 'numerical', 'integerOnly'=>true),
+			array('institucion, direccionInstitucion, barrio, Ciudad_idCiudad, telefonoFijo, emailInstitucional', 'required'),
+			array('codigoPostal, apartadoPostal, Ciudad_idCiudad, telefonoFijo, extension', 'numerical', 'integerOnly'=>true),
 			array('institucion, emailInstitucional, paginaInstitucional', 'length', 'max'=>100),
 			array('direccionInstitucion', 'length', 'max'=>35),
 			array('barrio', 'length', 'max'=>50),
+			array('emailInstitucional','email'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idDireccionProfesional, institucion, direccionInstitucion, barrio, codigoPostal, apartadoPostal, Ciudad_idCiudad, telefonoFijo, extension, emailInstitucional, paginaInstitucional', 'safe', 'on'=>'search'),

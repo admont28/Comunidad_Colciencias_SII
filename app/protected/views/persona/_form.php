@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary(array($model,$modelDireccionPersonal,$modelDireccionProfesional)); ?>
 
@@ -175,11 +175,13 @@
 
 	<!--- COMIENZA LA OTRA PARTE DE LA PERSONA (DIRECCIÓN PERSONAL) -->
 
+	<!-- 
 	<div class="row">
 		<?php echo $form->labelEx($modelDireccionPersonal,'idDireccionPersonal'); ?>
 		<?php echo $form->textField($modelDireccionPersonal,'idDireccionPersonal'); ?>
 		<?php echo $form->error($modelDireccionPersonal,'idDireccionPersonal'); ?>
 	</div>
+	-->
 
 	<div class="row">
 		<?php echo $form->labelEx($modelDireccionPersonal,'direccion'); ?>
@@ -241,12 +243,13 @@
 
 	<!--- COMIENZA LA OTRA PARTE DE LA PERSONA (DIRECCIÓN PROFESIONAL) -->
 
-
+	<!--
 	<div class="row">
 		<?php echo $form->labelEx($modelDireccionProfesional,'idDireccionProfesional'); ?>
 		<?php echo $form->textField($modelDireccionProfesional,'idDireccionProfesional'); ?>
 		<?php echo $form->error($modelDireccionProfesional,'idDireccionProfesional'); ?>
 	</div>
+	-->
 
 	<div class="row">
 		<?php echo $form->labelEx($modelDireccionProfesional,'institucion'); ?>
@@ -314,8 +317,8 @@
 
 
 	<div class="row buttons">
-	<!--	<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?> -->
-		<?php echo CHtml::submitButton('Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?> 
+		<!-- <?php echo CHtml::submitButton('Guardar'); ?> -->
 	</div>
 
 

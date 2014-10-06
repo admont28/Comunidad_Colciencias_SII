@@ -1328,3 +1328,73 @@ Stack trace:
 REQUEST_URI=/yii/prueba/images/calendario.jpg
 HTTP_REFERER=http://macbook-pro-de-andres.local/yii/prueba/persona/create
 ---
+2014/10/06 18:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/images/calendario.jpg
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/create
+---
+2014/10/06 18:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/images/calendario.jpg
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/create
+---
+2014/10/06 18:56:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/images/calendario.jpg
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/create
+---
+2014/10/06 18:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/images/calendario.jpg
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/create
+---
+2014/10/06 18:59:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `DireccionPersonal` (`idDireccionPersonal`, `direccion`, `barrio`, `codigoPostal`, `Ciudad_idCiudad`, `telefonoFijo`, `telefonoMovil`, `apartadoPostal`, `email`, `sitioWeb`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php (84)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/10/06 18:59:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `DireccionPersonal` (`idDireccionPersonal`, `direccion`, `barrio`, `codigoPostal`, `Ciudad_idCiudad`, `telefonoFijo`, `telefonoMovil`, `apartadoPostal`, `email`, `sitioWeb`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php(84): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PersonaController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('persona/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/persona/create
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/create
+---
+2014/10/06 18:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/calendario.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/calendar...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/images/calendario.jpg
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/create
+---

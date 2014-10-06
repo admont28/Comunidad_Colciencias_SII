@@ -167,7 +167,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estadoCivilPersona'); ?>
-		<?php echo $form->dropDownList($model,'tipoDocumentoPersona',array('Soltero'=>'Soltero','Casado'=>'Casado', 'Viudo'=>'Viudo','Union Libre'=>'Union Libre'));?>
+		<?php echo $form->dropDownList($model,'estadoCivilPersona',array('Soltero'=>'Soltero','Casado'=>'Casado', 'Viudo'=>'Viudo','Union Libre'=>'Union Libre'));?>
 		<!-- <?php echo $form->textField($model,'estadoCivilPersona',array('size'=>45,'maxlength'=>45)); ?> -->
 		<?php echo $form->error($model,'estadoCivilPersona'); ?>
 	</div>

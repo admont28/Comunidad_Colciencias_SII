@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idFormacionComplementaria'); ?>
-		<?php echo $form->textField($model,'idFormacionComplementaria'); ?>
-		<?php echo $form->error($model,'idFormacionComplementaria'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'tituloObtenido'); ?>
 		<?php echo $form->textField($model,'tituloObtenido',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'tituloObtenido'); ?>

@@ -38,8 +38,8 @@ class InformacionFormacion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idInformacionFormacion, Ciudad_idCiudad', 'required'),
-			array('idInformacionFormacion, tiempoFormacion, Ciudad_idCiudad', 'numerical', 'integerOnly'=>true),
+			array('Ciudad_idCiudad', 'required'),
+			array('tiempoFormacion, Ciudad_idCiudad', 'numerical', 'integerOnly'=>true),
 			array('nivelFormacion', 'length', 'max'=>25),
 			array('institucion, programaAcademico', 'length', 'max'=>100),
 			array('unidadTiempoFormacion', 'length', 'max'=>10),

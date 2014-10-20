@@ -62,20 +62,38 @@ class FormacionAcademicaController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new FormacionAcademica;
+		$idPersona = Yii::app()->user->id;
+		$persona=Persona::findByPk($idPresona);
+		$modelFormacionAcademica=new FormacionAcademica;
+		$modelIdioma=new Idioma;
+		$modelFormacionComplementaria=new FormacionComplementaria;
+		$modelInformacionFormacionAcademica=new InformacionFormacion;
+		$modelInformacionFormacionComplementaria=new InformacionFormacion;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['FormacionAcademica']))
+		if(isset($_POST['FormacionAcademica'],$_POST['Idioma'],$_POST['FormacionComplementaria'],$_POST['Persona'],$_POST['InformacionFormacion']))
 		{
-			$model->attributes=$_POST['FormacionAcademica'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idFormacionAcademica));
+			$persona->attributes=$_POST['Persona'];
+			$modelFormacionAcademica->attributes=$_POST['FormacionAcademica'];
+			$modelIdioma->attributes=$_POST['Idioma'];
+			$modelFormacionComplementaria->attributes=$_POST['FormacionComplementaria'];
+
+			$modelInformacionFormacionComplementaria->attributes=$_POST['InformacionFormacion'];
+
+			
+			if($modelFormacionAcademica->save())
+				$this->redirect(array('view','id'=>$modelFormacionAcademica->idFormacionAcademica));
+
+
+			$persona->Idioma_idIdioma=$modelIdioma->idIdioma;
+			$persona->FormacionAcademica_idFormacionAcademica = $modelFormacionAcademica->idFormacionAcademica;
+			$persona->FormacionComplementaria_idFormacionComplementaria = $modelFormacionComplementaria->idFormacionComplementaria;
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'modelFormacionAcademica'=>$modelFormacionAcademica,
 		));
 	}
 

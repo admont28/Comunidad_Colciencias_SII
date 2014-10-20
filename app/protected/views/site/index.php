@@ -18,3 +18,11 @@ $this->pageTitle=Yii::app()->name;
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
+
+<h1>
+<?php
+
+	$id = Yii::app()->user->id;
+	echo "".$id;
+?>
+</h1>

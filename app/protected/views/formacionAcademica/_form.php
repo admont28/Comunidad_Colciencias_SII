@@ -17,30 +17,77 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary(array($modelFormacionAcademica,$modelIdioma,$modelFormacionComplementaria)); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'intensidadHoraria'); ?>
-		<?php echo $form->textField($model,'intensidadHoraria'); ?>
-		<?php echo $form->error($model,'intensidadHoraria'); ?>
+		<?php echo $form->labelEx($modelFormacionAcademica,'intensidadHoraria'); ?>
+		<?php echo $form->textField($modelFormacionAcademica,'intensidadHoraria'); ?>
+		<?php echo $form->error($modelFormacionAcademica,'intensidadHoraria'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fechaObtencionTitulo'); ?>
-		<?php echo $form->textField($model,'fechaObtencionTitulo'); ?>
-		<?php echo $form->error($model,'fechaObtencionTitulo'); ?>
+		<?php echo $form->labelEx($modelFormacionAcademica,'fechaObtencionTitulo'); ?>
+		<?php echo $form->textField($modelFormacionAcademica,'fechaObtencionTitulo'); ?>
+		<?php echo $form->error($modelFormacionAcademica,'fechaObtencionTitulo'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'becado'); ?>
-		<?php echo $form->textField($model,'becado',array('size'=>1,'maxlength'=>1)); ?>
-		<?php echo $form->error($model,'becado'); ?>
+		<?php echo $form->labelEx($modelFormacionAcademica,'becado'); ?>
+		<?php echo $form->textField($modelFormacionAcademica,'becado',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->error($modelFormacionAcademica,'becado'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'institucionOfreceBeca'); ?>
-		<?php echo $form->textField($model,'institucionOfreceBeca',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'institucionOfreceBeca'); ?>
+		<?php echo $form->labelEx($modelFormacionAcademica,'institucionOfreceBeca'); ?>
+		<?php echo $form->textField($modelFormacionAcademica,'institucionOfreceBeca',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($modelFormacionAcademica,'institucionOfreceBeca'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($modelFormacionAcademica,'InformacionFormacion_idInformacionFormacion'); ?>
+		<?php echo $form->textField($modelFormacionAcademica,'InformacionFormacion_idInformacionFormacion'); ?>
+		<?php echo $form->error($modelFormacionAcademica,'InformacionFormacion_idInformacionFormacion'); ?>
+	</div>
+
+
+	<!-- ................... IDIOMA ..............................-->
+
+	<div class="row">
+		<?php echo $form->labelEx($modelIdioma,'nombreIdioma'); ?>
+		<?php echo $form->textField($modelIdioma,'nombreIdioma',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($modelIdioma,'nombreIdioma'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($modelIdioma,'nivelEscritura'); ?>
+		<?php echo $form->textField($modelIdioma,'nivelEscritura',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($modelIdioma,'nivelEscritura'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($modelIdioma,'nivelLectura'); ?>
+		<?php echo $form->textField($modelIdioma,'nivelLectura',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($modelIdioma,'nivelLectura'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($modelIdioma,'nivelHabla'); ?>
+		<?php echo $form->textField($modelIdioma,'nivelHabla',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($modelIdioma,'nivelHabla'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($modelIdioma,'nivelEscucha'); ?>
+		<?php echo $form->textField($modelIdioma,'nivelEscucha',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($modelIdioma,'nivelEscucha'); ?>
+	</div>
+
+	<!-- ................... FORMACION COMPLEMENTARIA ..............................-->
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'tituloObtenido'); ?>
+		<?php echo $form->textField($model,'tituloObtenido',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'tituloObtenido'); ?>
 	</div>
 
 	<div class="row">
@@ -50,7 +97,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($modelFormacionAcademica->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

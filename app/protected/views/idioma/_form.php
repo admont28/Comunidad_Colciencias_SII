@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idIdioma'); ?>
-		<?php echo $form->textField($model,'idIdioma'); ?>
-		<?php echo $form->error($model,'idIdioma'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'nombreIdioma'); ?>
 		<?php echo $form->textField($model,'nombreIdioma',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'nombreIdioma'); ?>

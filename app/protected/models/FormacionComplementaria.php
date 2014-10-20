@@ -30,8 +30,8 @@ class FormacionComplementaria extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idFormacionComplementaria, InformacionFormacion_idInformacionFormacion', 'required'),
-			array('idFormacionComplementaria, InformacionFormacion_idInformacionFormacion', 'numerical', 'integerOnly'=>true),
+			array('InformacionFormacion_idInformacionFormacion', 'required'),
+			array('InformacionFormacion_idInformacionFormacion', 'numerical', 'integerOnly'=>true),
 			array('tituloObtenido', 'length', 'max'=>30),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

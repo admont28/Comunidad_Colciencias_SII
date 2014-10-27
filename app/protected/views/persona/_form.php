@@ -86,8 +86,8 @@
 		   'options'=>array(
 		    'autoSize'=>true,
 		    'defaultDate'=>$model->fechaExpedicionDoc,
-		    'dateFormat'=>'dd-mm-yyy',
-		    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
+		    'dateFormat'=>'yy-mm-dd',
+		    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
 		    'buttonImageOnly'=>true,
 		    'buttonText'=>'Fecha',
 		    'selectOtherMonths'=>true,
@@ -97,8 +97,8 @@
 		    'showOtherMonths'=>true, 
 		    'changeMonth' => 'true', 
 		    'changeYear' => 'true', 
-		    'minDate'=>'date("d-m-yyyy")', 
-		    'maxDate'=> "+20Y",
+		    'minDate'=>'1900-01-01', 
+		    'maxDate'=> '0',
 		    ),
 		  )); 
 		 ?>
@@ -133,8 +133,8 @@
 		   'options'=>array(
 		    'autoSize'=>true,
 		    'defaultDate'=>$model->fechaNacimientoPersona,
-		    'dateFormat'=>'dd-mm-yyy',
-		    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.jpg',
+		    'dateFormat'=>'yy-mm-dd',
+		    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
 		    'buttonImageOnly'=>true,
 		    'buttonText'=>'Fecha',
 		    'selectOtherMonths'=>true,
@@ -144,8 +144,8 @@
 		    'showOtherMonths'=>true, 
 		    'changeMonth' => 'true', 
 		    'changeYear' => 'true', 
-		    'minDate'=>'date("d-m-yyyy")', 
-		    'maxDate'=> "+20Y",
+		    'minDate'=>'1900-01-01', 
+		    'maxDate'=> '0',
 		    ),
 		  )); 
 		 ?>

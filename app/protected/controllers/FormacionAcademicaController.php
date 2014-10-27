@@ -37,7 +37,7 @@ class FormacionAcademicaController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('admin','1094'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -63,7 +63,7 @@ class FormacionAcademicaController extends Controller
 	public function actionCreate()
 	{
 		$idPersona = Yii::app()->user->id;
-		$persona=Persona::findByPk($idPresona);
+		$persona=Persona::model()->findByPk($idPersona);
 		$modelFormacionAcademica=new FormacionAcademica;
 		$modelIdioma=new Idioma;
 		$modelFormacionComplementaria=new FormacionComplementaria;
@@ -71,7 +71,7 @@ class FormacionAcademicaController extends Controller
 		$modelInformacionFormacionComplementaria=new InformacionFormacion;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation(array($modelFormacionAcademica, $modelIdioma, $modelFormacionComplementaria, $modelInformacionFormacionAcademica, $modelInformacionFormacionComplementaria));
 
 		if(isset($_POST['FormacionAcademica'],$_POST['Idioma'],$_POST['FormacionComplementaria'],$_POST['Persona'],$_POST['InformacionFormacion']))
 		{
@@ -81,19 +81,32 @@ class FormacionAcademicaController extends Controller
 			$modelFormacionComplementaria->attributes=$_POST['FormacionComplementaria'];
 
 			$modelInformacionFormacionComplementaria->attributes=$_POST['InformacionFormacion'];
-
+			/* 	
+				----------------------------- 
+				poner atención 
+				----------------------------- 
+			*/
+			$modelInformacionFormacionAcademica->attributes=$_POST['InformacionFormacion'];
 			
-			if($modelFormacionAcademica->save())
-				$this->redirect(array('view','id'=>$modelFormacionAcademica->idFormacionAcademica));
-
-
 			$persona->Idioma_idIdioma=$modelIdioma->idIdioma;
 			$persona->FormacionAcademica_idFormacionAcademica = $modelFormacionAcademica->idFormacionAcademica;
 			$persona->FormacionComplementaria_idFormacionComplementaria = $modelFormacionComplementaria->idFormacionComplementaria;
+
+			if($modelInformacionFormacionAcademica->save())
+				if ($modelInformacionFormacionComplementaria->save()) 
+					if($modelFormacionComplementaria->save())
+						if($modelIdioma->save())
+							if($modelFormacionAcademica->save())
+								if($persona->save())
+									$this->redirect('index');
+
 		}
 
 		$this->render('create',array(
-			'modelFormacionAcademica'=>$modelFormacionAcademica,
+			'modelFormacionAcademica'=>$modelFormacionAcademica, 'modelIdioma'=>$modelIdioma,
+			'modelFormacionComplementaria'=> $modelFormacionComplementaria,
+			'modelInformacionFormacionAcademica'=>$modelInformacionFormacionAcademica,
+			'modelInformacionFormacionComplementaria'=>$modelInformacionFormacionComplementaria,
 		));
 	}
 

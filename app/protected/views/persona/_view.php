@@ -70,24 +70,80 @@
 	<?php echo CHtml::encode($data->estadoCivilPersona); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('DireccionPersonal_idDireccionPersonal')); ?>:</b>
-	<?php echo CHtml::encode($data->DireccionPersonal_idDireccionPersonal); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProInstitucion')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProInstitucion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('DireccionProfesional_idDireccionProfesional')); ?>:</b>
-	<?php echo CHtml::encode($data->DireccionProfesional_idDireccionProfesional); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProDireccionInstitucion')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProDireccionInstitucion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('FormacionAcademica_idFormacionAcademica')); ?>:</b>
-	<?php echo CHtml::encode($data->FormacionAcademica_idFormacionAcademica); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProBarrio')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProBarrio); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Idioma_idIdioma')); ?>:</b>
-	<?php echo CHtml::encode($data->Idioma_idIdioma); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProCodigoPostal')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProCodigoPostal); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('FormacionComplementaria_idFormacionComplementaria')); ?>:</b>
-	<?php echo CHtml::encode($data->FormacionComplementaria_idFormacionComplementaria); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProApartadoPostal')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProApartadoPostal); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProTelefonoFijo')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProTelefonoFijo); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProExtension')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProExtension); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProEmailInstitucional')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProEmailInstitucional); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProPaginaInstitucional')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProPaginaInstitucional); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirProCiudad_idCiudad')); ?>:</b>
+	<?php echo CHtml::encode($data->dirProCiudad_idCiudad); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerDireccion')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerDireccion); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerBarrio')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerBarrio); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerCodigoPostal')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerCodigoPostal); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerTelefonoFijo')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerTelefonoFijo); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerTelefonoMovil')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerTelefonoMovil); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerApartadoPostal')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerApartadoPostal); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerEmail')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerEmail); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerSitioWeb')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerSitioWeb); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dirPerCiudad_idCiudad')); ?>:</b>
+	<?php echo CHtml::encode($data->dirPerCiudad_idCiudad); ?>
 	<br />
 
 	*/ ?>

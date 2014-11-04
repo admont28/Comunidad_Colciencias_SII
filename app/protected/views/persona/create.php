@@ -15,4 +15,4 @@ $this->menu=array(
 
 <h1>Create Persona</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model, 'modelDireccionPersonal'=>$modelDireccionPersonal, 'modelDireccionProfesional'=>$modelDireccionProfesional)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model)); ?>

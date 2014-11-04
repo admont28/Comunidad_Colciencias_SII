@@ -37,7 +37,7 @@ class PersonaController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin','1094'),
+				'users'=>array('admin', '1094'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -51,12 +51,8 @@ class PersonaController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$modelos=$this->loadModel($id);
-		$model=$modelos['model'];
-		$modelDireccionPersonal=$modelos['modelDireccionPersonal'];
-		$modelDireccionProfesional=$modelos['modelDireccionProfesional'];
 		$this->render('view',array(
-			'model'=>$model,'modelDireccionPersonal'=>$modelDireccionPersonal, 'modelDireccionProfesional'=>$modelDireccionProfesional,
+			'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -67,39 +63,19 @@ class PersonaController extends Controller
 	public function actionCreate()
 	{
 		$model=new Persona;
-		$modelDireccionPersonal= new DireccionPersonal;
-		$modelDireccionProfesional = new DireccionProfesional;
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation(array($model,$modelDireccionPersonal,$modelDireccionProfesional));
+		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Persona'],$_POST['DireccionPersonal'], $_POST['DireccionProfesional']))
+		if(isset($_POST['Persona']))
 		{
 			$model->attributes=$_POST['Persona'];
-			$modelDireccionPersonal->attributes=$_POST['DireccionPersonal'];
-			$modelDireccionProfesional->attributes=$_POST['DireccionProfesional'];
-
-			$valid=$model->validate();
-        	$valid=$modelDireccionPersonal->validate() && $valid;
-        	$valid=$modelDireccionProfesional->validate() && $valid;
-
-        	if($valid)
-        	{
-        		if($modelDireccionPersonal->save()){
-        			$model->DireccionPersonal_idDireccionPersonal = $modelDireccionPersonal->idDireccionPersonal;
-        			if($modelDireccionProfesional->save()){
-        				$model->DireccionProfesional_idDireccionProfesional = $modelDireccionProfesional->idDireccionProfesional;
-        				if ($model->save()) {
-        					$this->redirect('index');
-        					/* $this->redirect(array('view','id'=>$model->idPersona)); */
-        				}
-					}
-        		}
-			}
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idPersona));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,'modelDireccionPersonal'=>$modelDireccionPersonal, 'modelDireccionProfesional'=>$modelDireccionProfesional,
+			'model'=>$model,
 		));
 	}
 
@@ -110,80 +86,21 @@ class PersonaController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$modelos=$this->loadModel($id);
-		$model=$modelos['model'];
-		$modelDireccionPersonal=$modelos['modelDireccionPersonal'];
-		$modelDireccionProfesional=$modelos['modelDireccionProfesional'];
+		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation(array($model,$modelDireccionPersonal,$modelDireccionProfesional));
+		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Persona'], $_POST['modelDireccionPersonal'], $_POST['modelDireccionProfesional']))
+		if(isset($_POST['Persona']))
 		{
-
-			echo '<h2 align="center">Entro</h2>'; 
 			$model->attributes=$_POST['Persona'];
-			$modelDireccionPersonal->attributes=$_POST['modelDireccionPersonal'];
-			$modelDireccionProfesional->attributes=$_POST['modelDireccionProfesional'];
-
-			/*
-			$valid=$model->validate();
-        	$valid=$modelDireccionPersonal->validate() && $valid;
-        	$valid=$modelDireccionProfesional->validate() && $valid;
-        	*/
-
-        	$model->DireccionPersonal_idDireccionPersonal = $modelDireccionPersonal->idDireccionPersonal;
-        	$model->DireccionProfesional_idDireccionProfesional = $modelDireccionProfesional->idDireccionProfesional;
-        	$model->setIsNewRecord(false);
-        	$modelDireccionPersonal->setIsNewRecord(false);
-        	$modelDireccionProfesional->setIsNewRecord(false);
-			if($modelDireccionPersonal->update() && $modelDireccionProfesional->update && $model->update()){
-						$this->redirect('admin');
-        					/* $this->redirect(array('view','id'=>$model->idPersona)); */
-			}
-
-			/*
-			public function actionUpdate($id) {
-			 	$a=new Personal; $b=new Estado; 
-			 	$this->performAjaxValidation(array($a,$b)); 
-			 	$a=$this->loadModel($id); 
-			 		if(isset($_POST['Personal'],$_POST['Estado'])) { 
-
-			 			$a->attributes=$_POST['Personal']; 
-			 			$b->attributes=$_POST['Estado']; 
-			 			$b->id_estado=$a->id_estado; 
-			 			$b->setIsNewRecord(false); 
-			 				if($a->save() && $b->update()) 
-			 					$this->redirect(array('view','id'=>$a->id_personal)); 
-			 		} 
-			 	$this->render('update',array('a'=>$a,'b'=>$b)); 
-			 } 
-
---------------------------------------------------------------------------------------------------------------------
-
-				$modelTabla2 = new Tabla2; #Se creo instancia de la Tabla2
-		        $model=$this->loadModel($id);
-		        $modelTabla2=Tabla2::model()->find('tabla1_id=?',array($id));
-
-		        if(isset($_POST['Tabla1'])){
-		                $model->attributes=$_POST['Tabla1'];
-		                if($model->save()){
-		                        if(isset($_POST['Tabla2']))
-		                        $modelTabla2->attributes=$_POST['Tabla2'];
-		                        $modelTabla2->tabla1_id = $model->id; #Se envia el id de Tabla1
-		                        if($modelTabla2->save())
-		                        $this->redirect(array('view','id'=>$model->id));
-		                }
-		        }
-		        $this->render('update',array(
-		        'model'=>$model,
-		        'modelTabla2'=$modelTabla2,
-		        ));
-			*/
+			if($model->save())
+				$this->redirect(array('admin'));
+				//$this->redirect(array('view','id'=>$model->idPersona));
 		}
 
 		$this->render('update',array(
-			'model'=>$model,'modelDireccionPersonal'=>$modelDireccionPersonal, 'modelDireccionProfesional'=>$modelDireccionProfesional,
+			'model'=>$model,
 		));
 	}
 
@@ -237,15 +154,9 @@ class PersonaController extends Controller
 	public function loadModel($id)
 	{
 		$model=Persona::model()->findByPk($id);
-		$modelDireccionPersonal=DireccionPersonal::model()->findByPk($model->DireccionPersonal_idDireccionPersonal);
-		$modelDireccionProfesional=DireccionProfesional::model()->findByPk($model->DireccionProfesional_idDireccionProfesional);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist. --- persona');
-		if($modelDireccionProfesional == null)
-			throw new CHttpException(404,'The requested page does not exist. --- direccion profesional');
-		if($modelDireccionPersonal == null)
-			throw new CHttpException(404,'The requested page does not exist. --- direccion personal');
-		return array('model'=>$model,'modelDireccionPersonal' =>$modelDireccionPersonal,'modelDireccionProfesional' => $modelDireccionProfesional);
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
 	}
 
 	/**

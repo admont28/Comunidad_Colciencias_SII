@@ -10,10 +10,11 @@
  *
  * The followings are the available model relations:
  * @property Departamento $departamentoIdDepartamento
- * @property DireccionPersonal[] $direccionPersonals
- * @property DireccionProfesional[] $direccionProfesionals
- * @property InformacionFormacion[] $informacionFormacions
+ * @property FormacionAcademica[] $formacionAcademicas
+ * @property FormacionAcademica[] $formacionAcademicas1
  * @property Persona[] $personas
+ * @property Persona[] $personas1
+ * @property Persona[] $personas2
  */
 class Ciudad extends CActiveRecord
 {
@@ -51,10 +52,11 @@ class Ciudad extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'departamentoIdDepartamento' => array(self::BELONGS_TO, 'Departamento', 'Departamento_idDepartamento'),
-			'direccionPersonals' => array(self::HAS_MANY, 'DireccionPersonal', 'Ciudad_idCiudad'),
-			'direccionProfesionals' => array(self::HAS_MANY, 'DireccionProfesional', 'Ciudad_idCiudad'),
-			'informacionFormacions' => array(self::HAS_MANY, 'InformacionFormacion', 'Ciudad_idCiudad'),
+			'formacionAcademicas' => array(self::HAS_MANY, 'FormacionAcademica', 'formAcaCiudad_idCiudad'),
+			'formacionAcademicas1' => array(self::HAS_MANY, 'FormacionAcademica', 'formComCiudad_idCiudad'),
 			'personas' => array(self::HAS_MANY, 'Persona', 'nacimientoCiudad_idCiudad'),
+			'personas1' => array(self::HAS_MANY, 'Persona', 'dirProCiudad_idCiudad'),
+			'personas2' => array(self::HAS_MANY, 'Persona', 'dirPerCiudad_idCiudad'),
 		);
 	}
 

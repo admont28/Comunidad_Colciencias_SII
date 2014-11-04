@@ -37,7 +37,7 @@ class FormacionAcademicaController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin','1094'),
+				'users'=>array('admin', '1094'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,51 +62,23 @@ class FormacionAcademicaController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$idPersona = Yii::app()->user->id;
-		$persona=Persona::model()->findByPk($idPersona);
-		$modelFormacionAcademica=new FormacionAcademica;
-		$modelIdioma=new Idioma;
-		$modelFormacionComplementaria=new FormacionComplementaria;
-		$modelInformacionFormacionAcademica=new InformacionFormacion;
-		$modelInformacionFormacionComplementaria=new InformacionFormacion;
+		$model=new FormacionAcademica;
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation(array($modelFormacionAcademica, $modelIdioma, $modelFormacionComplementaria, $modelInformacionFormacionAcademica, $modelInformacionFormacionComplementaria));
+		$this->performAjaxValidation($model);
 
-		if(isset($_POST['FormacionAcademica'],$_POST['Idioma'],$_POST['FormacionComplementaria'],$_POST['Persona'],$_POST['InformacionFormacion']))
+		if(isset($_POST['FormacionAcademica']))
 		{
-			$persona->attributes=$_POST['Persona'];
-			$modelFormacionAcademica->attributes=$_POST['FormacionAcademica'];
-			$modelIdioma->attributes=$_POST['Idioma'];
-			$modelFormacionComplementaria->attributes=$_POST['FormacionComplementaria'];
-
-			$modelInformacionFormacionComplementaria->attributes=$_POST['InformacionFormacion'];
-			/* 	
-				----------------------------- 
-				poner atención 
-				----------------------------- 
-			*/
-			$modelInformacionFormacionAcademica->attributes=$_POST['InformacionFormacion'];
-			
-			$persona->Idioma_idIdioma=$modelIdioma->idIdioma;
-			$persona->FormacionAcademica_idFormacionAcademica = $modelFormacionAcademica->idFormacionAcademica;
-			$persona->FormacionComplementaria_idFormacionComplementaria = $modelFormacionComplementaria->idFormacionComplementaria;
-
-			if($modelInformacionFormacionAcademica->save())
-				if ($modelInformacionFormacionComplementaria->save()) 
-					if($modelFormacionComplementaria->save())
-						if($modelIdioma->save())
-							if($modelFormacionAcademica->save())
-								if($persona->save())
-									$this->redirect('index');
-
+			$model->attributes=$_POST['FormacionAcademica'];
+			$cedulaPersona = Yii::app()->user->id;
+			$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
+			$model->Persona_idPersona = $usuario->idPersona;
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idFormacionAcademica));
 		}
 
 		$this->render('create',array(
-			'modelFormacionAcademica'=>$modelFormacionAcademica, 'modelIdioma'=>$modelIdioma,
-			'modelFormacionComplementaria'=> $modelFormacionComplementaria,
-			'modelInformacionFormacionAcademica'=>$modelInformacionFormacionAcademica,
-			'modelInformacionFormacionComplementaria'=>$modelInformacionFormacionComplementaria,
+			'model'=>$model,
 		));
 	}
 
@@ -120,7 +92,7 @@ class FormacionAcademicaController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['FormacionAcademica']))
 		{

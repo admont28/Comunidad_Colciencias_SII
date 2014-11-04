@@ -5,15 +5,40 @@
  *
  * The followings are the available columns in table 'FormacionAcademica':
  * @property integer $idFormacionAcademica
- * @property integer $intensidadHoraria
- * @property string $fechaObtencionTitulo
- * @property string $becado
- * @property string $institucionOfreceBeca
- * @property integer $InformacionFormacion_idInformacionFormacion
+ * @property integer $formAcaIntensidadHoraria
+ * @property string $formAcaFechaObtencionTitulo
+ * @property string $formAcaBecado
+ * @property string $formAcaInstitucionOfreceBeca
+ * @property string $formAcaNivelFormacion
+ * @property string $formAcaInstitucion
+ * @property string $formAcaProgramaAcademico
+ * @property string $formAcaFechaInicio
+ * @property string $formAcaFechaFinalizacion
+ * @property integer $formAcaTiempoFormacion
+ * @property string $formAcaUnidadTiempoFormacion
+ * @property string $formAcaPromedioPeriodos
+ * @property integer $formAcaCiudad_idCiudad
+ * @property string $nombreIdioma
+ * @property string $nivelEscritura
+ * @property string $nivelLectura
+ * @property string $nivelHabla
+ * @property string $nivelEscucha
+ * @property string $formComTituloObtenido
+ * @property string $formComNivelFormacion
+ * @property string $formComInstitucion
+ * @property string $formComProgramaAcademico
+ * @property string $formComFechaInicio
+ * @property string $formComFechaFinalizacon
+ * @property integer $formComTiempoFormacion
+ * @property string $formComUnidadTiempoFormacion
+ * @property string $formComPromedioPeriodos
+ * @property integer $formComCiudad_idCiudad
+ * @property integer $Persona_idPersona
  *
  * The followings are the available model relations:
- * @property InformacionFormacion $informacionFormacionIdInformacionFormacion
- * @property Persona[] $personas
+ * @property Ciudad $formAcaCiudadIdCiudad
+ * @property Ciudad $formComCiudadIdCiudad
+ * @property Persona $personaIdPersona
  */
 class FormacionAcademica extends CActiveRecord
 {
@@ -33,14 +58,18 @@ class FormacionAcademica extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('InformacionFormacion_idInformacionFormacion,intensidadHoraria', 'required'),
-			array('intensidadHoraria, InformacionFormacion_idInformacionFormacion', 'numerical', 'integerOnly'=>true),
-			array('becado', 'length', 'max'=>1),
-			array('institucionOfreceBeca', 'length', 'max'=>100),
-			array('fechaObtencionTitulo', 'safe'),
+			array('formAcaCiudad_idCiudad, formComCiudad_idCiudad, Persona_idPersona', 'required'),
+			array('formAcaIntensidadHoraria, formAcaTiempoFormacion, formAcaCiudad_idCiudad, formComTiempoFormacion, formComCiudad_idCiudad, Persona_idPersona', 'numerical', 'integerOnly'=>true),
+			array('formAcaBecado, formAcaPromedioPeriodos, formComPromedioPeriodos', 'length', 'max'=>2),
+			array('formAcaInstitucionOfreceBeca, formAcaInstitucion, formAcaProgramaAcademico, formComInstitucion, formComProgramaAcademico', 'length', 'max'=>100),
+			array('formAcaNivelFormacion, formComNivelFormacion', 'length', 'max'=>25),
+			array('formAcaUnidadTiempoFormacion, nivelEscritura, nivelLectura, nivelHabla, nivelEscucha, formComUnidadTiempoFormacion', 'length', 'max'=>10),
+			array('nombreIdioma', 'length', 'max'=>45),
+			array('formComTituloObtenido', 'length', 'max'=>30),
+			array('formAcaFechaObtencionTitulo, formAcaFechaInicio, formAcaFechaFinalizacion, formComFechaInicio, formComFechaFinalizacon', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idFormacionAcademica, intensidadHoraria, fechaObtencionTitulo, becado, institucionOfreceBeca, InformacionFormacion_idInformacionFormacion', 'safe', 'on'=>'search'),
+			array('idFormacionAcademica, formAcaIntensidadHoraria, formAcaFechaObtencionTitulo, formAcaBecado, formAcaInstitucionOfreceBeca, formAcaNivelFormacion, formAcaInstitucion, formAcaProgramaAcademico, formAcaFechaInicio, formAcaFechaFinalizacion, formAcaTiempoFormacion, formAcaUnidadTiempoFormacion, formAcaPromedioPeriodos, formAcaCiudad_idCiudad, nombreIdioma, nivelEscritura, nivelLectura, nivelHabla, nivelEscucha, formComTituloObtenido, formComNivelFormacion, formComInstitucion, formComProgramaAcademico, formComFechaInicio, formComFechaFinalizacon, formComTiempoFormacion, formComUnidadTiempoFormacion, formComPromedioPeriodos, formComCiudad_idCiudad, Persona_idPersona', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,8 +81,9 @@ class FormacionAcademica extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'informacionFormacionIdInformacionFormacion' => array(self::BELONGS_TO, 'InformacionFormacion', 'InformacionFormacion_idInformacionFormacion'),
-			'personas' => array(self::HAS_MANY, 'Persona', 'FormacionAcademica_idFormacionAcademica'),
+			'formAcaCiudadIdCiudad' => array(self::BELONGS_TO, 'Ciudad', 'formAcaCiudad_idCiudad'),
+			'formComCiudadIdCiudad' => array(self::BELONGS_TO, 'Ciudad', 'formComCiudad_idCiudad'),
+			'personaIdPersona' => array(self::BELONGS_TO, 'Persona', 'Persona_idPersona'),
 		);
 	}
 
@@ -64,11 +94,35 @@ class FormacionAcademica extends CActiveRecord
 	{
 		return array(
 			'idFormacionAcademica' => 'Id Formacion Academica',
-			'intensidadHoraria' => 'Intensidad Horaria',
-			'fechaObtencionTitulo' => 'Fecha Obtencion Titulo',
-			'becado' => 'Becado',
-			'institucionOfreceBeca' => 'Institucion Ofrece Beca',
-			'InformacionFormacion_idInformacionFormacion' => 'Informacion Formacion Id Informacion Formacion',
+			'formAcaIntensidadHoraria' => 'Formación Académica - Intensidad Horaria',
+			'formAcaFechaObtencionTitulo' => 'Formación Académica - Fecha Obtencion Titulo',
+			'formAcaBecado' => 'Formación Académica - Becado',
+			'formAcaInstitucionOfreceBeca' => 'Formación Académica - Institucion Ofrece Beca',
+			'formAcaNivelFormacion' => 'Formación Académica - Nivel Formacion',
+			'formAcaInstitucion' => 'Formación Académica - Institucion',
+			'formAcaProgramaAcademico' => 'Formación Académica - Programa Academico',
+			'formAcaFechaInicio' => 'Formación Académica - Fecha Inicio',
+			'formAcaFechaFinalizacion' => 'Formación Académica - Fecha Finalizacion',
+			'formAcaTiempoFormacion' => 'Form Académica - Tiempo Formacion',
+			'formAcaUnidadTiempoFormacion' => 'Formación Académica - Unidad Tiempo Formacion',
+			'formAcaPromedioPeriodos' => 'Formación Académica - Promedio Periodos',
+			'formAcaCiudad_idCiudad' => 'Formación Académica - Ciudad Id Ciudad',
+			'nombreIdioma' => 'Nombre Idioma',
+			'nivelEscritura' => 'Nivel Escritura',
+			'nivelLectura' => 'Nivel Lectura',
+			'nivelHabla' => 'Nivel Habla',
+			'nivelEscucha' => 'Nivel Escucha',
+			'formComTituloObtenido' => 'Formación Complementaria - Titulo Obtenido',
+			'formComNivelFormacion' => 'Formación Complementaria - Nivel Formacion',
+			'formComInstitucion' => 'Formación Complementaria - Institucion',
+			'formComProgramaAcademico' => 'Formación Complementaria - Programa Academico',
+			'formComFechaInicio' => 'Formación Complementaria - Fecha Inicio',
+			'formComFechaFinalizacon' => 'Formación Complementaria - Fecha Finalizacon',
+			'formComTiempoFormacion' => 'Formación Complementaria - Tiempo Formacion',
+			'formComUnidadTiempoFormacion' => 'Formación Complementaria - Unidad Tiempo Formacion',
+			'formComPromedioPeriodos' => 'Formación Complementaria - Promedio Periodos',
+			'formComCiudad_idCiudad' => 'Formación Complementaria - Ciudad Id Ciudad',
+			'Persona_idPersona' => 'Persona Id Persona',
 		);
 	}
 
@@ -91,11 +145,35 @@ class FormacionAcademica extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idFormacionAcademica',$this->idFormacionAcademica);
-		$criteria->compare('intensidadHoraria',$this->intensidadHoraria);
-		$criteria->compare('fechaObtencionTitulo',$this->fechaObtencionTitulo,true);
-		$criteria->compare('becado',$this->becado,true);
-		$criteria->compare('institucionOfreceBeca',$this->institucionOfreceBeca,true);
-		$criteria->compare('InformacionFormacion_idInformacionFormacion',$this->InformacionFormacion_idInformacionFormacion);
+		$criteria->compare('formAcaIntensidadHoraria',$this->formAcaIntensidadHoraria);
+		$criteria->compare('formAcaFechaObtencionTitulo',$this->formAcaFechaObtencionTitulo,true);
+		$criteria->compare('formAcaBecado',$this->formAcaBecado,true);
+		$criteria->compare('formAcaInstitucionOfreceBeca',$this->formAcaInstitucionOfreceBeca,true);
+		$criteria->compare('formAcaNivelFormacion',$this->formAcaNivelFormacion,true);
+		$criteria->compare('formAcaInstitucion',$this->formAcaInstitucion,true);
+		$criteria->compare('formAcaProgramaAcademico',$this->formAcaProgramaAcademico,true);
+		$criteria->compare('formAcaFechaInicio',$this->formAcaFechaInicio,true);
+		$criteria->compare('formAcaFechaFinalizacion',$this->formAcaFechaFinalizacion,true);
+		$criteria->compare('formAcaTiempoFormacion',$this->formAcaTiempoFormacion);
+		$criteria->compare('formAcaUnidadTiempoFormacion',$this->formAcaUnidadTiempoFormacion,true);
+		$criteria->compare('formAcaPromedioPeriodos',$this->formAcaPromedioPeriodos,true);
+		$criteria->compare('formAcaCiudad_idCiudad',$this->formAcaCiudad_idCiudad);
+		$criteria->compare('nombreIdioma',$this->nombreIdioma,true);
+		$criteria->compare('nivelEscritura',$this->nivelEscritura,true);
+		$criteria->compare('nivelLectura',$this->nivelLectura,true);
+		$criteria->compare('nivelHabla',$this->nivelHabla,true);
+		$criteria->compare('nivelEscucha',$this->nivelEscucha,true);
+		$criteria->compare('formComTituloObtenido',$this->formComTituloObtenido,true);
+		$criteria->compare('formComNivelFormacion',$this->formComNivelFormacion,true);
+		$criteria->compare('formComInstitucion',$this->formComInstitucion,true);
+		$criteria->compare('formComProgramaAcademico',$this->formComProgramaAcademico,true);
+		$criteria->compare('formComFechaInicio',$this->formComFechaInicio,true);
+		$criteria->compare('formComFechaFinalizacon',$this->formComFechaFinalizacon,true);
+		$criteria->compare('formComTiempoFormacion',$this->formComTiempoFormacion);
+		$criteria->compare('formComUnidadTiempoFormacion',$this->formComUnidadTiempoFormacion,true);
+		$criteria->compare('formComPromedioPeriodos',$this->formComPromedioPeriodos,true);
+		$criteria->compare('formComCiudad_idCiudad',$this->formComCiudad_idCiudad);
+		$criteria->compare('Persona_idPersona',$this->Persona_idPersona);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -15,10 +15,4 @@ $this->menu=array(
 
 <h1>Create FormacionAcademica</h1>
 
-<?php $this->renderPartial('_form', array('modelFormacionAcademica'=>$modelFormacionAcademica,
-	'modelIdioma'=>$modelIdioma,
-	'modelFormacionComplementaria'=> $modelFormacionComplementaria,
-	'modelInformacionFormacionAcademica'=>$modelInformacionFormacionAcademica,
-	'modelInformacionFormacionComplementaria'=>$modelInformacionFormacionComplementaria
-	)); 
-?>
+<?php $this->renderPartial('_form', array('model'=>$model)); ?>

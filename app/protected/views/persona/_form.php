@@ -17,7 +17,9 @@
 
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
-	<?php echo $form->errorSummary(array($model,$modelDireccionPersonal,$modelDireccionProfesional)); ?>
+	<?php echo $form->errorSummary($model); ?>
+
+	<h2> Datos personales </h2>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cedulaPersona'); ?>
@@ -154,6 +156,15 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'estadoCivilPersona'); ?>
+		<?php echo $form->dropDownList($model,'estadoCivilPersona',array('Soltero'=>'Soltero','Casado'=>'Casado', 'Viudo'=>'Viudo','Union Libre'=>'Union Libre'));?>
+		<!-- <?php echo $form->textField($model,'estadoCivilPersona',array('size'=>45,'maxlength'=>45)); ?> -->
+		<?php echo $form->error($model,'estadoCivilPersona'); ?>
+	</div>
+
+	<h2> Datos para ingresar a la comunidad </h2>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'usuarioSIICPersona'); ?>
 		<?php echo $form->textField($model,'usuarioSIICPersona',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'usuarioSIICPersona'); ?>
@@ -165,201 +176,140 @@
 		<?php echo $form->error($model,'contraseñaSIICPersona'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'estadoCivilPersona'); ?>
-		<?php echo $form->dropDownList($model,'estadoCivilPersona',array('Soltero'=>'Soltero','Casado'=>'Casado', 'Viudo'=>'Viudo','Union Libre'=>'Union Libre'));?>
-		<!-- <?php echo $form->textField($model,'estadoCivilPersona',array('size'=>45,'maxlength'=>45)); ?> -->
-		<?php echo $form->error($model,'estadoCivilPersona'); ?>
-	</div>
+	
 
+	<!-- ............................ DIRECCIÓN PROFESIONAL ................................. -->
 
-	<!--- COMIENZA LA OTRA PARTE DE LA PERSONA (DIRECCIÓN PERSONAL) -->
-
-	<!-- 
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'idDireccionPersonal'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'idDireccionPersonal'); ?>
-		<?php echo $form->error($modelDireccionPersonal,'idDireccionPersonal'); ?>
-	</div>
-	-->
+	<h2> Dirección profesional</h2>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'direccion'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'direccion',array('size'=>35,'maxlength'=>35)); ?>
-		<?php echo $form->error($modelDireccionPersonal,'direccion'); ?>
+		<?php echo $form->labelEx($model,'dirProInstitucion'); ?>
+		<?php echo $form->textField($model,'dirProInstitucion',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'dirProInstitucion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'barrio'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'barrio',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($modelDireccionPersonal,'barrio'); ?>
+		<?php echo $form->labelEx($model,'dirProDireccionInstitucion'); ?>
+		<?php echo $form->textField($model,'dirProDireccionInstitucion',array('size'=>35,'maxlength'=>35)); ?>
+		<?php echo $form->error($model,'dirProDireccionInstitucion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'codigoPostal'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'codigoPostal'); ?>
-		<?php echo $form->error($modelDireccionPersonal,'codigoPostal'); ?>
+		<?php echo $form->labelEx($model,'dirProBarrio'); ?>
+		<?php echo $form->textField($model,'dirProBarrio',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'dirProBarrio'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'Ciudad_idCiudad'); ?>
+		<?php echo $form->labelEx($model,'dirProCodigoPostal'); ?>
+		<?php echo $form->textField($model,'dirProCodigoPostal'); ?>
+		<?php echo $form->error($model,'dirProCodigoPostal'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirProApartadoPostal'); ?>
+		<?php echo $form->textField($model,'dirProApartadoPostal'); ?>
+		<?php echo $form->error($model,'dirProApartadoPostal'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirProTelefonoFijo'); ?>
+		<?php echo $form->textField($model,'dirProTelefonoFijo'); ?>
+		<?php echo $form->error($model,'dirProTelefonoFijo'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirProExtension'); ?>
+		<?php echo $form->textField($model,'dirProExtension'); ?>
+		<?php echo $form->error($model,'dirProExtension'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirProEmailInstitucional'); ?>
+		<?php echo $form->textField($model,'dirProEmailInstitucional',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'dirProEmailInstitucional'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirProPaginaInstitucional'); ?>
+		<?php echo $form->textField($model,'dirProPaginaInstitucional',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'dirProPaginaInstitucional'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirProCiudad_idCiudad'); ?>
 		<?php
 			$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
-			echo $form->DropDownList($modelDireccionPersonal,'Ciudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
-		<!-- <?php echo $form->textField($modelDireccionPersonal,'Ciudad_idCiudad'); ?> -->
-		<?php echo $form->error($modelDireccionPersonal,'Ciudad_idCiudad'); ?>
+			echo $form->DropDownList($model,'dirProCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+		<!-- <?php echo $form->textField($model,'dirProCiudad_idCiudad'); ?> -->
+		<?php echo $form->error($model,'dirProCiudad_idCiudad'); ?>
+	</div>
+
+	<!-- ...................... DIRECCIÓN PERSONAL ............................... -->
+
+	<h2> Dirección Personal </h2>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dirPerDireccion'); ?>
+		<?php echo $form->textField($model,'dirPerDireccion',array('size'=>35,'maxlength'=>35)); ?>
+		<?php echo $form->error($model,'dirPerDireccion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'telefonoFijo'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'telefonoFijo'); ?>
-		<?php echo $form->error($modelDireccionPersonal,'telefonoFijo'); ?>
+		<?php echo $form->labelEx($model,'dirPerBarrio'); ?>
+		<?php echo $form->textField($model,'dirPerBarrio',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'dirPerBarrio'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'telefonoMovil'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'telefonoMovil'); ?>
-		<?php echo $form->error($modelDireccionPersonal,'telefonoMovil'); ?>
+		<?php echo $form->labelEx($model,'dirPerCodigoPostal'); ?>
+		<?php echo $form->textField($model,'dirPerCodigoPostal'); ?>
+		<?php echo $form->error($model,'dirPerCodigoPostal'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'apartadoPostal'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'apartadoPostal'); ?>
-		<?php echo $form->error($modelDireccionPersonal,'apartadoPostal'); ?>
+		<?php echo $form->labelEx($model,'dirPerTelefonoFijo'); ?>
+		<?php echo $form->textField($model,'dirPerTelefonoFijo'); ?>
+		<?php echo $form->error($model,'dirPerTelefonoFijo'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'email'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'email',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($modelDireccionPersonal,'email'); ?>
+		<?php echo $form->labelEx($model,'dirPerTelefonoMovil'); ?>
+		<?php echo $form->textField($model,'dirPerTelefonoMovil'); ?>
+		<?php echo $form->error($model,'dirPerTelefonoMovil'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionPersonal,'sitioWeb'); ?>
-		<?php echo $form->textField($modelDireccionPersonal,'sitioWeb',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($modelDireccionPersonal,'sitioWeb'); ?>
-	</div>
-
-
-	<!--- COMIENZA LA OTRA PARTE DE LA PERSONA (DIRECCIÓN PROFESIONAL) -->
-
-	<!--
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'idDireccionProfesional'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'idDireccionProfesional'); ?>
-		<?php echo $form->error($modelDireccionProfesional,'idDireccionProfesional'); ?>
-	</div>
-	-->
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'institucion'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'institucion',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($modelDireccionProfesional,'institucion'); ?>
+		<?php echo $form->labelEx($model,'dirPerApartadoPostal'); ?>
+		<?php echo $form->textField($model,'dirPerApartadoPostal'); ?>
+		<?php echo $form->error($model,'dirPerApartadoPostal'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'direccionInstitucion'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'direccionInstitucion',array('size'=>35,'maxlength'=>35)); ?>
-		<?php echo $form->error($modelDireccionProfesional,'direccionInstitucion'); ?>
+		<?php echo $form->labelEx($model,'dirPerEmail'); ?>
+		<?php echo $form->textField($model,'dirPerEmail',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'dirPerEmail'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'barrio'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'barrio',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($modelDireccionProfesional,'barrio'); ?>
+		<?php echo $form->labelEx($model,'dirPerSitioWeb'); ?>
+		<?php echo $form->textField($model,'dirPerSitioWeb',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'dirPerSitioWeb'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'codigoPostal'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'codigoPostal'); ?>
-		<?php echo $form->error($modelDireccionProfesional,'codigoPostal'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'apartadoPostal'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'apartadoPostal'); ?>
-		<?php echo $form->error($modelDireccionProfesional,'apartadoPostal'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'Ciudad_idCiudad'); ?>
+		<?php echo $form->labelEx($model,'dirPerCiudad_idCiudad'); ?>
 		<?php
 			$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
-			echo $form->DropDownList($modelDireccionProfesional,'Ciudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
-		<!-- <?php echo $form->textField($modelDireccionProfesional,'Ciudad_idCiudad'); ?> -->
-		<?php echo $form->error($modelDireccionProfesional,'Ciudad_idCiudad'); ?>
+			echo $form->DropDownList($model,'dirPerCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+		<!-- <?php echo $form->textField($model,'dirPerCiudad_idCiudad'); ?> -->
+		<?php echo $form->error($model,'dirPerCiudad_idCiudad'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'telefonoFijo'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'telefonoFijo'); ?>
-		<?php echo $form->error($modelDireccionProfesional,'telefonoFijo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'extension'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'extension'); ?>
-		<?php echo $form->error($modelDireccionProfesional,'extension'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'emailInstitucional'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'emailInstitucional',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($modelDireccionProfesional,'emailInstitucional'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelDireccionProfesional,'paginaInstitucional'); ?>
-		<?php echo $form->textField($modelDireccionProfesional,'paginaInstitucional',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($modelDireccionProfesional,'paginaInstitucional'); ?>
-	</div>
-
-
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?> 
-		<!-- <?php echo CHtml::submitButton('Guardar'); ?> -->
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
-
-
-
-
-
-	<!-- 
-	<div class="row">
-		<?php echo $form->labelEx($model,'DireccionPersonal_idDireccionPersonal'); ?>
-		<?php echo $form->textField($model,'DireccionPersonal_idDireccionPersonal'); ?>
-		<?php echo $form->error($model,'DireccionPersonal_idDireccionPersonal'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'DireccionProfesional_idDireccionProfesional'); ?>
-		<?php echo $form->textField($model,'DireccionProfesional_idDireccionProfesional'); ?>
-		<?php echo $form->error($model,'DireccionProfesional_idDireccionProfesional'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'FormacionAcademica_idFormacionAcademica'); ?>
-		<?php echo $form->textField($model,'FormacionAcademica_idFormacionAcademica'); ?>
-		<?php echo $form->error($model,'FormacionAcademica_idFormacionAcademica'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Idioma_idIdioma'); ?>
-		<?php echo $form->textField($model,'Idioma_idIdioma'); ?>
-		<?php echo $form->error($model,'Idioma_idIdioma'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'FormacionComplementaria_idFormacionComplementaria'); ?>
-		<?php echo $form->textField($model,'FormacionComplementaria_idFormacionComplementaria'); ?>
-		<?php echo $form->error($model,'FormacionComplementaria_idFormacionComplementaria'); ?>
-	</div>
-
-	-->
-
-	<?php $this->endWidget(); ?>
+<?php $this->endWidget(); ?>
 
 </div><!-- form -->
-	

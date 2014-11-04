@@ -92,28 +92,98 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'DireccionPersonal_idDireccionPersonal'); ?>
-		<?php echo $form->textField($model,'DireccionPersonal_idDireccionPersonal'); ?>
+		<?php echo $form->label($model,'dirProInstitucion'); ?>
+		<?php echo $form->textField($model,'dirProInstitucion',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'DireccionProfesional_idDireccionProfesional'); ?>
-		<?php echo $form->textField($model,'DireccionProfesional_idDireccionProfesional'); ?>
+		<?php echo $form->label($model,'dirProDireccionInstitucion'); ?>
+		<?php echo $form->textField($model,'dirProDireccionInstitucion',array('size'=>35,'maxlength'=>35)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'FormacionAcademica_idFormacionAcademica'); ?>
-		<?php echo $form->textField($model,'FormacionAcademica_idFormacionAcademica'); ?>
+		<?php echo $form->label($model,'dirProBarrio'); ?>
+		<?php echo $form->textField($model,'dirProBarrio',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Idioma_idIdioma'); ?>
-		<?php echo $form->textField($model,'Idioma_idIdioma'); ?>
+		<?php echo $form->label($model,'dirProCodigoPostal'); ?>
+		<?php echo $form->textField($model,'dirProCodigoPostal'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'FormacionComplementaria_idFormacionComplementaria'); ?>
-		<?php echo $form->textField($model,'FormacionComplementaria_idFormacionComplementaria'); ?>
+		<?php echo $form->label($model,'dirProApartadoPostal'); ?>
+		<?php echo $form->textField($model,'dirProApartadoPostal'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirProTelefonoFijo'); ?>
+		<?php echo $form->textField($model,'dirProTelefonoFijo'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirProExtension'); ?>
+		<?php echo $form->textField($model,'dirProExtension'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirProEmailInstitucional'); ?>
+		<?php echo $form->textField($model,'dirProEmailInstitucional',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirProPaginaInstitucional'); ?>
+		<?php echo $form->textField($model,'dirProPaginaInstitucional',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirProCiudad_idCiudad'); ?>
+		<?php echo $form->textField($model,'dirProCiudad_idCiudad'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerDireccion'); ?>
+		<?php echo $form->textField($model,'dirPerDireccion',array('size'=>35,'maxlength'=>35)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerBarrio'); ?>
+		<?php echo $form->textField($model,'dirPerBarrio',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerCodigoPostal'); ?>
+		<?php echo $form->textField($model,'dirPerCodigoPostal'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerTelefonoFijo'); ?>
+		<?php echo $form->textField($model,'dirPerTelefonoFijo'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerTelefonoMovil'); ?>
+		<?php echo $form->textField($model,'dirPerTelefonoMovil'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerApartadoPostal'); ?>
+		<?php echo $form->textField($model,'dirPerApartadoPostal'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerEmail'); ?>
+		<?php echo $form->textField($model,'dirPerEmail',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerSitioWeb'); ?>
+		<?php echo $form->textField($model,'dirPerSitioWeb',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dirPerCiudad_idCiudad'); ?>
+		<?php echo $form->textField($model,'dirPerCiudad_idCiudad'); ?>
 	</div>
 
 	<div class="row buttons">

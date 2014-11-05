@@ -1,2 +1,0 @@
-
-/*#esto contiene cualquier cosa#*/

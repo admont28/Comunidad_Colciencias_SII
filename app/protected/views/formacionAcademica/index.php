@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Formacion Academicas',
+	'Formación Académica',
 );
 
 $this->menu=array(
-	array('label'=>'Create FormacionAcademica', 'url'=>array('create')),
-	array('label'=>'Manage FormacionAcademica', 'url'=>array('admin')),
+	array('label'=>'Crear Formación Académica', 'url'=>array('create')),
+	array('label'=>'Administrar Formación Académica', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Formacion Academicas</h1>
+<h1>Formación Académica</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

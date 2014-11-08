@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Personas'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Persona</h1>
+<h1>Crear Persona</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

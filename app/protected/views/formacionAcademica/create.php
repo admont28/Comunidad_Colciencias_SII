@@ -3,16 +3,16 @@
 /* @var $model FormacionAcademica */
 
 $this->breadcrumbs=array(
-	'Formacion Academicas'=>array('index'),
-	'Create',
+	'Formación Académica'=>array('index'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List FormacionAcademica', 'url'=>array('index')),
-	array('label'=>'Manage FormacionAcademica', 'url'=>array('admin')),
+	array('label'=>'Listar Formación Académica', 'url'=>array('index')),
+	array('label'=>'Administrar Formación Académica', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create FormacionAcademica</h1>
+<h1>Crear Formación Académica para: <?php echo Yii::app()->user->id ?> </h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

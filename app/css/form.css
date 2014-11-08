@@ -36,6 +36,7 @@
 
 div.form
 {
+	background: rgb(232,233,232);
 }
 
 div.form input,
@@ -63,6 +64,52 @@ div.form label
 div.form .row
 {
 	margin: 5px 0;
+}
+
+div.columna1{
+	margin-left: 3px;
+	margin-right: 130px;
+	float: left;
+}
+
+div.columna2{
+	margin-right: 100px;
+	float: left;
+}
+
+div.separador{
+	border: 2px;
+	margin-top: 50px;
+	clear: left;
+	overflow: hidden;
+}
+
+h2.titulo2
+{
+	clear: left; 
+	margin: 5px; 
+	padding: 10px; 
+	color: rgb(70,71,78); 
+	background: #BFBEC0;
+}
+
+div.titulo1
+{
+	margin: 5px 0;
+	width: 100%;
+	text-align: center;
+	background: rgb(123,172,176);
+	color: rgb(248,249,243);
+}
+
+div.titulo1 h2
+{
+	color: rgb(248,249,243);
+}
+
+div.textfield
+{
+	color: rgb(248,249,243);
 }
 
 div.form .hint

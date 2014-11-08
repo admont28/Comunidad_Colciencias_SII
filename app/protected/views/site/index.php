@@ -6,6 +6,7 @@ $this->pageTitle=Yii::app()->name;
 
 <h1>Bienvenido a <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
+<!--
 <p>Congratulations! You have successfully created your Yii application.</p>
 
 <p>You may change the content of this page by modifying the following two files:</p>
@@ -18,11 +19,20 @@ $this->pageTitle=Yii::app()->name;
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
+-->
 
 <h1>
 <?php
 
 	$id = Yii::app()->user->id;
-	echo "".$id;
+	if($id != null){
+		?>
+		<h2> Tu identificación de  usuario es: <?php echo $id ?></h3>
+		<br>
+		<?php
+	}
 ?>
 </h1>
+
+<?php echo CHtml::image(Yii::app()->request->baseUrl . '/images/ComunidadColciencias.png'); ?>
+

@@ -13,9 +13,11 @@
  * @property string $tipoDocumentoPersona
  * @property integer $nacionalidadPais_idPais
  * @property integer $expediciónPais_idPais
+ * @property integer $nacimientoPais_idPais
+ * @property integer $nacimientoDepartamento_idDepartamento
+ * @property integer $nacimientoCiudad_idCiudad
  * @property string $fechaExpedicionDoc
  * @property string $sexoPersona
- * @property integer $nacimientoCiudad_idCiudad
  * @property string $fechaNacimientoPersona
  * @property string $usuarioSIICPersona
  * @property string $contraseñaSIICPersona
@@ -29,6 +31,8 @@
  * @property integer $dirProExtension
  * @property string $dirProEmailInstitucional
  * @property string $dirProPaginaInstitucional
+ * @property integer $dirProPais_idPais
+ * @property integer $dirProDepartamento_idDepartamento
  * @property integer $dirProCiudad_idCiudad
  * @property string $dirPerDireccion
  * @property string $dirPerBarrio
@@ -38,6 +42,8 @@
  * @property integer $dirPerApartadoPostal
  * @property string $dirPerEmail
  * @property string $dirPerSitioWeb
+ * @property integer $dirPerPais_idPais
+ * @property integer $dirPerDepartamento_idDepartamento
  * @property integer $dirPerCiudad_idCiudad
  *
  * The followings are the available model relations:
@@ -45,8 +51,14 @@
  * @property Ciudad $nacimientoCiudadIdCiudad
  * @property Ciudad $dirProCiudadIdCiudad
  * @property Ciudad $dirPerCiudadIdCiudad
+ * @property Departamento $nacimientoDepartamentoIdDepartamento
+ * @property Departamento $dirProDepartamentoIdDepartamento
+ * @property Departamento $dirPerDepartamentoIdDepartamento
  * @property Pais $nacionalidadPaisIdPais
  * @property Pais $expediciónPaisIdPais
+ * @property Pais $nacimientoPaisIdPais
+ * @property Pais $dirProPaisIdPais
+ * @property Pais $dirPerPaisIdPais
  */
 class Persona extends CActiveRecord
 {
@@ -66,8 +78,8 @@ class Persona extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cedulaPersona, nombrePersona, primerApellidoPersona, tipoDocumentoPersona, nacionalidadPais_idPais, expediciónPais_idPais, fechaExpedicionDoc, sexoPersona, nacimientoCiudad_idCiudad, fechaNacimientoPersona, usuarioSIICPersona, contraseñaSIICPersona, dirProInstitucion, dirProDireccionInstitucion, dirProBarrio, dirProTelefonoFijo, dirProEmailInstitucional, dirProCiudad_idCiudad, dirPerDireccion, dirPerBarrio, dirPerTelefonoFijo, dirPerEmail, dirPerCiudad_idCiudad', 'required'),
-			array('nacionalidadPais_idPais, expediciónPais_idPais, nacimientoCiudad_idCiudad, dirProCodigoPostal, dirProApartadoPostal, dirProTelefonoFijo, dirProExtension, dirProCiudad_idCiudad, dirPerCodigoPostal, dirPerTelefonoFijo, dirPerTelefonoMovil, dirPerApartadoPostal, dirPerCiudad_idCiudad', 'numerical', 'integerOnly'=>true),
+			array('cedulaPersona, nombrePersona, primerApellidoPersona, tipoDocumentoPersona, nacionalidadPais_idPais, expediciónPais_idPais, nacimientoPais_idPais, nacimientoDepartamento_idDepartamento, nacimientoCiudad_idCiudad, fechaExpedicionDoc, sexoPersona, nacimientoCiudad_idCiudad, fechaNacimientoPersona, usuarioSIICPersona, contraseñaSIICPersona, dirProInstitucion, dirProDireccionInstitucion, dirProBarrio, dirProTelefonoFijo, dirProEmailInstitucional, dirProPais_idPais, dirProDepartamento_idDepartamento, dirProCiudad_idCiudad, dirPerDireccion, dirPerBarrio, dirPerTelefonoFijo, dirPerEmail, dirPerPais_idPais, dirPerDepartamento_idDepartamento, dirPerCiudad_idCiudad', 'required'),
+			array('nacionalidadPais_idPais, expediciónPais_idPais, nacimientoPais_idPais, nacimientoDepartamento_idDepartamento, nacimientoCiudad_idCiudad, dirProCodigoPostal, dirProApartadoPostal, dirProTelefonoFijo, dirProExtension, dirProPais_idPais, dirProDepartamento_idDepartamento, dirProCiudad_idCiudad, dirPerCodigoPostal, dirPerTelefonoFijo, dirPerTelefonoMovil, dirPerApartadoPostal, dirPerPais_idPais, dirPerDepartamento_idDepartamento, dirPerCiudad_idCiudad', 'numerical', 'integerOnly'=>true),
 			array('cedulaPersona, primerApellidoPersona, segundoApellidoPersona, tipoDocumentoPersona', 'length', 'max'=>25),
 			array('nombrePersona, usuarioSIICPersona, contraseñaSIICPersona, dirProBarrio, dirPerBarrio', 'length', 'max'=>50),
 			array('nombreCitasBliblioPersona', 'length', 'max'=>80),
@@ -94,8 +106,14 @@ class Persona extends CActiveRecord
 			'nacimientoCiudadIdCiudad' => array(self::BELONGS_TO, 'Ciudad', 'nacimientoCiudad_idCiudad'),
 			'dirProCiudadIdCiudad' => array(self::BELONGS_TO, 'Ciudad', 'dirProCiudad_idCiudad'),
 			'dirPerCiudadIdCiudad' => array(self::BELONGS_TO, 'Ciudad', 'dirPerCiudad_idCiudad'),
+			'nacimientoDepartamentoIdDepartamento' => array(self::BELONGS_TO, 'Departamento', 'nacimientoDepartamento_idDepartamento'),
+			'dirProDepartamentoIdDepartamento' => array(self::BELONGS_TO, 'Departamento', 'dirProDepartamento_idDepartamento'),
+			'dirPerDepartamentoIdDepartamento' => array(self::BELONGS_TO, 'Departamento', 'dirPerDepartamento_idDepartamento'),
 			'nacionalidadPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'nacionalidadPais_idPais'),
 			'expediciónPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'expediciónPais_idPais'),
+			'nacimientoPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'nacimientoPais_idPais'),
+			'dirProPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'dirProPais_idPais'),
+			'dirPerPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'dirPerPais_idPais'),
 		);
 	}
 
@@ -106,40 +124,47 @@ class Persona extends CActiveRecord
 	{
 		return array(
 			'idPersona' => 'Id Persona',
-			'cedulaPersona' => 'Cedula Persona',
-			'nombrePersona' => 'Nombre Persona',
-			'primerApellidoPersona' => 'Primer Apellido Persona',
-			'segundoApellidoPersona' => 'Segundo Apellido Persona',
-			'nombreCitasBliblioPersona' => 'Nombre Citas Bliblio Persona',
-			'tipoDocumentoPersona' => 'Tipo Documento Persona',
-			'nacionalidadPais_idPais' => 'Nacionalidad Pais Id Pais',
-			'expediciónPais_idPais' => 'Expedición Pais Id Pais',
-			'fechaExpedicionDoc' => 'Fecha Expedicion Doc',
-			'sexoPersona' => 'Sexo Persona',
-			'nacimientoCiudad_idCiudad' => 'Nacimiento Ciudad Id Ciudad',
-			'fechaNacimientoPersona' => 'Fecha Nacimiento Persona',
-			'usuarioSIICPersona' => 'Usuario Siicpersona',
+			'nombrePersona' => 'Nombres',
+			'primerApellidoPersona' => 'Primer Apellido',
+			'segundoApellidoPersona' => 'Segundo Apellido',
+			'nombreCitasBliblioPersona' => 'Nombre en citas blibliográficas',
+			'nacionalidadPais_idPais' => 'Nacionalidad',
+			'tipoDocumentoPersona' => 'Tipo de documento',
+			'cedulaPersona' => 'Documento de identidad No',
+			'expediciónPais_idPais' => 'Lugar de expedición',
+			'nacimientoPais_idPais' => 'País de nacimiento',
+			'nacimientoDepartamento_idDepartamento' => 'Departamento',
+			'nacimientoCiudad_idCiudad' => 'Ciudad',
+			'fechaExpedicionDoc' => 'Fecha de expedicion del documento de identidad',
+			'sexoPersona' => 'Sexo',
+			'nacimientoCiudad_idCiudad' => 'Ciudad de nacimiento',
+			'fechaNacimientoPersona' => 'Fecha de nacimiento',
+			'usuarioSIICPersona' => 'Usuario SIIC',
 			'contraseñaSIICPersona' => 'Contraseña Siicpersona',
-			'estadoCivilPersona' => 'Estado Civil Persona',
-			'dirProInstitucion' => 'Dir Pro Institucion',
-			'dirProDireccionInstitucion' => 'Dir Pro Direccion Institucion',
-			'dirProBarrio' => 'Dir Pro Barrio',
-			'dirProCodigoPostal' => 'Dir Pro Codigo Postal',
-			'dirProApartadoPostal' => 'Dir Pro Apartado Postal',
-			'dirProTelefonoFijo' => 'Dir Pro Telefono Fijo',
-			'dirProExtension' => 'Dir Pro Extension',
-			'dirProEmailInstitucional' => 'Dir Pro Email Institucional',
-			'dirProPaginaInstitucional' => 'Dir Pro Pagina Institucional',
-			'dirProCiudad_idCiudad' => 'Dir Pro Ciudad Id Ciudad',
-			'dirPerDireccion' => 'Dir Per Direccion',
-			'dirPerBarrio' => 'Dir Per Barrio',
-			'dirPerCodigoPostal' => 'Dir Per Codigo Postal',
-			'dirPerTelefonoFijo' => 'Dir Per Telefono Fijo',
-			'dirPerTelefonoMovil' => 'Dir Per Telefono Movil',
-			'dirPerApartadoPostal' => 'Dir Per Apartado Postal',
-			'dirPerEmail' => 'Dir Per Email',
-			'dirPerSitioWeb' => 'Dir Per Sitio Web',
-			'dirPerCiudad_idCiudad' => 'Dir Per Ciudad Id Ciudad',
+			'estadoCivilPersona' => 'Estado civil ',
+			'dirProInstitucion' => 'Institución',
+			'dirProDireccionInstitucion' => 'Dirección de la institución',
+			'dirProBarrio' => 'Barrio',
+			'dirProCodigoPostal' => 'Código Postal',
+			'dirProApartadoPostal' => 'Apartado postal',
+			'dirProTelefonoFijo' => 'Teléfono fijo',
+			'dirProExtension' => 'Extensión',
+			'dirProEmailInstitucional' => 'E-mail institucional',
+			'dirProPaginaInstitucional' => 'Sitio web institucional',
+			'dirProPais_idPais' => 'País de nacimiento',
+			'dirProDepartamento_idDepartamento' => 'Departamento',
+			'dirProCiudad_idCiudad' => 'Ciudad',
+			'dirPerDireccion' => 'Dirección de residencia',
+			'dirPerBarrio' => 'Barrio',
+			'dirPerCodigoPostal' => 'Código Postal',
+			'dirPerTelefonoFijo' => 'Teléfono fijo',
+			'dirPerTelefonoMovil' => 'Teléfono móvil',
+			'dirPerApartadoPostal' => 'Apartado postal',
+			'dirPerEmail' => 'E-mail',
+			'dirPerSitioWeb' => 'Sitio Web personal',
+			'dirPerPais_idPais' => 'País de nacimiento',
+			'dirPerDepartamento_idDepartamento' => 'Departamento',
+			'dirPerCiudad_idCiudad' => 'Ciudad',
 		);
 	}
 
@@ -170,9 +195,11 @@ class Persona extends CActiveRecord
 		$criteria->compare('tipoDocumentoPersona',$this->tipoDocumentoPersona,true);
 		$criteria->compare('nacionalidadPais_idPais',$this->nacionalidadPais_idPais);
 		$criteria->compare('expediciónPais_idPais',$this->expediciónPais_idPais);
+		$criteria->compare('nacimientoPais_idPais',$this->nacimientoPais_idPais);
+		$criteria->compare('nacimientoDepartamento_idDepartamento',$this->nacimientoDepartamento_idDepartamento);
+		$criteria->compare('nacimientoCiudad_idCiudad',$this->nacimientoCiudad_idCiudad);
 		$criteria->compare('fechaExpedicionDoc',$this->fechaExpedicionDoc,true);
 		$criteria->compare('sexoPersona',$this->sexoPersona,true);
-		$criteria->compare('nacimientoCiudad_idCiudad',$this->nacimientoCiudad_idCiudad);
 		$criteria->compare('fechaNacimientoPersona',$this->fechaNacimientoPersona,true);
 		$criteria->compare('usuarioSIICPersona',$this->usuarioSIICPersona,true);
 		$criteria->compare('contraseñaSIICPersona',$this->contraseñaSIICPersona,true);
@@ -186,6 +213,8 @@ class Persona extends CActiveRecord
 		$criteria->compare('dirProExtension',$this->dirProExtension);
 		$criteria->compare('dirProEmailInstitucional',$this->dirProEmailInstitucional,true);
 		$criteria->compare('dirProPaginaInstitucional',$this->dirProPaginaInstitucional,true);
+		$criteria->compare('dirProPais_idPais',$this->dirProPais_idPais);
+		$criteria->compare('dirProDepartamento_idDepartamento',$this->dirProDepartamento_idDepartamento);
 		$criteria->compare('dirProCiudad_idCiudad',$this->dirProCiudad_idCiudad);
 		$criteria->compare('dirPerDireccion',$this->dirPerDireccion,true);
 		$criteria->compare('dirPerBarrio',$this->dirPerBarrio,true);
@@ -195,6 +224,8 @@ class Persona extends CActiveRecord
 		$criteria->compare('dirPerApartadoPostal',$this->dirPerApartadoPostal);
 		$criteria->compare('dirPerEmail',$this->dirPerEmail,true);
 		$criteria->compare('dirPerSitioWeb',$this->dirPerSitioWeb,true);
+		$criteria->compare('dirPerPais_idPais',$this->dirPerPais_idPais);
+		$criteria->compare('dirPerDepartamento_idDepartamento',$this->dirPerDepartamento_idDepartamento);
 		$criteria->compare('dirPerCiudad_idCiudad',$this->dirPerCiudad_idCiudad);
 
 		return new CActiveDataProvider($this, array(

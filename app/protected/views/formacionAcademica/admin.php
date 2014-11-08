@@ -3,13 +3,13 @@
 /* @var $model FormacionAcademica */
 
 $this->breadcrumbs=array(
-	'Formacion Academicas'=>array('index'),
-	'Manage',
+	'Formación Académica'=>array('index'),
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List FormacionAcademica', 'url'=>array('index')),
-	array('label'=>'Create FormacionAcademica', 'url'=>array('create')),
+	array('label'=>'Listar Formación Académica', 'url'=>array('index')),
+	array('label'=>'Crear Formación Académica', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

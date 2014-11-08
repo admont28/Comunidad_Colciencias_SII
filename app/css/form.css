@@ -73,15 +73,19 @@ div.columna1{
 }
 
 div.columna2{
-	margin-right: 100px;
+	margin-left: 3px;
+	margin-right: 150px;
 	float: left;
 }
 
 div.separador{
-	border: 2px;
+	border: 1px solid;
 	margin-top: 50px;
+	margin-bottom: 20px;
 	clear: left;
 	overflow: hidden;
+	color: #fff;
+
 }
 
 h2.titulo2
@@ -95,11 +99,13 @@ h2.titulo2
 
 div.titulo1
 {
-	margin: 5px 0;
+	padding: 2px ;
 	width: 100%;
 	text-align: center;
 	background: rgb(123,172,176);
 	color: rgb(248,249,243);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
 
 div.titulo1 h2
@@ -208,4 +214,12 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 {
 	clear: left;
 	padding-left: 110px;
+	
+}
+
+.button, input[type="submit"] { 
+      	background: rgb(13,54,52);
+      	color: #fff;
+      	border-radius: 10px;
+      	padding: 5px;
 }

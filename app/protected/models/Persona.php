@@ -140,7 +140,7 @@ class Persona extends CActiveRecord
 			'nacimientoCiudad_idCiudad' => 'Ciudad de nacimiento',
 			'fechaNacimientoPersona' => 'Fecha de nacimiento',
 			'usuarioSIICPersona' => 'Usuario SIIC',
-			'contraseñaSIICPersona' => 'Contraseña Siicpersona',
+			'contraseñaSIICPersona' => 'Clave SIIC',
 			'estadoCivilPersona' => 'Estado civil ',
 			'dirProInstitucion' => 'Institución',
 			'dirProDireccionInstitucion' => 'Dirección de la institución',

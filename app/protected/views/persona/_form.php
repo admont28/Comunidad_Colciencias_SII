@@ -194,6 +194,9 @@
 		</div>	<!-- ....................................CIERRO TERCERA COLUMNA............................................ -->
 	</div>
 
+	<div class="separador"> </div>
+
+	<div class="separador"> </div>
 
 	<!-- ...................... DIRECCIÓN PERSONAL ............................... -->
 
@@ -286,6 +289,10 @@
 		</div>
 
 	</div>
+
+	<div class="separador"> </div>
+
+	<div class="separador"> </div>
 
 	<!-- ............................ DIRECCIÓN PROFESIONAL ................................. -->
 	<h2 class="titulo2">Dirección profesional</h2>
@@ -387,30 +394,38 @@
 
 	</div>
 
+
 	<h2 class="titulo2"> Datos para ingresar a la comunidad </h2>
 
 
-	<div class="row columna1">
+	<div class="columna1">
 		<?php echo $form->labelEx($model,'usuarioSIICPersona'); ?>
-		<?php echo $form->textField($model,'usuarioSIICPersona',array('size'=>50,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
+		<?php echo $form->textField($model,'usuarioSIICPersona',array('size'=>60,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
 		<?php echo $form->error($model,'usuarioSIICPersona'); ?>
 	</div>
 
-	<div class="row columna1">
+	<div class="columna1">
 		<?php echo $form->labelEx($model,'contraseñaSIICPersona'); ?>
-		<?php echo $form->passwordField($model,'contraseñaSIICPersona',array('size'=>50,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
+		<?php echo $form->passwordField($model,'contraseñaSIICPersona',array('size'=>25,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
 		<?php echo $form->error($model,'contraseñaSIICPersona'); ?>
 	</div>
 
-	<div class="row columna1">
+	<div class="columna1">
+
+		<label> Confirmar clave SIIC *</label>
+		<input type="password" value="<?php echo $model->contraseñaSIICPersona; ?>">
+		<!--
 		<?php echo $form->labelEx($model,'contraseñaSIICPersona'); ?>
-		<?php echo $form->passwordField($model,'contraseñaSIICPersona',array('size'=>50,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
+		<?php echo $form->passwordField($model,'contraseñaSIICPersona',array('size'=>25,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
 		<?php echo $form->error($model,'contraseñaSIICPersona'); ?>
+		-->
 	</div>
 
-	<div class="separador">.</div>
+	<div class="separador"> </div>
 
-	<div class="row buttons" style="text-align: right;  background: rgb(13,54,52);">
+
+	<div class="row buttons" style="text-align: right; ">
+		<input class="button" type="reset"  value="Borrar">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 

@@ -15,7 +15,7 @@ $this->menu=array(
 	array('label'=>'Administrar Formación Académica', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Actualizar Formación Académica <?php echo $model->idFormacionAcademica; ?></h1>
-
+<div class="titulo1">
+	<h2>Formación</h2>
+</div>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

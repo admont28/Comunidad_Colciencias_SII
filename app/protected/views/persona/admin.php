@@ -51,6 +51,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'persona-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'cssFile'=> Yii::app()->request->baseUrl.'/css/gridview.css',
 	'columns'=>array(
 		'idPersona',
 		'cedulaPersona',

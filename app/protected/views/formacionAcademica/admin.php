@@ -47,22 +47,26 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
+<div class="tituloTabla">
+	<h2 >TRAYECTORIA ESCOLAR </h2>
+</div>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'formacion-academica-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'cssFile'=> Yii::app()->request->baseUrl.'/css/gridview.css',
 	'columns'=>array(
 		//'idFormacionAcademica',
+		'formAcaFechaInicio',
+		'formAcaNivelFormacion',
+		'formAcaFechaFinalizacion',
+		'formAcaInstitucion',
+		'formAcaBecado',
+		/*
+		'formAcaInstitucionOfreceBeca',
 		'formAcaIntensidadHoraria',
 		'formAcaFechaObtencionTitulo',
-		'formAcaBecado',
-		'formAcaInstitucionOfreceBeca',
-		'formAcaNivelFormacion',
-		/*
-		'formAcaInstitucion',
 		'formAcaProgramaAcademico',
-		'formAcaFechaInicio',
-		'formAcaFechaFinalizacion',
 		'formAcaTiempoFormacion',
 		'formAcaUnidadTiempoFormacion',
 		'formAcaPromedioPeriodos',

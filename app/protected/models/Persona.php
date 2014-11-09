@@ -78,8 +78,8 @@ class Persona extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cedulaPersona, nombrePersona, primerApellidoPersona, tipoDocumentoPersona, nacionalidadPais_idPais, expediciónPais_idPais, nacimientoPais_idPais, nacimientoDepartamento_idDepartamento, nacimientoCiudad_idCiudad, fechaExpedicionDoc, sexoPersona, nacimientoCiudad_idCiudad, fechaNacimientoPersona, usuarioSIICPersona, contraseñaSIICPersona, dirProInstitucion, dirProDireccionInstitucion, dirProBarrio, dirProTelefonoFijo, dirProEmailInstitucional, dirProPais_idPais, dirProDepartamento_idDepartamento, dirProCiudad_idCiudad, dirPerDireccion, dirPerBarrio, dirPerTelefonoFijo, dirPerEmail, dirPerPais_idPais, dirPerDepartamento_idDepartamento, dirPerCiudad_idCiudad', 'required'),
-			array('nacionalidadPais_idPais, expediciónPais_idPais, nacimientoPais_idPais, nacimientoDepartamento_idDepartamento, nacimientoCiudad_idCiudad, dirProCodigoPostal, dirProApartadoPostal, dirProTelefonoFijo, dirProExtension, dirProPais_idPais, dirProDepartamento_idDepartamento, dirProCiudad_idCiudad, dirPerCodigoPostal, dirPerTelefonoFijo, dirPerTelefonoMovil, dirPerApartadoPostal, dirPerPais_idPais, dirPerDepartamento_idDepartamento, dirPerCiudad_idCiudad', 'numerical', 'integerOnly'=>true),
+			array('cedulaPersona, nombrePersona, primerApellidoPersona, tipoDocumentoPersona, nacionalidadPais_idPais, expediciónPais_idPais, nacimientoPais_idPais, nacimientoDepartamento_idDepartamento, nacimientoCiudad_idCiudad, fechaExpedicionDoc, sexoPersona, nacimientoCiudad_idCiudad, fechaNacimientoPersona, usuarioSIICPersona, contraseñaSIICPersona, dirProInstitucion, dirProDireccionInstitucion, dirProBarrio, dirProTelefonoFijo, dirProEmailInstitucional, dirProPais_idPais, dirProDepartamento_idDepartamento, dirProCiudad_idCiudad, dirPerDireccion, dirPerBarrio, dirPerTelefonoFijo, dirPerEmail, dirPerPais_idPais, dirPerDepartamento_idDepartamento, dirPerCiudad_idCiudad', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
+			array('nacionalidadPais_idPais, expediciónPais_idPais, nacimientoPais_idPais, nacimientoDepartamento_idDepartamento, nacimientoCiudad_idCiudad, dirProCodigoPostal, dirProApartadoPostal, dirProTelefonoFijo, dirProExtension, dirProPais_idPais, dirProDepartamento_idDepartamento, dirProCiudad_idCiudad, dirPerCodigoPostal, dirPerTelefonoFijo, dirPerTelefonoMovil, dirPerApartadoPostal, dirPerPais_idPais, dirPerDepartamento_idDepartamento, dirPerCiudad_idCiudad', 'numerical', 'integerOnly'=>true ,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			array('cedulaPersona, primerApellidoPersona, segundoApellidoPersona, tipoDocumentoPersona', 'length', 'max'=>25),
 			array('nombrePersona, usuarioSIICPersona, contraseñaSIICPersona, dirProBarrio, dirPerBarrio', 'length', 'max'=>50),
 			array('nombreCitasBliblioPersona', 'length', 'max'=>80),
@@ -87,7 +87,7 @@ class Persona extends CActiveRecord
 			array('sexoPersona', 'length', 'max'=>9),
 			array('dirProInstitucion, dirProEmailInstitucional, dirProPaginaInstitucional, dirPerEmail, dirPerSitioWeb', 'length', 'max'=>100),
 			array('dirProDireccionInstitucion, dirPerDireccion', 'length', 'max'=>35),
-			array('dirProEmailInstitucional, dirPerEmail','email'),
+			array('dirProEmailInstitucional, dirPerEmail','email','message'=>  Yii::t('es', 'El campo debe ser un correo electrónico válido')),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('cedulaPersona, nombrePersona, primerApellidoPersona, segundoApellidoPersona, nombreCitasBliblioPersona', 'safe', 'on'=>'search'),

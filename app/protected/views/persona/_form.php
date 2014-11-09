@@ -66,7 +66,7 @@
 				    'showOtherMonths'=>true, 
 				    'changeMonth' => 'true', 
 				    'changeYear' => 'true', 
-				    'minDate'=>'1900-01-01', 
+				    'minDate'=>$model->fechaNacimientoPersona, 
 				    'maxDate'=> '0',
 				    ),
 				  )); 
@@ -110,7 +110,12 @@
 				<?php echo $form->labelEx($model,'nacimientoPais_idPais'); ?>
 				<?php
 					$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
-					echo $form->DropDownList($model,'nacimientoPais_idPais',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+					echo $form->DropDownList($model,'nacimientoPais_idPais',$datos, array('empty'=>'--Seleccione una opción--', 
+									'ajax'=> array(
+											'type'=>'POST',
+											'url'=>CController::createUrl('Persona/Selectdepartamentos'),
+											'update'=>'#'.CHtml::activeId($model,'nacimientoDepartamento_idDepartamento'))
+								)); ?>
 				<!-- <?php echo $form->textField($model,'nacimientoPais_idPais'); ?> -->
 				<?php echo $form->error($model,'nacimientoPais_idPais'); ?>
 			</div>
@@ -121,7 +126,8 @@
 
 			<div class="row">
 				<?php echo $form->labelEx($model,'primerApellidoPersona'); ?>
-				<?php echo $form->textField($model,'primerApellidoPersona',array('size'=>25,'maxlength'=>25,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
+				<?php echo $form->textField($model,'primerApellidoPersona',array('size'=>25,'maxlength'=>25,'style'=>'border-
+				radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
 				<?php echo $form->error($model,'primerApellidoPersona'); ?>
 			</div>
 
@@ -141,8 +147,13 @@
 			<div class="row">
 				<?php echo $form->labelEx($model,'nacimientoDepartamento_idDepartamento'); ?>
 				<?php
-					$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
-					echo $form->DropDownList($model,'nacimientoDepartamento_idDepartamento',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+					//$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
+					echo $form->DropDownList($model,'nacimientoDepartamento_idDepartamento',array(), array('empty'=>'--Seleccione una opción--',
+								'ajax'=> array(
+											'type'=>'POST',
+											'url'=>CController::createUrl('Persona/Selectciudades'),
+											'update'=>'#'.CHtml::activeId($model,'nacimientoCiudad_idCiudad')),
+								));?>
 				<!-- <?php echo $form->textField($model,'nacimientoDepartamento_idDepartamento'); ?> -->
 				<?php echo $form->error($model,'nacimientoDepartamento_idDepartamento'); ?>
 			</div>
@@ -161,7 +172,7 @@
 				<?php echo $form->labelEx($model,'nacionalidadPais_idPais'); ?>
 				<?php
 					$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
-					echo $form->DropDownList($model,'nacionalidadPais_idPais',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+					echo $form->DropDownList($model,'nacionalidadPais_idPais',$datos, array('empty'=>'--Seleccione una opción--')); ?>
 				<!-- <?php echo $form->textField($model,'nacionalidadPais_idPais'); ?> -->
 				<?php echo $form->error($model,'nacionalidadPais_idPais'); ?>
 			</div>
@@ -170,7 +181,7 @@
 				<?php echo $form->labelEx($model,'expediciónPais_idPais'); ?>
 				<?php
 					$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
-					echo $form->DropDownList($model,'expediciónPais_idPais',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+					echo $form->DropDownList($model,'expediciónPais_idPais',$datos, array('empty'=>'--Seleccione una opción--')); ?>
 				<!-- <?php echo $form->textField($model,'expediciónPais_idPais'); ?> -->
 				<?php echo $form->error($model,'expediciónPais_idPais'); ?>
 			</div>
@@ -186,7 +197,7 @@
 				<?php echo $form->labelEx($model,'nacimientoCiudad_idCiudad'); ?>
 				<?php
 					$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
-					echo $form->DropDownList($model,'nacimientoCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+					echo $form->DropDownList($model,'nacimientoCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opción--')); ?>
 				<!-- <?php echo $form->textField($model,'nacimientoCiudad_idCiudad'); ?> -->
 				<?php echo $form->error($model,'nacimientoCiudad_idCiudad'); ?>
 			</div>
@@ -209,7 +220,12 @@
 			<?php echo $form->labelEx($model,'dirPerPais_idPais'); ?>
 			<?php
 				$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
-				echo $form->DropDownList($model,'dirPerPais_idPais',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				echo $form->DropDownList($model,'dirPerPais_idPais',$datos, array('empty'=>'--Seleccione una opción--', 
+									'ajax'=> array(
+											'type'=>'POST',
+											'url'=>CController::createUrl('Persona/Selectdepartamentospersonal'),
+											'update'=>'#'.CHtml::activeId($model,'dirPerDepartamento_idDepartamento'))
+									)); ?>
 			<!-- <?php echo $form->textField($model,'dirPerPais_idPais'); ?> -->
 			<?php echo $form->error($model,'dirPerPais_idPais'); ?>
 		</div>
@@ -246,8 +262,13 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirPerDepartamento_idDepartamento'); ?>
 			<?php
-				$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
-				echo $form->DropDownList($model,'dirPerDepartamento_idDepartamento',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				//$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
+				echo $form->DropDownList($model,'dirPerDepartamento_idDepartamento',array(), array('empty'=>'--Seleccione una opción--',
+								'ajax'=> array(
+											'type'=>'POST',
+											'url'=>CController::createUrl('Persona/Selectciudadespersonal'),
+											'update'=>'#'.CHtml::activeId($model,'dirPerCiudad_idCiudad'))
+								)); ?>
 			<!-- <?php echo $form->textField($model,'dirPerDepartamento_idDepartamento'); ?> -->
 			<?php echo $form->error($model,'dirPerDepartamento_idDepartamento'); ?>
 		</div>
@@ -276,8 +297,8 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirPerCiudad_idCiudad'); ?>
 			<?php
-				$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
-				echo $form->DropDownList($model,'dirPerCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				//$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
+				echo $form->DropDownList($model,'dirPerCiudad_idCiudad',array(), array('empty'=>'--Seleccione una opción--')); ?>
 			<!-- <?php echo $form->textField($model,'dirPerCiudad_idCiudad'); ?> -->
 			<?php echo $form->error($model,'dirPerCiudad_idCiudad'); ?>
 		</div>
@@ -303,7 +324,12 @@
 			<?php echo $form->labelEx($model,'dirProPais_idPais'); ?>
 			<?php
 				$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
-				echo $form->DropDownList($model,'dirProPais_idPais',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				echo $form->DropDownList($model,'dirProPais_idPais',$datos, array('empty'=>'--Seleccione una opción--', 
+									'ajax'=> array(
+											'type'=>'POST',
+											'url'=>CController::createUrl('Persona/Selectdepartamentosprofesional'),
+											'update'=>'#'.CHtml::activeId($model,'dirProDepartamento_idDepartamento'))
+									)); ?>
 			<!-- <?php echo $form->textField($model,'dirProPais_idPais'); ?> -->
 			<?php echo $form->error($model,'dirProPais_idPais'); ?>
 		</div>
@@ -337,8 +363,13 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirProDepartamento_idDepartamento'); ?>
 			<?php
-				$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
-				echo $form->DropDownList($model,'dirProDepartamento_idDepartamento',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				//$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
+				echo $form->DropDownList($model,'dirProDepartamento_idDepartamento',array(), array('empty'=>'--Seleccione una opción--',
+								'ajax'=> array(
+											'type'=>'POST',
+											'url'=>CController::createUrl('Persona/Selectciudadesprofesional'),
+											'update'=>'#'.CHtml::activeId($model,'dirProCiudad_idCiudad'))
+								)); ?>
 			<!-- <?php echo $form->textField($model,'dirProDepartamento_idDepartamento'); ?> -->
 			<?php echo $form->error($model,'dirProDepartamento_idDepartamento'); ?>
 		</div>
@@ -368,8 +399,8 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirProCiudad_idCiudad'); ?>
 			<?php
-				$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
-				echo $form->DropDownList($model,'dirProCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				//$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
+				echo $form->DropDownList($model,'dirProCiudad_idCiudad',array(), array('empty'=>'--Seleccione una opción--')); ?>
 			<!-- <?php echo $form->textField($model,'dirProCiudad_idCiudad'); ?> -->
 			<?php echo $form->error($model,'dirProCiudad_idCiudad'); ?>
 		</div>
@@ -413,7 +444,7 @@
 	<div class="columna1">
 
 		<label> Confirmar clave SIIC *</label>
-		<input type="password" value="<?php echo $model->contraseñaSIICPersona; ?>">
+		<input type="password"  style="border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);" value="<?php echo $model->contraseñaSIICPersona; ?>">
 		<!--
 		<?php echo $form->labelEx($model,'contraseñaSIICPersona'); ?>
 		<?php echo $form->passwordField($model,'contraseñaSIICPersona',array('size'=>25,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>

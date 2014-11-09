@@ -1,131 +1,481 @@
 <?php
 /* @var $this FormacionAcademicaController */
-/* @var $data FormacionAcademica */
+/* @var $model FormacionAcademica */
+/* @var $form CActiveForm */
 ?>
 
-<div class="view">
+<div class="form">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idFormacionAcademica')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idFormacionAcademica), array('view', 'id'=>$data->idFormacionAcademica)); ?>
-	<br />
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'contact-form',
+	'enableClientValidation'=>false,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaIntensidadHoraria')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaIntensidadHoraria); ?>
-	<br />
+	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaFechaObtencionTitulo')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaFechaObtencionTitulo); ?>
-	<br />
+	<?php echo $form->errorSummary($model); ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaBecado')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaBecado); ?>
-	<br />
+	<h2 class="titulo2"> Formación Académica </h2>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaInstitucionOfreceBeca')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaInstitucionOfreceBeca); ?>
-	<br />
+	<div style="margin-left: 5px;">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaNivelFormacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaNivelFormacion); ?>
-	<br />
+		<div class="row">
+		<?php echo $form->labelEx($model,'formAcaNivelFormacion'); ?>
+		<?php 
+			echo $form->dropDownList($model,'formAcaNivelFormacion',
+			array('No informado'=>'No informado','Primaria Incompleta'=>'Primaria Incompleta',
+			 'Primario Secundario'=>'Primario Secundario',
+			 'Técnico - Nivel medio'=>'Técnico - Nivel medio',
+			 'Técnico nivel superior'=>'Técnico nivel superior',
+			 'Jefe de Cátedra'=>'Jefe de Cátedra',
+			 'Perfeccionamiento'=>'Perfeccionamiento',
+			 'Pregrado/Universitario'=>'Pregrado/Universitario',
+			 'Especialización'=>'Especialización',
+			 'Especialización-residencia médica'=>'Especialización-residencia médica',
+			 'Maestría/Magister'=>'Maestría/Magister',
+			 'Doctorado'=>'Doctorado',
+			 'Postdoctorado'=>'Postdoctorado',
+			 'MBA'=>'MBA',),
+			array('disabled'=>'disabled'));
+		?>
+		<!-- <?php echo $form->textField($model,'formAcaNivelFormacion',array('size'=>25,'maxlength'=>25)); ?> -->
+		<?php echo $form->error($model,'formAcaNivelFormacion'); ?>
+		</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaInstitucion')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaInstitucion); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaInstitucion'); ?>
+			<?php echo $form->textField($model,'formAcaInstitucion',array('size'=>60,'maxlength'=>100,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formAcaInstitucion'); ?>
+		</div>
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaProgramaAcademico')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaProgramaAcademico); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaProgramaAcademico'); ?>
+			<?php echo $form->textField($model,'formAcaProgramaAcademico',array('size'=>60,'maxlength'=>100,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formAcaProgramaAcademico'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaFechaInicio')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaFechaInicio); ?>
-	<br />
+	<div class="columna2">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaFechaFinalizacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaFechaFinalizacion); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaIntensidadHoraria'); ?>
+			<?php echo $form->textField($model,'formAcaIntensidadHoraria', array('style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formAcaIntensidadHoraria'); ?>
+		</div>
+	</div>
+	<div class="columna2">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaCiudad_idCiudad'); ?>
+			<?php
+				$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
+				echo $form->DropDownList($model,'formAcaCiudad_idCiudad',$datos, 
+					array('empty'=>'--Seleccione una opcion--','disabled'=>'disabled'))?>
+			<!-- <?php echo $form->textField($model,'formAcaCiudad_idCiudad'); ?> -->
+			<?php echo $form->error($model,'formAcaCiudad_idCiudad'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaTiempoFormacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaTiempoFormacion); ?>
-	<br />
+	<div class="separador"></div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaUnidadTiempoFormacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaUnidadTiempoFormacion); ?>
-	<br />
+	<div class="columna1">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaPromedioPeriodos')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaPromedioPeriodos); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaFechaInicio'); ?>
+			<?php
+			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			   'model'=>$model,
+			   'attribute'=>'formAcaFechaInicio',
+			   'value'=>$model->formAcaFechaInicio,
+			   'language' => 'es',
+			   'htmlOptions' => array('readonly'=>"readonly"),
+			   'options'=>array(
+			    'autoSize'=>true,
+			    'defaultDate'=>$model->formAcaFechaInicio,
+			    'dateFormat'=>'yy-mm-dd',
+			    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
+			    'buttonImageOnly'=>true,
+			    'buttonText'=>'Fecha',
+			    'selectOtherMonths'=>true,
+			    'showAnim'=>'slide',
+			    'showButtonPanel'=>true,
+			    'showOn'=>'button', 
+			    'showOtherMonths'=>true, 
+			    'changeMonth' => 'true', 
+			    'changeYear' => 'true', 
+			    'minDate'=>'1900-01-01', 
+			    'maxDate'=> '0',
+			    ),
+			  )); 
+			 ?>
+			<?php echo $form->error($model,'formAcaFechaInicio'); ?>
+		</div>
+	</div>
+	
+	<div class="columna1">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaFechaFinalizacion'); ?>
+			<?php
+			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			   'model'=>$model,
+			   'attribute'=>'formAcaFechaFinalizacion',
+			   'value'=>$model->formAcaFechaFinalizacion,
+			   'language' => 'es',
+			   'htmlOptions' => array('readonly'=>"readonly"),
+			   'options'=>array(
+			    'autoSize'=>true,
+			    'defaultDate'=>$model->formAcaFechaFinalizacion,
+			    'dateFormat'=>'yy-mm-dd',
+			    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
+			    'buttonImageOnly'=>true,
+			    'buttonText'=>'Fecha',
+			    'selectOtherMonths'=>true,
+			    'showAnim'=>'slide',
+			    'showButtonPanel'=>true,
+			    'showOn'=>'button', 
+			    'showOtherMonths'=>true, 
+			    'changeMonth' => 'true', 
+			    'changeYear' => 'true', 
+			    'minDate'=>'1900-01-01', 
+			    'maxDate'=> '0',
+			    ),
+			  )); 
+			 ?>
+			<?php echo $form->error($model,'formAcaFechaFinalizacion'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formAcaCiudad_idCiudad')); ?>:</b>
-	<?php echo CHtml::encode($data->formAcaCiudad_idCiudad); ?>
-	<br />
+	<div class="columna1">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nombreIdioma')); ?>:</b>
-	<?php echo CHtml::encode($data->nombreIdioma); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaFechaObtencionTitulo'); ?>
+			<?php
+			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			   'model'=>$model,
+			   'attribute'=>'formAcaFechaObtencionTitulo',
+			   'value'=>$model->formAcaFechaObtencionTitulo,
+			   'language' => 'es',
+			   'htmlOptions' => array('readonly'=>"readonly"),
+			   'options'=>array(
+			    'autoSize'=>true,
+			    'defaultDate'=>$model->formAcaFechaObtencionTitulo,
+			    'dateFormat'=>'yy-mm-dd',
+			    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
+			    'buttonImageOnly'=>true,
+			    'buttonText'=>'Fecha',
+			    'selectOtherMonths'=>true,
+			    'showAnim'=>'slide',
+			    'showButtonPanel'=>true,
+			    'showOn'=>'button', 
+			    'showOtherMonths'=>true, 
+			    'changeMonth' => 'true', 
+			    'changeYear' => 'true', 
+			    'minDate'=>'1900-01-01', 
+			    'maxDate'=> '0',
+			    ),
+			  )); 
+			 ?>
+			<?php echo $form->error($model,'formAcaFechaObtencionTitulo'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nivelEscritura')); ?>:</b>
-	<?php echo CHtml::encode($data->nivelEscritura); ?>
-	<br />
+	<div class="separador"></div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nivelLectura')); ?>:</b>
-	<?php echo CHtml::encode($data->nivelLectura); ?>
-	<br />
+	<div class="columna1">
+		<div class="row">
+			<p>Si no ha concluido indique el tiempo en que lleva la formación </p>
+			<!-- <?php echo $form->labelEx($model,'formAcaTiempoFormacion'); ?> -->
+			<?php echo $form->textField($model,'formAcaTiempoFormacion', array('style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formAcaTiempoFormacion'); ?>
+			<!-- <?php echo $form->labelEx($model,'formAcaUnidadTiempoFormacion'); ?> -->
+			<?php 
+				echo $form->dropDownList($model,'formAcaUnidadTiempoFormacion',
+				array('Meses'=>'Meses','Semestres'=>'Semestres',
+				 'Años'=>'Años',
+				), 
+				array('disabled'=>'disabled'));
+			?>
+			<!-- <?php echo $form->textField($model,'formAcaUnidadTiempoFormacion',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'formAcaUnidadTiempoFormacion'); ?>
+		</div>		
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nivelHabla')); ?>:</b>
-	<?php echo CHtml::encode($data->nivelHabla); ?>
-	<br />
+	<div class="columna1">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaPromedioPeriodos'); ?>
+			<?php echo $form->textField($model,'formAcaPromedioPeriodos',array('size'=>20,'maxlength'=>2,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formAcaPromedioPeriodos'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nivelEscucha')); ?>:</b>
-	<?php echo CHtml::encode($data->nivelEscucha); ?>
-	<br />
+	<div class="columna1">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formAcaBecado'); ?>
+			<?php 
+				echo $form->dropDownList($model,'formAcaBecado',
+				array('Si'=>'Si','No'=>'No',), 
+				array('disabled'=>'disabled'));
+			?>
+			<!-- <?php echo $form->textField($model,'formAcaBecado',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'formAcaBecado'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComTituloObtenido')); ?>:</b>
-	<?php echo CHtml::encode($data->formComTituloObtenido); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'formAcaInstitucionOfreceBeca', array('style'=>'clear: left; overflow: hidden; margin-left: 5px;')); ?>
+		<?php echo $form->textField($model,'formAcaInstitucionOfreceBeca',array('size'=>60,'maxlength'=>100,'style'=>'clear: left; overflow: hidden; margin-left: 5px; border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+		<?php echo $form->error($model,'formAcaInstitucionOfreceBeca'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComNivelFormacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formComNivelFormacion); ?>
-	<br />
+	<div class="separador"></div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComInstitucion')); ?>:</b>
-	<?php echo CHtml::encode($data->formComInstitucion); ?>
-	<br />
+	<div style="margin-left: 5px;">
+		<div class="row">
+			<?php echo $form->labelEx($model,'nombreIdioma'); ?>
+			<?php echo $form->dropDownList($model,'nombreIdioma',
+						array('Mandarín'=>'Mandarín',
+						'Español'=>'Español', 
+						'Inglés'=>'Inglés',
+						'Hindi'=>'Hindi',
+						'Bengalí'=>'Bengalí',
+						'Portugués'=>'Portugués',
+						'Ruso'=>'Ruso',
+						'Japonés'=>'Japonés',
+						'Alemán'=>'Alemán',
+						'Francés'=>'Francés',
+						'Coreano'=>'Coreano',
+						'Cantonés'=>'Cantonés',
+						'Telugú'=>'Telugú',
+						'Maratí'=>'Maratí',
+						'Vietnamita'=>'Vietnamita',
+						'Tamil'=>'Tamil',
+						'Punyabí'=>'Punyabí',
+						'Italiano'=>'Italiano',
+						'Turco'=>'Turco',
+						'Urdu'=>'Urdu',
+						), 
+						array('disabled'=>'disabled'));?>
+			<!--
+				<?php echo $form->textField($model,'nombreIdioma',array('size'=>45,'maxlength'=>45)); ?>
+			-->
+			<?php echo $form->error($model,'nombreIdioma'); ?>
+		</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComProgramaAcademico')); ?>:</b>
-	<?php echo CHtml::encode($data->formComProgramaAcademico); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'nivelEscritura'); ?>
+			<?php
+				$niveles = array('Deficiente'=>'Deficiente', 'Aceptable'=>'Aceptable','Bueno'=>'Bueno');
+	            echo $form->radioButtonList($model,'nivelEscritura',$niveles,
+	            	array('separator'=>' ','labelOptions'=>array('style'=>'display:inline;')), 
+					array('disabled'=>'disabled'));
+	        ?>
+			<!-- <?php echo $form->textField($model,'nivelEscritura',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'nivelEscritura'); ?>
+		</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComFechaInicio')); ?>:</b>
-	<?php echo CHtml::encode($data->formComFechaInicio); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'nivelLectura'); ?>
+			<?php
+				$niveles = array('Deficiente'=>'Deficiente', 'Aceptable'=>'Aceptable','Bueno'=>'Bueno');
+	            echo $form->radioButtonList($model,'nivelLectura',$niveles,array('separator'=>' ',
+					'labelOptions'=>array('style'=>'display:inline')));
+	        ?>
+			<!-- <?php echo $form->textField($model,'nivelLectura',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'nivelLectura'); ?>
+		</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComFechaFinalizacon')); ?>:</b>
-	<?php echo CHtml::encode($data->formComFechaFinalizacon); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'nivelHabla'); ?>
+			<?php
+				$niveles = array('Deficiente'=>'Deficiente', 'Aceptable'=>'Aceptable','Bueno'=>'Bueno');
+	            echo $form->radioButtonList($model,'nivelHabla',$niveles,array('separator'=>' ',
+					'labelOptions'=>array('style'=>'display:inline')));
+	        ?>
+			<!-- <?php echo $form->textField($model,'nivelHabla',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'nivelHabla'); ?>
+		</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComTiempoFormacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formComTiempoFormacion); ?>
-	<br />
+		<div class="row">
+			<?php echo $form->labelEx($model,'nivelEscucha'); ?>
+			<?php
+				$niveles = array('Deficiente'=>'Deficiente', 'Aceptable'=>'Aceptable','Bueno'=>'Bueno');
+	            echo $form->radioButtonList($model,'nivelEscucha',$niveles,array('separator'=>' ',
+					'labelOptions'=>array('style'=>'display:inline')));
+	        ?>
+			<!-- <?php echo $form->textField($model,'nivelEscucha',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'nivelEscucha'); ?>
+		</div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComUnidadTiempoFormacion')); ?>:</b>
-	<?php echo CHtml::encode($data->formComUnidadTiempoFormacion); ?>
-	<br />
+	<div class="separador"> </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComPromedioPeriodos')); ?>:</b>
-	<?php echo CHtml::encode($data->formComPromedioPeriodos); ?>
-	<br />
+	<!-- ......................................... FORMACIÓN COMPLEMENTARIA ............................... -->
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('formComCiudad_idCiudad')); ?>:</b>
-	<?php echo CHtml::encode($data->formComCiudad_idCiudad); ?>
-	<br />
+	<h2 class="titulo1"> Formación complementaria </h2>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Persona_idPersona')); ?>:</b>
-	<?php echo CHtml::encode($data->Persona_idPersona); ?>
-	<br />
+	<p>En este espacio diligencie los datos requeridos. Los datos marcados con (*) son obligatorios, cuando termine de click en aceptar</p>
 
-	*/ ?>
+	<div class="separador"> </div>
 
-</div>
+	<div style="margin-left 5px;">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComNivelFormacion'); ?>
+			<?php 
+				echo $form->dropDownList($model,'formComNivelFormacion',
+				array('Otros'=>'Otros','Extension'=>'Extensión', 'Cursos de corta duracion'=>'Cursos de corta duración'),
+				array('disabled'=>'disabled'));
+			?>
+			<!-- <?php echo $form->textField($model,'formComNivelFormacion',array('size'=>25,'maxlength'=>25)); ?> -->
+			<?php echo $form->error($model,'formComNivelFormacion'); ?>
+		</div>
+
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComInstitucion'); ?>
+			<?php echo $form->textField($model,'formComInstitucion',array('size'=>60,'maxlength'=>100,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formComInstitucion'); ?>
+		</div>
+
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComProgramaAcademico'); ?>
+			<?php echo $form->textField($model,'formComProgramaAcademico',array('size'=>60,'maxlength'=>100,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formComProgramaAcademico'); ?>
+		</div>
+
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComCiudad_idCiudad'); ?>
+			<?php
+				$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
+				echo $form->DropDownList($model,'formComCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--','disabled'=>'disabled')); ?>
+			<!-- <?php echo $form->textField($model,'formComCiudad_idCiudad'); ?> -->
+			<?php echo $form->error($model,'formComCiudad_idCiudad'); ?>
+		</div>
+	</div>
+
+	<div class="separador"></div>
+
+	<div class="columna2">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComFechaInicio'); ?>
+			<?php
+			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			   'model'=>$model,
+			   'attribute'=>'formComFechaInicio',
+			   'value'=>$model->formComFechaInicio,
+			   'language' => 'es',
+			   'htmlOptions' => array('readonly'=>"readonly"),
+			   'options'=>array(
+			    'autoSize'=>true,
+			    'defaultDate'=>$model->formComFechaInicio,
+			    'dateFormat'=>'yy-mm-dd',
+			    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
+			    'buttonImageOnly'=>true,
+			    'buttonText'=>'Fecha',
+			    'selectOtherMonths'=>true,
+			    'showAnim'=>'slide',
+			    'showButtonPanel'=>true,
+			    'showOn'=>'button', 
+			    'showOtherMonths'=>true, 
+			    'changeMonth' => 'true', 
+			    'changeYear' => 'true', 
+			    'minDate'=>'1900-01-01', 
+			    'maxDate'=> '0',
+			    ),
+			  )); 
+			 ?>
+			<?php echo $form->error($model,'formComFechaInicio'); ?>
+		</div>
+	</div>
+
+	<div class="columna2">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComFechaFinalizacon'); ?>
+			<?php
+			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			   'model'=>$model,
+			   'attribute'=>'formComFechaFinalizacon',
+			   'value'=>$model->formComFechaFinalizacon,
+			   'language' => 'es',
+			   'htmlOptions' => array('readonly'=>"readonly"),
+			   'options'=>array(
+			    'autoSize'=>true,
+			    'defaultDate'=>$model->formComFechaFinalizacon,
+			    'dateFormat'=>'yy-mm-dd',
+			    'buttonImage'=>Yii::app()->baseUrl.'/images/calendario.png',
+			    'buttonImageOnly'=>true,
+			    'buttonText'=>'Fecha',
+			    'selectOtherMonths'=>true,
+			    'showAnim'=>'slide',
+			    'showButtonPanel'=>true,
+			    'showOn'=>'button', 
+			    'showOtherMonths'=>true, 
+			    'changeMonth' => 'true', 
+			    'changeYear' => 'true', 
+			    'minDate'=>'1900-01-01', 
+			    'maxDate'=> '0',
+			    ),
+			  )); 
+			 ?>
+			<?php echo $form->error($model,'formComFechaFinalizacon'); ?>
+		</div>
+	</div>
+
+	<div class="separador"></div>
+
+	<div class="columna2">
+		<div class="row">
+			<p>Si no ha concluido indique el tiempo en que lleva la formación </p>
+			<!-- <?php echo $form->labelEx($model,'formComTiempoFormacion'); ?> -->
+			<?php echo $form->textField($model,'formComTiempoFormacion',array('style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formComTiempoFormacion'); ?>
+
+			<!-- <?php echo $form->labelEx($model,'formComUnidadTiempoFormacion'); ?> -->
+			<?php 
+				echo $form->dropDownList($model,'formComUnidadTiempoFormacion',
+				array('Meses'=>'Meses','Semestres'=>'Semestres','Años'=>'Años',),
+				array('disabled'=>'disabled'));
+			?>
+			<!-- <?php echo $form->textField($model,'formComUnidadTiempoFormacion',array('size'=>10,'maxlength'=>10)); ?> -->
+			<?php echo $form->error($model,'formComUnidadTiempoFormacion'); ?>
+		</div>
+	</div>
+
+	<div class="columna2">
+		<div class="row">
+			<?php echo $form->labelEx($model,'formComPromedioPeriodos'); ?>
+			<?php echo $form->textField($model,'formComPromedioPeriodos',array('size'=>20,'maxlength'=>2,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+			<?php echo $form->error($model,'formComPromedioPeriodos'); ?>
+		</div>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'formComTituloObtenido', array('style'=>'clear: left; overflow: hidden; margin-left: 5px;')); ?>
+		<?php echo $form->textField($model,'formComTituloObtenido',array('size'=>60,'maxlength'=>30,'style'=>'clear: left; overflow: hidden; margin-left: 5px; border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+		<?php echo $form->error($model,'formComTituloObtenido'); ?>
+	</div>
+
+	<div class="separador"></div>
+	
+
+	<h2 class="titulo2"> Información adicional </h2>
+
+	<!--
+	<div class="row">
+		<?php echo $form->labelEx($model,'Persona_idPersona'); ?>
+		<?php echo $form->textField($model,'Persona_idPersona'); ?>
+		<?php echo $form->error($model,'Persona_idPersona'); ?>
+	</div>
+	-->
+
+	<div class="separador"> </div>
+
+	<div class="row buttons" style="text-align: right; ">
+	 	<?php echo CHtml::submitButton('Volver',array('name'=>'volver')); ?>
+	</div>
+
+	<div class="separador"> </div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->

@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'Lista de proyectos', 'url'=>array('index')),
 	array('label'=>'Crear un proyecto', 'url'=>array('crear')),
 	array('label'=>'Actualizar un proyecto', 'url'=>array('actualizar', 'id'=>$model->idProyectos)),
-	array('label'=>'Eliminar un proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idProyectos),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Eliminar un proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idProyectos),'confirm'=>'Esta seguro que desea eliminar este proyecto?')),
 	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
 );
 ?>

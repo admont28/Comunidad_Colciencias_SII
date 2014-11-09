@@ -84,6 +84,8 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'formAcaFechaInicio'); ?>
 			<?php
+				$cedulaPersona = Yii::app()->user->id;
+				$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 			   'model'=>$model,
 			   'attribute'=>'formAcaFechaInicio',
@@ -104,7 +106,7 @@
 			    'showOtherMonths'=>true, 
 			    'changeMonth' => 'true', 
 			    'changeYear' => 'true', 
-			    'minDate'=>'1900-01-01', 
+			    'minDate'=> $modelPersona->fechaNacimientoPersona, 
 			    'maxDate'=> '0',
 			    ),
 			  )); 
@@ -137,7 +139,7 @@
 			    'showOtherMonths'=>true, 
 			    'changeMonth' => 'true', 
 			    'changeYear' => 'true', 
-			    'minDate'=>'1900-01-01', 
+			    'minDate'=> $model->formAcaFechaInicio, 
 			    'maxDate'=> '0',
 			    ),
 			  )); 
@@ -171,7 +173,7 @@
 			    'showOtherMonths'=>true, 
 			    'changeMonth' => 'true', 
 			    'changeYear' => 'true', 
-			    'minDate'=>'1900-01-01', 
+			    'minDate'=> $model->formAcaFechaInicio, 
 			    'maxDate'=> '0',
 			    ),
 			  )); 

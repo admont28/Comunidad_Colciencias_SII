@@ -28,7 +28,7 @@ class PersonaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','selectdepartamentos','selectciudades','selectdepartamentospersonal','selectciudadespersonal','selectdepartamentosprofesional','selectciudadesprofesional'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -169,6 +169,84 @@ class PersonaController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	/**
+	* función que lista los departmentos de un pais seleccionado
+	*
+	*/
+	public function actionSelectDepartamentos(){
+		$idPais = $_POST['Persona']['nacimientoPais_idPais'];
+		$lista = Departamento::model()->findAll('Pais_idPais = :idPais', array(':idPais'=>$idPais));
+		$lista = CHtml::listData($lista, 'idDepartamento','nombreDepartamento');
+		$this->listar($lista);
+	}
+
+	/**
+	* función que lista las ciudades de un departamento seleccionado
+	*
+	*/
+	public function actionSelectCiudades(){
+		$idDepartamento = $_POST['Persona']['nacimientoDepartamento_idDepartamento'];
+		$lista = Ciudad::model()->findAll('Departamento_idDepartamento = :idDepartamento', array(':idDepartamento'=>$idDepartamento));
+		$lista = CHtml::listData($lista, 'idCiudad','nombreCiudad');
+		$this->listar($lista);
+	}
+
+	/**
+	* función que lista los departmentos de un pais seleccionado
+	*
+	*/
+	public function actionSelectDepartamentosPersonal(){
+		$idPais = $_POST['Persona']['dirPerPais_idPais'];
+		$lista = Departamento::model()->findAll('Pais_idPais = :idPais', array(':idPais'=>$idPais));
+		$lista = CHtml::listData($lista, 'idDepartamento','nombreDepartamento');
+		$this->listar($lista);
+	}
+
+	/**
+	* función que lista las ciudades de un departamento seleccionado
+	*
+	*/
+	public function actionSelectCiudadesPersonal(){
+		$idDepartamento = $_POST['Persona']['dirPerDepartamento_idDepartamento'];
+		$lista = Ciudad::model()->findAll('Departamento_idDepartamento = :idDepartamento', array(':idDepartamento'=>$idDepartamento));
+		$lista = CHtml::listData($lista, 'idCiudad','nombreCiudad');
+		$this->listar($lista);
+	}
+
+	/**
+	* función que lista los departmentos de un pais seleccionado
+	*
+	*/
+	public function actionSelectDepartamentosProfesional(){
+		$idPais = $_POST['Persona']['dirProPais_idPais'];
+		$lista = Departamento::model()->findAll('Pais_idPais = :idPais', array(':idPais'=>$idPais));
+		$lista = CHtml::listData($lista, 'idDepartamento','nombreDepartamento');
+		$this->listar($lista);
+	}
+
+	/**
+	* función que lista las ciudades de un departamento seleccionado
+	*
+	*/
+	public function actionSelectCiudadesProfesional(){
+		$idDepartamento = $_POST['Persona']['dirProDepartamento_idDepartamento'];
+		$lista = Ciudad::model()->findAll('Departamento_idDepartamento = :idDepartamento', array(':idDepartamento'=>$idDepartamento));
+		$lista = CHtml::listData($lista, 'idCiudad','nombreCiudad');
+		$this->listar($lista);
+	}
+
+	/**
+	* función que lista los elementos del parametro $lista
+	* @param Lista $lista es la lista a mostrar
+	*/
+	public function listar($lista){
+		
+		echo CHtml::tag('option',array('value'=>''), CHtml::encode('--Seleccione una opción--'), true);
+		foreach ($lista as $valor => $nombre) {
+			echo CHtml::tag('option',array('value'=>$valor), CHtml::encode($nombre), true);
 		}
 	}
 }

@@ -59,14 +59,15 @@ class FormacionAcademica extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('formAcaCiudad_idCiudad, formComCiudad_idCiudad, Persona_idPersona', 'required'),
-			array('formAcaIntensidadHoraria, formAcaTiempoFormacion, formAcaCiudad_idCiudad, formComTiempoFormacion, formComCiudad_idCiudad, Persona_idPersona', 'numerical', 'integerOnly'=>true),
+			array('formAcaIntensidadHoraria, formAcaTiempoFormacion, formAcaCiudad_idCiudad, formComTiempoFormacion, formComCiudad_idCiudad, Persona_idPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			array('formAcaBecado, formAcaPromedioPeriodos, formComPromedioPeriodos', 'length', 'max'=>2),
 			array('formAcaInstitucionOfreceBeca, formAcaInstitucion, formAcaProgramaAcademico, formComInstitucion, formComProgramaAcademico', 'length', 'max'=>100),
 			array('formAcaNivelFormacion, formComNivelFormacion', 'length', 'max'=>25),
 			array('formAcaUnidadTiempoFormacion, nivelEscritura, nivelLectura, nivelHabla, nivelEscucha, formComUnidadTiempoFormacion', 'length', 'max'=>10),
-			array('nombreIdioma', 'length', 'max'=>45),
-			array('formComTituloObtenido', 'length', 'max'=>30),
+			array('nombreIdioma', 'length', 'max'=>45,'message'=>  Yii::t('es', 'El campo no puede exceder los 45 caracteres')),
+			array('formComTituloObtenido', 'length', 'max'=>30,'message'=>  Yii::t('es', 'El campo no puede exceder los 30 caracteres')),
 			array('formAcaFechaObtencionTitulo, formAcaFechaInicio, formAcaFechaFinalizacion, formComFechaInicio, formComFechaFinalizacon', 'safe'),
+			array('formAcaFechaFinalizacion','compare','compareAttribute'=>'formAcaFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio')),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idFormacionAcademica, formAcaIntensidadHoraria, formAcaFechaObtencionTitulo, formAcaBecado, formAcaInstitucionOfreceBeca, formAcaNivelFormacion, formAcaInstitucion, formAcaProgramaAcademico, formAcaFechaInicio, formAcaFechaFinalizacion, formAcaTiempoFormacion, formAcaUnidadTiempoFormacion, formAcaPromedioPeriodos, formAcaCiudad_idCiudad, nombreIdioma, nivelEscritura, nivelLectura, nivelHabla, nivelEscucha, formComTituloObtenido, formComNivelFormacion, formComInstitucion, formComProgramaAcademico, formComFechaInicio, formComFechaFinalizacon, formComTiempoFormacion, formComUnidadTiempoFormacion, formComPromedioPeriodos, formComCiudad_idCiudad, Persona_idPersona', 'safe', 'on'=>'search'),
@@ -103,7 +104,7 @@ class FormacionAcademica extends CActiveRecord
 			'formAcaProgramaAcademico' => 'Programa académico',
 			'formAcaFechaInicio' => 'Fecha de inicio',
 			'formAcaFechaFinalizacion' => 'Fecha finalización',
-			'formAcaTiempoFormacion' => 'Form Académica - Tiempo Formación',
+			'formAcaTiempoFormacion' => 'Tiempo formación',
 			'formAcaUnidadTiempoFormacion' => 'Unidad Tiempo Formación',
 			'formAcaPromedioPeriodos' => 'Promedio acumulativo de los periodos cursados',
 			'formAcaCiudad_idCiudad' => 'Ciudad Id Ciudad',

@@ -51,6 +51,9 @@ class FormacionAcademicaController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(isset($_POST['volver']))
+            $this->redirect(array('/formacionAcademica/admin'));
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -66,6 +69,7 @@ class FormacionAcademicaController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
+
 
 		if(isset($_POST['FormacionAcademica']))
 		{

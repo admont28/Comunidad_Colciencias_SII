@@ -52,6 +52,10 @@ class SiteController extends Controller
 	public function actionContact()
 	{
 		$model=new ContactForm;
+
+		if(isset($_POST['volver']))
+            $this->redirect(array('/site/index'));
+        
 		if(isset($_POST['ContactForm']))
 		{
 			$model->attributes=$_POST['ContactForm'];

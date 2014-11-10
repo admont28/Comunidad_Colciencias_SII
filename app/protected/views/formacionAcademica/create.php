@@ -15,6 +15,8 @@ $this->menu=array(
 */
 ?>
 
-<h1>Crear Formación Académica para: <?php echo Yii::app()->user->id ?> </h1>
+<div class="titulo1">
+	<h2>Formación</h2>
+</div>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

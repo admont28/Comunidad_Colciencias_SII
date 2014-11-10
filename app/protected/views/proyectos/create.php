@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 ?>
 <div class = "titulo1">
-	<h1>Proyectos</h1>
+	<h2>Proyectos</h2>
 </div>
 
 

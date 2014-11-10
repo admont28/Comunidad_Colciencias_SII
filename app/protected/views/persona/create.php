@@ -6,13 +6,10 @@ $this->breadcrumbs=array(
 	'Personas'=>array('admin'),
 	'Crear',
 );
-
-$this->menu=array(
-	array('label'=>'List Persona', 'url'=>array('index')),
-	array('label'=>'Manage Persona', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Crear Persona</h1>
+<div class="titulo1">
+	<h2>Crear persona</h2>
+</div>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

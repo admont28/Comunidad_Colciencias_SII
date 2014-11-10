@@ -14,7 +14,8 @@ class PersonaController extends Controller{
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-		);}
+		);
+	}
 
 	/**
 	 * Specifies the access control rules.
@@ -38,7 +39,8 @@ class PersonaController extends Controller{
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
-		);}
+		);
+	}
 
 	/**
 	 * Displays a particular model.
@@ -47,7 +49,8 @@ class PersonaController extends Controller{
 	public function actionView($id){
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-		));}
+		));
+	}
 
 	/**
 	 * Creates a new model.
@@ -62,11 +65,14 @@ class PersonaController extends Controller{
 		if(isset($_POST['Persona'])){
 			$model->attributes=$_POST['Persona'];
 			if($model->save()){
-				$this->redirect(array('admin'));}}
+				$this->redirect(array('admin'));
+			}
+		}
 
 		$this->render('create',array(
 			'model'=>$model,
-		));}
+		));
+	}
 
 	/**
 	 * Updates a particular model.
@@ -82,11 +88,14 @@ class PersonaController extends Controller{
 		if(isset($_POST['Persona'])){
 			$model->attributes=$_POST['Persona'];
 			if($model->save()){
-				$this->redirect(array('admin'));}}
+				$this->redirect(array('admin'));
+			}
+		}
 
 		$this->render('update',array(
 			'model'=>$model,
-		));}
+		));
+	}
 
 	/**
 	 * Deletes a particular model.
@@ -98,7 +107,9 @@ class PersonaController extends Controller{
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])){
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));}}
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		}
+	}
 
 	/**
 	 * Lists all models.
@@ -107,7 +118,8 @@ class PersonaController extends Controller{
 		$dataProvider=new CActiveDataProvider('Persona');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-		));}
+		));
+	}
 
 	/**
 	 * Manages all models.
@@ -116,11 +128,13 @@ class PersonaController extends Controller{
 		$model=new Persona('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Persona'])){
-			$model->attributes=$_GET['Persona'];}
+			$model->attributes=$_GET['Persona'];
+		}
 
 		$this->render('admin',array(
 			'model'=>$model,
-		));}
+		));
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -132,8 +146,10 @@ class PersonaController extends Controller{
 	public function loadModel($id){
 		$model=Persona::model()->findByPk($id);
 		if($model===null){
-			throw new CHttpException(404,'The requested page does not exist.');}
-		return $model;}
+			throw new CHttpException(404,'The requested page does not exist.');
+		}
+		return $model;
+	}
 
 	/**
 	 * Performs the AJAX validation.
@@ -142,7 +158,9 @@ class PersonaController extends Controller{
 	protected function performAjaxValidation($model){
 		if(isset($_POST['ajax']) && $_POST['ajax']==='persona-form'){
 			echo CActiveForm::validate($model);
-			Yii::app()->end();}}
+			Yii::app()->end();
+		}
+	}
 
 	/**
 	* función que lista los departmentos de un pais seleccionado
@@ -152,7 +170,8 @@ class PersonaController extends Controller{
 		$idPais = $_POST['Persona']['nacimientoPais_idPais'];
 		$lista = Departamento::model()->findAll('Pais_idPais = :idPais', array(':idPais'=>$idPais));
 		$lista = CHtml::listData($lista, 'idDepartamento','nombreDepartamento');
-		$this->listar($lista);}
+		$this->listar($lista);
+	}
 
 	/**
 	* función que lista las ciudades de un departamento seleccionado
@@ -162,7 +181,8 @@ class PersonaController extends Controller{
 		$idDepartamento = $_POST['Persona']['nacimientoDepartamento_idDepartamento'];
 		$lista = Ciudad::model()->findAll('Departamento_idDepartamento = :idDepartamento', array(':idDepartamento'=>$idDepartamento));
 		$lista = CHtml::listData($lista, 'idCiudad','nombreCiudad');
-		$this->listar($lista);}
+		$this->listar($lista);
+	}
 
 	/**
 	* función que lista los departmentos de un pais seleccionado
@@ -172,7 +192,8 @@ class PersonaController extends Controller{
 		$idPais = $_POST['Persona']['dirPerPais_idPais'];
 		$lista = Departamento::model()->findAll('Pais_idPais = :idPais', array(':idPais'=>$idPais));
 		$lista = CHtml::listData($lista, 'idDepartamento','nombreDepartamento');
-		$this->listar($lista);}
+		$this->listar($lista);
+	}
 
 	/**
 	* función que lista las ciudades de un departamento seleccionado
@@ -182,7 +203,8 @@ class PersonaController extends Controller{
 		$idDepartamento = $_POST['Persona']['dirPerDepartamento_idDepartamento'];
 		$lista = Ciudad::model()->findAll('Departamento_idDepartamento = :idDepartamento', array(':idDepartamento'=>$idDepartamento));
 		$lista = CHtml::listData($lista, 'idCiudad','nombreCiudad');
-		$this->listar($lista);}
+		$this->listar($lista);
+	}
 
 	/**
 	* función que lista los departmentos de un pais seleccionado
@@ -192,7 +214,8 @@ class PersonaController extends Controller{
 		$idPais = $_POST['Persona']['dirProPais_idPais'];
 		$lista = Departamento::model()->findAll('Pais_idPais = :idPais', array(':idPais'=>$idPais));
 		$lista = CHtml::listData($lista, 'idDepartamento','nombreDepartamento');
-		$this->listar($lista);}
+		$this->listar($lista);
+	}
 
 	/**
 	* función que lista las ciudades de un departamento seleccionado
@@ -202,7 +225,8 @@ class PersonaController extends Controller{
 		$idDepartamento = $_POST['Persona']['dirProDepartamento_idDepartamento'];
 		$lista = Ciudad::model()->findAll('Departamento_idDepartamento = :idDepartamento', array(':idDepartamento'=>$idDepartamento));
 		$lista = CHtml::listData($lista, 'idCiudad','nombreCiudad');
-		$this->listar($lista);}
+		$this->listar($lista);
+	}
 
 	/**
 	* función que lista los elementos del parametro $lista
@@ -212,4 +236,7 @@ class PersonaController extends Controller{
 		
 		echo CHtml::tag('option',array('value'=>''), CHtml::encode('--Seleccione una opción--'), true);
 		foreach ($lista as $valor => $nombre) {
-			echo CHtml::tag('option',array('value'=>$valor), CHtml::encode($nombre), true);}}}
+			echo CHtml::tag('option',array('value'=>$valor), CHtml::encode($nombre), true);
+		}
+	}
+}

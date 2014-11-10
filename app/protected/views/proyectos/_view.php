@@ -287,8 +287,6 @@
 			<!--
 			<?php $form=$this->beginWidget("CActiveForm",array("action"=>Yii::app()->createUrl("proyectos/view"))); ?>
 					<?php 
-				
-					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
 					?>
 					<?php echo $form->textField($modelParticipantes,'idParticipante'); ?>
 					<?php echo $form->error($modelParticipantes,'idParticipante'); ?>
@@ -303,7 +301,6 @@
 				<?php echo $form->labelEx($modelPersona,'cedulaPersona'); ?>
 				<?php 
 				
-					echo $form->dropDownList($modelPersona, 'cedulaPersona', $datos);
 				?>
 				<!--
 				<?php echo $form->textField($modelPersona,'cedulaPersona',array('size'=>25,'maxlength'=>25,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>

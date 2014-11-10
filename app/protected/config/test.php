@@ -8,11 +8,11 @@ return CMap::mergeArray(
 				'class'=>'system.test.CDbFixtureManager',
 			),
 			//uncomment the following to provide test database connection
-			'db'=>array(
+			/*'db'=>array(
 				'connectionString'=>'mysql:host=localhost';
 				dbname=comunidad_colciencias_persona;
 			),
-			
+			*/
 		),
 	)
 );

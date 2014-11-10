@@ -3379,3 +3379,25 @@ REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/proyectos/38247560
 in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\views\proyectos\_view.php (239)
 in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\views\proyectos\view.php (25)
 in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (75)
+2014/11/10 22:47:49 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\SiteController.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\SiteController.php (3)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/10 22:48:27 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\SiteController.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\SiteController.php (3)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)

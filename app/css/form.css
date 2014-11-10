@@ -235,6 +235,11 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 	
 }
 
+div#content .compactRadioGroup LABEL,
+div#content .compactRadioGroup INPUT {
+    display: inline;
+}
+
 .button, input[type="submit"] { 
       	background: rgb(13,54,52);
       	color: #fff;

@@ -51,6 +51,9 @@ class ProyectosController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(isset($_POST['volver']))
+			$this->redirect(array('/proyectos/admin'));
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -65,7 +68,7 @@ class ProyectosController extends Controller
 		$model=new Proyectos;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Proyectos']))
 		{
@@ -89,7 +92,7 @@ class ProyectosController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Proyectos']))
 		{

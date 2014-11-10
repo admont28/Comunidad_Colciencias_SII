@@ -1,87 +1,135 @@
 <?php
 /* @var $this ProyectosController */
-/* @var $data Proyectos */
+/* @var $model Proyectos */
+/* @var $form CActiveForm */
 ?>
 
-<div class="view">
+<div class="form">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idProyectos')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idProyectos), array('view', 'id'=>$data->idProyectos)); ?>
-	<br />
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'proyectos-form',
+	'enableClientValidation'=>false,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nombreProyecto')); ?>:</b>
-	<?php echo CHtml::encode($data->nombreProyecto); ?>
-	<br />
+	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipoProyecto')); ?>:</b>
-	<?php echo CHtml::encode($data->tipoProyecto); ?>
-	<br />
+	<?php echo $form->errorSummary($model); ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipoFinanciacion')); ?>:</b>
-	<?php echo CHtml::encode($data->tipoFinanciacion); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'nombreProyecto'); ?>
+		<?php echo $form->textField($model,'nombreProyecto',array('size'=>60,'maxlength'=>100, 'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
+		<?php echo $form->error($model,'nombreProyecto'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fuentesFinanciacion')); ?>:</b>
-	<?php echo CHtml::encode($data->fuentesFinanciacion); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'tipoProyecto'); ?>
+		<?php echo $form->textField($model,'tipoProyecto',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'tipoProyecto'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('participacionProyecto')); ?>:</b>
-	<?php echo CHtml::encode($data->participacionProyecto); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'tipoFinanciacion'); ?>
+		<?php echo $form->textField($model,'tipoFinanciacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'tipoFinanciacion'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('institucion')); ?>:</b>
-	<?php echo CHtml::encode($data->institucion); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'fuentesFinanciacion'); ?>
+		<?php echo $form->textField($model,'fuentesFinanciacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'fuentesFinanciacion'); ?>
+	</div>
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('participaciónInst')); ?>:</b>
-	<?php echo CHtml::encode($data->participaciónInst); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'participacionProyecto'); ?>
+		<?php echo $form->textField($model,'participacionProyecto',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'participacionProyecto'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('valorContrapartida')); ?>:</b>
-	<?php echo CHtml::encode($data->valorContrapartida); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'institucion'); ?>
+		<?php echo $form->textField($model,'institucion',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'institucion'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('numeroActoAdministrativo')); ?>:</b>
-	<?php echo CHtml::encode($data->numeroActoAdministrativo); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'participacionInst'); ?>
+		<?php echo $form->textField($model,'participacionInst',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'participaciónInst'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('anioInicio')); ?>:</b>
-	<?php echo CHtml::encode($data->anioInicio); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'valorContrapartida'); ?>
+		<?php echo $form->textField($model,'valorContrapartida'); ?>
+		<?php echo $form->error($model,'valorContrapartida'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('mesInicio')); ?>:</b>
-	<?php echo CHtml::encode($data->mesInicio); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'numeroActoAdministrativo'); ?>
+		<?php echo $form->textField($model,'numeroActoAdministrativo'); ?>
+		<?php echo $form->error($model,'numeroActoAdministrativo'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('anioFin')); ?>:</b>
-	<?php echo CHtml::encode($data->anioFin); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'anioInicio'); ?>
+		<?php echo $form->textField($model,'anioInicio',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'anioInicio'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('mesFin')); ?>:</b>
-	<?php echo CHtml::encode($data->mesFin); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'mesInicio'); ?>
+		<?php echo $form->textField($model,'mesInicio',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'mesInicio'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('resumen')); ?>:</b>
-	<?php echo CHtml::encode($data->resumen); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'anioFin'); ?>
+		<?php echo $form->textField($model,'anioFin',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'anioFin'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('integrantesProyecto')); ?>:</b>
-	<?php echo CHtml::encode($data->integrantesProyecto); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'mesFin'); ?>
+		<?php echo $form->textField($model,'mesFin',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'mesFin'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('certificado')); ?>:</b>
-	<?php echo CHtml::encode($data->certificado); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'resumen'); ?>
+		<?php echo $form->textField($model,'resumen',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'resumen'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('institucionesVinculadas')); ?>:</b>
-	<?php echo CHtml::encode($data->institucionesVinculadas); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'integrantesProyecto'); ?>
+		<?php echo $form->textField($model,'integrantesProyecto',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'integrantesProyecto'); ?>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('producciónCTI')); ?>:</b>
-	<?php echo CHtml::encode($data->producciónCTI); ?>
-	<br />
+	<div class="row">
+		<?php echo $form->labelEx($model,'certificado'); ?>
+		<?php echo $form->textField($model,'certificado',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'certificado'); ?>
+	</div>
 
-	*/ ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'institucionesVinculadas'); ?>
+		<?php echo $form->textField($model,'institucionesVinculadas',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'institucionesVinculadas'); ?>
+	</div>
 
-</div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'produccionCTI'); ?>
+		<?php echo $form->textField($model,'produccionCTI',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'produccionCTI'); ?>
+	</div>
+
+	<div class="row buttons" style="text-align: right; ">
+	 	<?php echo CHtml::submitButton('Volver',array('name'=>'volver')); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->

@@ -3,7 +3,7 @@
 /* @var $model Proyectos */
 
 $this->breadcrumbs=array(
-	'Proyectoses'=>array('index'),
+	'Proyectoses'=>array('admin'),
 	$model->idProyectos,
 );
 
@@ -16,8 +16,11 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Proyectos #<?php echo $model->idProyectos; ?></h1>
+<h1>Ver Mis Proyectos #<?php echo $model->idProyectos; ?></h1>
 
+<?php $this->renderPartial('_view', array('model'=>$model)); ?> 
+
+<!--
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -42,3 +45,4 @@ $this->menu=array(
 		'produccionCTI',
 	),
 )); ?>
+-->

@@ -7,7 +7,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'contact-form',
+	'id'=>'fomacion-form',
 	'enableClientValidation'=>false,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,

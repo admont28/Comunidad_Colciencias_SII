@@ -7,15 +7,6 @@ $this->breadcrumbs=array(
 	$model->idPersona=>array('view','id'=>$model->idPersona),
 	'Actualizar',
 );
-
-$this->menu=array(
-	/*
-	array('label'=>'Listar Persona', 'url'=>array('index')),
-	array('label'=>'Crear Persona', 'url'=>array('create')),
-	array('label'=>'Ver Persona', 'url'=>array('view', 'id'=>$model->idPersona)),
-	array('label'=>'Administrar Persona', 'url'=>array('admin')),
-	*/
-);
 ?>
 
 <div class="titulo1">

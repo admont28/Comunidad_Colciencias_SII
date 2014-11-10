@@ -7,7 +7,6 @@ $this->breadcrumbs=array(
 	$model->idProyectos=>array('view','id'=>$model->idProyectos),
 	'Update',
 );
-
 ?>
 
 <div class="titulo1">

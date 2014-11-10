@@ -45,8 +45,7 @@
  * @property integer $dirPerPais_idPais
  * @property integer $dirPerDepartamento_idDepartamento
  * @property integer $dirPerCiudad_idCiudad
- * @property Proyectos $proyectosIdProyectos
- * @property Proyectos $proyectosIdProyectos1
+ * @property integer $participacionProyectos_idProyectos
  *
  * The followings are the available model relations:
  * @property FormacionAcademica[] $formacionAcademicas
@@ -61,8 +60,8 @@
  * @property Pais $nacimientoPaisIdPais
  * @property Pais $dirProPaisIdPais
  * @property Pais $dirPerPaisIdPais
- * @property Proyectos $proyectosIdProyectos
- * @property Proyectos $proyectosIdProyectos1
+ * @property Proyectos $participacionProyectosIdProyectos
+ * @property Proyectos[] $proyectoses
  */
 class Persona extends CActiveRecord
 {
@@ -118,6 +117,8 @@ class Persona extends CActiveRecord
 			'nacimientoPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'nacimientoPais_idPais'),
 			'dirProPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'dirProPais_idPais'),
 			'dirPerPaisIdPais' => array(self::BELONGS_TO, 'Pais', 'dirPerPais_idPais'),
+			'participacionProyectosIdProyectos' => array(self::BELONGS_TO, 'Proyectos', 'participacionProyectos_idProyectos'),
+			'proyectoses' => array(self::HAS_MANY, 'Proyectos', 'duenoPersona_idPersona'),
 		);
 	}
 
@@ -169,6 +170,7 @@ class Persona extends CActiveRecord
 			'dirPerPais_idPais' => 'País de nacimiento',
 			'dirPerDepartamento_idDepartamento' => 'Departamento',
 			'dirPerCiudad_idCiudad' => 'Ciudad',
+			'participacionProyectos_idProyectos' => 'Participacion Proyectos Id Proyectos',
 		);
 	}
 
@@ -231,6 +233,7 @@ class Persona extends CActiveRecord
 		$criteria->compare('dirPerPais_idPais',$this->dirPerPais_idPais);
 		$criteria->compare('dirPerDepartamento_idDepartamento',$this->dirPerDepartamento_idDepartamento);
 		$criteria->compare('dirPerCiudad_idCiudad',$this->dirPerCiudad_idCiudad);
+		$criteria->compare('participacionProyectos_idProyectos',$this->participacionProyectos_idProyectos);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "proyectos".
+ * This is the model class for table "Proyectos".
  *
- * The followings are the available columns in table 'proyectos':
+ * The followings are the available columns in table 'Proyectos'.:
  * @property integer $idProyectos
  * @property string $nombreProyecto
  * @property string $tipoProyecto
@@ -23,10 +23,11 @@
  * @property string $certificado
  * @property string $institucionesVinculadas
  * @property string $produccionCTI
+ * @property integer $duenoPersona_idPersona
  *
  * The followings are the available model relations:
  * @property Persona[] $personas
- * @property Persona[] $personas1
+ * @property Persona $duenoPersonaIdPersona
  */
 class Proyectos extends CActiveRecord
 {
@@ -35,7 +36,7 @@ class Proyectos extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'proyectos';
+		return 'Proyectos';
 	}
 
 	/**
@@ -47,12 +48,13 @@ class Proyectos extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idProyectos, nombreProyecto, tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, institucion, participacionInst, valorContrapartida, numeroActoAdministrativo, anioInicio, mesInicio, anioFin, mesFin, resumen, certificado', 'required'),
-			array('idProyectos, valorContrapartida, numeroActoAdministrativo', 'numerical', 'integerOnly'=>true),
+			array('idProyectos, valorContrapartida, numeroActoAdministrativo, duenoPersona_idPersona', 'numerical', 'integerOnly'=>true),
 			array('nombreProyecto, institucion, certificado, institucionesVinculadas, produccionCTI', 'length', 'max'=>100),
 			array('tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, participacionInst, anioInicio, mesInicio, anioFin, mesFin', 'length', 'max'=>45),
 			array('resumen, integrantesProyecto', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
+			array('idProyectos, nombreProyecto, tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, institucion, participacionInst, valorContrapartida, numeroActoAdministrativo, anioInicio, mesInicio, anioFin, mesFin, resumen, integrantesProyecto, certificado, institucionesVinculadas, produccionCTI, duenoPersona_idPersona', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,8 +66,9 @@ class Proyectos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'personas' => array(self::HAS_MANY, 'Persona', 'Proyectos_idProyectos'),
-			'personas1' => array(self::HAS_MANY, 'Persona', 'Proyectos_idProyectos1'),
+			'personas' => array(self::HAS_MANY, 'Persona', 'participacionProyectos_idProyectos'),
+			'duenoPersonaIdPersona' => array(self::BELONGS_TO, 'Persona', 'duenoPersona_idPersona'),),
+
 		);
 	}
 
@@ -94,6 +97,7 @@ class Proyectos extends CActiveRecord
 			'certificado' => 'Certificado expedido por la instituci&#243n que presta el servicio de extensi&#243n',
 			'institucionesVinculadas' => 'Instituciones vinculadas al proyecto',
 			'produccionCTI' => 'Producci&#243n CTI resultado del proyecto o programa',
+			'duenoPersona_idPersona' => 'Dueno Persona Id Persona',
 		);
 	}
 
@@ -134,6 +138,7 @@ class Proyectos extends CActiveRecord
 		$criteria->compare('certificado',$this->certificado,true);
 		$criteria->compare('institucionesVinculadas',$this->institucionesVinculadas,true);
 		$criteria->compare('produccionCTI',$this->produccionCTI,true);
+		$criteria->compare('duenoPersona_idPersona',$this->duenoPersona_idPersona);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

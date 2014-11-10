@@ -45,6 +45,8 @@
  * @property integer $dirPerPais_idPais
  * @property integer $dirPerDepartamento_idDepartamento
  * @property integer $dirPerCiudad_idCiudad
+ * @property Proyectos $proyectosIdProyectos
+ * @property Proyectos $proyectosIdProyectos1
  *
  * The followings are the available model relations:
  * @property FormacionAcademica[] $formacionAcademicas
@@ -59,6 +61,8 @@
  * @property Pais $nacimientoPaisIdPais
  * @property Pais $dirProPaisIdPais
  * @property Pais $dirPerPaisIdPais
+ * @property Proyectos $proyectosIdProyectos
+ * @property Proyectos $proyectosIdProyectos1
  */
 class Persona extends CActiveRecord
 {

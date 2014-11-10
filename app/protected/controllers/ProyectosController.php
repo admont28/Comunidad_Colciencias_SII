@@ -73,8 +73,13 @@ class ProyectosController extends Controller
 		if(isset($_POST['Proyectos']))
 		{
 			$model->attributes=$_POST['Proyectos'];
-			if($model->save())
+			$cedulaPersona = Yii::app()->user->id;
+			$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
+			$usuario->Proyectos_idProyectos = $model->idProyectos;
+			if($model->save()){
+				$usuario->update();
 				$this->redirect(array('view','id'=>$model->idProyectos));
+			}
 		}
 
 		$this->render('create',array(
@@ -113,7 +118,12 @@ class ProyectosController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model = $this->loadModel($id);
+		$cedulaPersona = Yii::app()->user->id;
+		$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
+		$usuario->Proyectos_idProyectos = null;
+		$usuario->update();
+		$model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

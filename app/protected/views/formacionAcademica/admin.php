@@ -7,10 +7,12 @@ $this->breadcrumbs=array(
 	'Administrar',
 );
 
+/*
 $this->menu=array(
-	array('label'=>'Listar Formación Académica', 'url'=>array('index')),
+	array('label'=>'Listar Formación Académica', 'url'=>array('admin')),
 	array('label'=>'Crear Formación Académica', 'url'=>array('create')),
 );
+*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,7 +28,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administrar Formación Académica</h1>
+<div class="titulo1">
+	<h2>Formación</h2>
+</div>
 
 <p>
 Opcionalmente, puede introducir un operador de comparación (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -45,7 +49,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
-</div><!-- search-form -->
+</div><!-- search-form --> 
 
 <div class="tituloTabla">
 	<h2>TRAYECTORIA ESCOLAR </h2>
@@ -93,3 +97,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+
+<h2 style="text-align: right;"> 
+	<?php echo CHtml::button('Agregar', array('submit' => array('FormacionAcademica/create'),'class'=>'button')); ?> 
+</h1>
+

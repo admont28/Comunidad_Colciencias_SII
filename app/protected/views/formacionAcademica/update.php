@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 <div class="titulo1">
-	<h2>Formación</h2>
+	<h2>Actualizar Formación Número: <?php echo $model->idFormacionAcademica; ?></h2>
 </div>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

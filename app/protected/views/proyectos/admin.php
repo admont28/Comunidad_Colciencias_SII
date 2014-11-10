@@ -7,10 +7,12 @@ $this->breadcrumbs=array(
 	'Administrar',
 );
 
+/*
 $this->menu=array(
 	array('label'=>'Lista de proyectos', 'url'=>array('index')),
 	array('label'=>'Crear un proyecto', 'url'=>array('create')),
 );
+*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,7 +28,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administrar Proyectos</h1>
+<div class="titulo1">
+	<h2>Proyectos</h2>
+</div>
 
 <!--<p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -70,5 +74,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		array(
 			'class'=>'CButtonColumn',
 		),
-	),
-)); ?>
+))); ?>
+
+<h2 style="text-align: right;"> 
+	<?php echo CHtml::button('Agregar', array('submit' => array('Proyectos/create'),'class'=>'button')); ?> 
+</h1>

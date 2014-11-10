@@ -7,10 +7,12 @@ $this->breadcrumbs=array(
 	'Administrar',
 );
 
+/*
 $this->menu=array(
 	array('label'=>'List Persona', 'url'=>array('index')),
 	array('label'=>'Create Persona', 'url'=>array('create')),
 );
+*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -25,9 +27,9 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
-<h1>Administrar Persona</h1>
-
+<div class="titulo1">
+	<h2>Persona</h2>
+</div>
 <p>
 Opcionalmente, puede introducir un operador de comparación (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) al principio de cada uno de los valores de búsqueda para especificar cómo se debe hacer la comparación.
@@ -92,6 +94,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		*/
 		array(
 			'class'=>'CButtonColumn',
+			'template'=>'{update} {delete}',
 		),
-	),
-)); ?>
+))); ?>
+
+<h2 style="text-align: right;"> 
+	<?php echo CHtml::button('Agregar', array('submit' => array('Persona/create'),'class'=>'button')); ?> 
+</h1>

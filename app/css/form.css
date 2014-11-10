@@ -241,3 +241,10 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
       	border-radius: 10px;
       	padding: 5px;
 }
+
+.enlace{
+	color: #fff;
+	border-radius: 10px;
+    padding: 5px;
+    text-align: right;
+}

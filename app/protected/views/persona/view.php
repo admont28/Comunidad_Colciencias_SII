@@ -7,6 +7,7 @@ $this->breadcrumbs=array(
 	$model->idPersona,
 );
 
+/*
 $this->menu=array(
 	array('label'=>'List Persona', 'url'=>array('index')),
 	array('label'=>'Create Persona', 'url'=>array('create')),
@@ -14,7 +15,9 @@ $this->menu=array(
 	array('label'=>'Delete Persona', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idPersona),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Persona', 'url'=>array('admin')),
 );
+*/
 ?>
+
 
 <h1>Ver Persona #<?php echo $model->idPersona; ?></h1>
 

@@ -47,7 +47,7 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'formAcaInstitucion'); ?>
-			<?php echo $form->textField($model,'formAcaInstitucion',array('size'=>60,'maxlength'=>100,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly', 'readonly'=>'readonly')); ?>
+			<?php echo $form->textField($model,'formAcaInstitucion',array('size'=>60,'maxlength'=>100,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);', 'readonly'=>'readonly')); ?>
 			<?php echo $form->error($model,'formAcaInstitucion'); ?>
 		</div>
 

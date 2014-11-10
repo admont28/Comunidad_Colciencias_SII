@@ -67,8 +67,7 @@ class Proyectos extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'personas' => array(self::HAS_MANY, 'Persona', 'participacionProyectos_idProyectos'),
-			'duenoPersonaIdPersona' => array(self::BELONGS_TO, 'Persona', 'duenoPersona_idPersona'),),
-
+			'duenoPersonaIdPersona' => array(self::BELONGS_TO, 'Persona', 'duenoPersona_idPersona'),
 		);
 	}
 

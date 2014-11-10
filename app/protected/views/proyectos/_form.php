@@ -218,6 +218,12 @@
 		<?php echo $form->error($model,'produccionCTI'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'duenoPersona_idPersona'); ?>
+		<?php echo $form->textField($model,'duenoPersona_idPersona'); ?>
+		<?php echo $form->error($model,'duenoPersona_idPersona'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Agregar' : 'Guardar'); ?>
 	</div>

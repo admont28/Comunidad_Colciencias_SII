@@ -22,7 +22,7 @@ $this->menu=array(
 	<h2>Ver Proyecto Número: <?php echo $model->idProyectos; ?></h2>
 </div>
 
-<?php $this->renderPartial('_view', array('model'=>$model)); ?> 
+<?php $this->renderPartial('_view', array('model'=>$model,'modelParticipantes'=>$modelParticipantes)); ?> 
 
 <!--
 <?php $this->widget('zii.widgets.CDetailView', array(

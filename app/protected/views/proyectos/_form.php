@@ -17,7 +17,7 @@
 
 	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary(array($model,$modelParticipantes)); ?>
 	
 	<div style="margin-left: 5px;">
 		<div class="row">
@@ -227,11 +227,23 @@
 	<h1 class="titulo2">Información adicional</h1>
 
 	<div class="columna2">
+		<!--
 		<div class="row">
 				<?php echo $form->labelEx($model,'integrantesProyecto'); ?>
 				<?php echo $form->textArea($model,'integrantesProyecto',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 				<?php echo $form->error($model,'integrantesProyecto'); ?>
 		</div>
+		-->
+		<div class="row">
+					<?php echo $form->labelEx($model,'integrantesProyecto'); ?>
+					<?php 
+					//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
+					?>
+					<?php echo $form->textArea($modelParticipantes,'idParticipante',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+					<?php echo $form->error($modelParticipantes,'idParticipante'); ?>
+					<!-- <?php echo CHtml::submitButton("Agregar")?> -->
+	</div>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'produccionCTI'); ?>

@@ -28,7 +28,7 @@ class ProyectosController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','agregar','volver'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -51,11 +51,27 @@ class ProyectosController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$modelParticipantes = new ParticipantesForm;
+
+
+		if(isset($_POST['ParticipantesForm'])){
+			//$modelParticipantes->attributes =$_POST['ParticipantesForm'];
+			$modelParticipantes->idParticipante = $_POST['ParticipantesForm']['idParticipante'];
+			if($modelParticipantes->idParticipante != null){
+			$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
+			//$id =  $modelPersona->idPersona;
+			$modelPersona->participacionProyectos_idProyectos = $id;
+			if($modelPersona->update())
+				$this->redirect(array('view','id'=>$id));
+			}
+		}
+		
 		if(isset($_POST['volver']))
 			$this->redirect(array('/proyectos/admin'));
 		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'modelParticipantes'=>$modelParticipantes,
 		));
 	}
 
@@ -66,6 +82,7 @@ class ProyectosController extends Controller
 	public function actionCreate()
 	{
 		$model=new Proyectos;
+		$modelParticipantes = new ParticipantesForm;
 
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
@@ -77,12 +94,24 @@ class ProyectosController extends Controller
 			$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 			$model->duenoPersona_idPersona = $usuario->idPersona;
 			if($model->save()){
+				if(isset($_POST['ParticipantesForm'])){
+				//$modelParticipantes->attributes =$_POST['ParticipantesForm'];
+					$modelParticipantes->idParticipante = $_POST['ParticipantesForm']['idParticipante'];
+					if($modelParticipantes->idParticipante != null){
+						$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
+						$id =  $model->idProyectos;
+						$modelPersona->participacionProyectos_idProyectos = $id;
+						if($modelPersona->update())
+							$this->redirect(array('view','id'=>$id));
+					}
+				}
 				$this->redirect(array('view','id'=>$model->idProyectos));
 			}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'modelParticipantes'=>$modelParticipantes,
 		));
 	}
 
@@ -175,6 +204,20 @@ class ProyectosController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	
+	public function actionAgregar(){
+
+		$modelParticipantes = new ParticipantesForm;
+
+		if(isset($_POST['ParticipantesForm'])){
+			$modelParticipantes->attributes =$_POST['ParticipantesForm'];
+			$modelPersona = Persona::model()->findByPk($modelParticipantes->id);
+			$modelPersona->participacionProyectos_idProyectos = $modelPersona->$id;
+			if($modelPersona->update())
+				$this->redirect(array('/proyectos/admin'));
 		}
 	}
 }

@@ -16,7 +16,7 @@
 
 	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary(array($model,$modelParticipantes)); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombreProyecto'); ?>
@@ -126,9 +126,84 @@
 		<?php echo $form->error($model,'produccionCTI'); ?>
 	</div>
 
-	<div class="row buttons" style="text-align: right; ">
-	 	<?php echo CHtml::submitButton('Volver',array('name'=>'volver')); ?>
+
+	
+	<div class="row">
+		<?php $form=$this->beginWidget("CActiveForm",array("action"=>Yii::app()->createUrl("proyectos/view"))); ?>
+					<?php 
+					//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
+					?>
+					<?php echo $form->textField($modelParticipantes,'idParticipante'); ?>
+					<?php echo $form->error($modelParticipantes,'idParticipante'); ?>
+					<?php echo CHtml::submitButton("Agregar")?>
+		<?php $this->endWidget();?>
 	</div>
+
+	
+	<!--
+	<div class="row">
+		<?php 
+			$this->beginWidget('zii.widgets.jui.CJuiDialog', array(
+				"id"=>'ventanaParticipantes',
+				"options"=>array(
+						"title"=>'Agregar participantes al proyecto',
+						"width"=>400,
+						"height"=>400,
+						"autoOpen"=>false,
+						"resizable"=>true,
+						"modal"=>true,
+						"overLay"=>array(
+								'backgroundColor'=>'#000',
+								'opacity'=>'0,5',
+								),
+						),
+					));
+		?>
+			<!--
+			<?php $form=$this->beginWidget("CActiveForm",array("action"=>Yii::app()->createUrl("proyectos/view"))); ?>
+					<?php 
+					//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
+					?>
+					<?php echo $form->textField($modelParticipantes,'idParticipante'); ?>
+					<?php echo $form->error($modelParticipantes,'idParticipante'); ?>
+					<?php echo CHtml::submitButton("Agregar")?>
+			<?php $this->endWidget();?>
+
+			
+			<?php
+			//echo $this->renderPartial('_formParticipantes', array('modelParticipantes'=>$modelParticipantes));
+			/*
+			?>
+				<?php echo $form->labelEx($modelPersona,'cedulaPersona'); ?>
+				<?php 
+				$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+					echo $form->dropDownList($modelPersona, 'cedulaPersona', $datos);
+				?>
+				<!--
+				<?php echo $form->textField($modelPersona,'cedulaPersona',array('size'=>25,'maxlength'=>25,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
+				-->
+				<?php echo $form->error($modelPersona,'cedulaPersona'); ?>
+				<!-- <?php echo CHtml::submitButton('Agregar',array('name'=>'agregar')); ?> -->
+				<?php echo CHtml::link('Link Text',array('Proyectos/agregar',
+                                         'param1'=>$modelPersona->nombrePersona)); ?>
+				<?php
+			/*
+				echo $form->labelEx($modelPersona,'cedulaPersona');
+				$datos = Persona::model()->findAll();
+				echo $form->dropDownList($modelPersona, 'cedulaPersona', $datos);
+			*/
+			$this->endWidget('zii.widgets.jui.CJuiDialog');
+		?>
+
+		<?php echo CHtml::link('Agregar participante', '', array('onclick'=>'$("#ventanaParticipantes").dialog("open"); return false;'));?>
+	</div>
+	-->
+	<div class="row buttons" style="text-align: right; ">
+	 	<?php echo CHtml::submitButton('Volver', array('submit' => array('proyectos/admin'))); ?>
+	</div>
+	
 
 <?php $this->endWidget(); ?>
 

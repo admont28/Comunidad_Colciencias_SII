@@ -71,7 +71,7 @@ class PersonaController extends Controller
 		{
 			$model->attributes=$_POST['Persona'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idPersona));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('create',array(

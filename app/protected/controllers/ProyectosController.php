@@ -28,7 +28,7 @@ class ProyectosController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','agregar','volver'),
+				'actions'=>array('index','view','agregar','volver','limpiar'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -125,6 +125,7 @@ class ProyectosController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$modelParticipantes = new ParticipantesForm;
 
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
@@ -133,13 +134,26 @@ class ProyectosController extends Controller
 		{
 			$model->attributes=$_POST['Proyectos'];
 			$model->certificado=CUploadedFile::getInstance($model,'image');
-			if($model->save())
+			if($model->save()){
+				if(isset($_POST['ParticipantesForm'])){
+				//$modelParticipantes->attributes =$_POST['ParticipantesForm'];
+					$modelParticipantes->idParticipante = $_POST['ParticipantesForm']['idParticipante'];
+					if($modelParticipantes->idParticipante != null){
+						$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
+						$id =  $model->idProyectos;
+						$modelPersona->participacionProyectos_idProyectos = $id;
+						if($modelPersona->update())
+							$this->redirect(array('view','id'=>$id));
+					}
+				}
 				$this->redirect(array('view','id'=>$model->idProyectos));
 				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);
+			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+			'modelParticipantes'=>$modelParticipantes,
 		));
 	}
 
@@ -150,7 +164,20 @@ class ProyectosController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$modelProyecto = $this->loadModel($id);
+		$criteria = new CDbCriteria();
+		$criteria->select = 'idPersona, cedulaPersona, participacionProyectos_idProyectos';
+		$criteria->condition = 'participacionProyectos_idProyectos= :proyectos';
+		$criteria->params = array(':proyectos' => $id);
+		$comments= Persona::model()->findAll($criteria);
+
+		foreach ($comments as $key) {
+			$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$key->cedulaPersona));
+			$modelPersona->participacionProyectos_idProyectos = null;
+			$modelPersona->update();
+		}
+
+		$modelProyecto->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -212,16 +239,17 @@ class ProyectosController extends Controller
 	}
 
 	
-	public function actionAgregar(){
+	public function actionLimpiar(){
 
+		$model = new Proyectos;
 		$modelParticipantes = new ParticipantesForm;
 
-		if(isset($_POST['ParticipantesForm'])){
-			$modelParticipantes->attributes =$_POST['ParticipantesForm'];
-			$modelPersona = Persona::model()->findByPk($modelParticipantes->id);
-			$modelPersona->participacionProyectos_idProyectos = $modelPersona->$id;
-			if($modelPersona->update())
-				$this->redirect(array('/proyectos/admin'));
-		}
+		// Uncomment the following line if AJAX validation is needed
+		$this->performAjaxValidation($model);
+
+		$this->render('update',array(
+			'model'=>$model,
+			'modelParticipantes'=>$modelParticipantes,
+		));
 	}
 }

@@ -21,4 +21,4 @@ $this->menu=array(
 	<h2>Actualizar Proyecto Número: <?php echo $model->idProyectos; ?></h2>
 </div>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model,'modelParticipantes'=>$modelParticipantes)); ?>

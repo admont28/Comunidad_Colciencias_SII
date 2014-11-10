@@ -265,6 +265,7 @@
 	<div class="separadorNegro"></div>
 
 	<div class="row buttons"  style="text-align: right;">
+		<?php echo CHtml::submitButton('Volver', array('submit' => array('proyectos/admin'))); ?>
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Agregar' : 'Guardar'); ?>
 	</div>
 

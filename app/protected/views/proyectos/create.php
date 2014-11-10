@@ -7,12 +7,15 @@ $this->breadcrumbs=array(
 	'create',
 );
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Lista de proyectos', 'url'=>array('index')),
 	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
 );
+*/
 ?>
+<div class = "titulo1">
+	<h1>Proyectos</h1>
+</div>
 
-<h1>Create Proyectos</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

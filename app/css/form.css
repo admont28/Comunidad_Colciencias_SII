@@ -94,6 +94,13 @@ div.columna2{
 	float: left;
 }
 
+div.columnaInterna{
+	margin-left: 3px;
+	margin-right: 90px;
+	display: inline-block;
+
+}
+
 div.separador{
 	border: 1px solid;
 	margin-top: 50px;
@@ -101,7 +108,15 @@ div.separador{
 	clear: left;
 	overflow: hidden;
 	color: #fff;
+}
 
+div.separadorNegro{
+	border: 1px solid;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	clear: left;
+	overflow: hidden;
+	color: #000;
 }
 
 h2.titulo2

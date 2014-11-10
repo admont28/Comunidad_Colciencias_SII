@@ -13,6 +13,7 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>true,
+	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
@@ -25,9 +26,9 @@
 			<div class ="compactRadioGroup">
 				<?php
 	                echo $form->radioButtonList($model, 'tipoProyecto',
-	                    array(  'Investigacion y desarrollo' => ' | Investigación y desarrollo',
-	                            'Investigacion, desarrollo e innovación' => ' | Investigación, desarrollo e innovación',
-	                            'Extension y respunsabilidad social CTI' => ' | Extension y respunsabilidad social CTI' ) );
+	                    array(  'Investigación y desarrollo' => ' | Investigación y desarrollo',
+	                            'Investigación, desarrollo e innovación' => ' | Investigación, desarrollo e innovación',
+	                            'Extensión y responsabilidad social CTI' => ' | Extension y respunsabilidad social CTI' ) );
 	            ?>
 			</div>
 		</div>
@@ -105,33 +106,33 @@
 			<?php
 				$niveles = array('Interna'=>' | Interna', 'Externa'=>' | Externa');
 		        echo $form->radioButtonList($model,'fuentesFinanciacion',$niveles,array('separator'=>' ',
-					'labelOptions'=>array('style'=>'display:inline;')));
-		        ?>
+					'labelOptions'=>array('style'=>'display:inline;'))); 
+				?>
 				<!-- <?php echo $form->textField($model,'fuentesFinanciacion',array('size'=>10,'maxlength'=>10)); ?> -->
 				<?php echo $form->error($model,'fuentesFinanciacion'); ?>
 		</div>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'institucion'); ?>
-			<?php echo $form->textField($model,'institucion',array('size'=>60,'maxlength'=>100)); ?>
+			<?php echo $form->textField($model,'institucion',array('size'=>60,'maxlength'=>100, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 			<?php echo $form->error($model,'institucion'); ?>
 		</div>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'participacionInst'); ?>
-			<?php echo $form->textField($model,'participacionInst',array('size'=>45,'maxlength'=>45)); ?>
+			<?php echo $form->textField($model,'participacionInst',array('size'=>45,'maxlength'=>45, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 			<?php echo $form->error($model,'participaciónInst'); ?>
 		</div>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'valorContrapartida'); ?>
-			<?php echo $form->textField($model,'valorContrapartida'); ?>
+			<?php echo $form->textField($model,'valorContrapartida',array('style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 			<?php echo $form->error($model,'valorContrapartida'); ?>
 		</div>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'numeroActoAdministrativo'); ?>
-			<?php echo $form->textField($model,'numeroActoAdministrativo'); ?>
+			<?php echo $form->textField($model,'numeroActoAdministrativo', array('style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>		
 			<?php echo $form->error($model,'numeroActoAdministrativo'); ?>
 		</div>
 
@@ -143,7 +144,7 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'certificado'); ?>
-			<?php echo $form->textField($model,'certificado',array('size'=>60,'maxlength'=>100, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+			<?php echo CHtml::activeFileField($model,'image'); ?>
 			<?php echo $form->error($model,'certificado'); ?>
 		</div>
 	</div>
@@ -268,5 +269,6 @@
 	</div>
 
 <?php $this->endWidget(); ?>
+
 
 </div><!-- form -->

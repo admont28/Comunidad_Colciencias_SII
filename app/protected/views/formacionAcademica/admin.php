@@ -3,7 +3,7 @@
 /* @var $model FormacionAcademica */
 
 $this->breadcrumbs=array(
-	'Formación Académica'=>array('index'),
+	'Formación Académica'=>array('admin'),
 	'Administrar',
 );
 

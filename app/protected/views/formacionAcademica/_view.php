@@ -460,6 +460,27 @@
 
 	<h2 class="titulo2"> Información adicional </h2>
 
+	<div class="columna1">
+		<div class="row">
+			<label> Palabras clave</label>
+			<textarea name="textarea" style="border-radius: 7px; border-color: rgb(211,211,211);" maxlenght="300" rows="5" cols="30"></textarea>
+		</div>
+	</div>
+
+	<div class="columna1">
+		<div class="row">
+			<label> Areas de conocimiento</label>
+			<textarea name="textarea" style="border-radius: 7px; border-color: rgb(211,211,211);" maxlenght="300" rows="5" cols="30"></textarea>
+		</div>
+	</div>
+
+	<div class="columna1">
+		<div class="row">
+			<label> Sectores de aplicación</label>
+			<textarea name="textarea" style="border-radius: 7px; border-color: rgb(211,211,211);" maxlenght="300" rows="5" cols="30"></textarea>
+		</div>
+	</div>
+	
 	<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'Persona_idPersona'); ?>

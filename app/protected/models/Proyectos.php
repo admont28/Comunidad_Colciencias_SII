@@ -44,8 +44,8 @@ class Proyectos extends CActiveRecord{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idProyectos, nombreProyecto, tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, institucion, participacionInst, valorContrapartida, numeroActoAdministrativo, anioInicio, mesInicio, anioFin, mesFin, resumen, certificado', 'required'),
-			array('idProyectos, valorContrapartida, numeroActoAdministrativo, duenoPersona_idPersona', 'numerical', 'integerOnly'=>true),
+			array('idProyectos, nombreProyecto, tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, institucion, participacionInst, valorContrapartida, numeroActoAdministrativo, anioInicio, mesInicio, anioFin, mesFin, resumen, certificado', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
+			array('idProyectos, valorContrapartida, numeroActoAdministrativo, duenoPersona_idPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			array('nombreProyecto, institucion, certificado, institucionesVinculadas, produccionCTI', 'length', 'max'=>100),
 			array('tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, participacionInst, anioInicio, mesInicio, anioFin, mesFin', 'length', 'max'=>45),
 			array('resumen, integrantesProyecto', 'length', 'max'=>255),

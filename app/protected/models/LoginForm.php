@@ -20,7 +20,7 @@ class LoginForm extends CFormModel{
 	public function rules(){
 		return array(
 			// username and password are required
-			array('username, password', 'required'),
+			array('username, password', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated

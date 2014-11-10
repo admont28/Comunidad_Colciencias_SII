@@ -57,7 +57,7 @@ class ProyectosController extends Controller{
 				$this->redirect(array('view','id'=>$id));}}}
 		
 		if(isset($_POST['volver'])){
-			$this->redirect(array('/proyectos/admin'))};
+			$this->redirect(array('/proyectos/admin'));}
 		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -176,7 +176,7 @@ class ProyectosController extends Controller{
 		$model=new Proyectos('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Proyectos'])){
-			$model->attributes=$_GET['Proyectos']};
+			$model->attributes=$_GET['Proyectos'];}
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -192,7 +192,7 @@ class ProyectosController extends Controller{
 	public function loadModel($id){
 		$model=Proyectos::model()->findByPk($id);
 		if($model===null){
-			throw new CHttpException(404,'The requested page does not exist.')};
+			throw new CHttpException(404,'The requested page does not exist.');}
 		return $model;}
 
 	/**
@@ -217,3 +217,4 @@ class ProyectosController extends Controller{
 			'modelParticipantes'=>$modelParticipantes,
 		));
 	}
+}

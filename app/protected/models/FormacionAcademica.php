@@ -55,7 +55,7 @@ class FormacionAcademica extends CActiveRecord{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('formAcaCiudad_idCiudad, formComCiudad_idCiudad, Persona_idPersona', 'required'),
+			array('formAcaCiudad_idCiudad, formComCiudad_idCiudad, Persona_idPersona', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
 			array('formAcaIntensidadHoraria, formAcaTiempoFormacion, formAcaCiudad_idCiudad, formComTiempoFormacion, formComCiudad_idCiudad, Persona_idPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			array('formAcaBecado, formAcaPromedioPeriodos, formComPromedioPeriodos', 'length', 'max'=>2),
 			array('formAcaInstitucionOfreceBeca, formAcaInstitucion, formAcaProgramaAcademico, formComInstitucion, formComProgramaAcademico', 'length', 'max'=>100),
@@ -64,7 +64,12 @@ class FormacionAcademica extends CActiveRecord{
 			array('nombreIdioma', 'length', 'max'=>45,'message'=>  Yii::t('es', 'El campo no puede exceder los 45 caracteres')),
 			array('formComTituloObtenido', 'length', 'max'=>30,'message'=>  Yii::t('es', 'El campo no puede exceder los 30 caracteres')),
 			array('formAcaFechaObtencionTitulo, formAcaFechaInicio, formAcaFechaFinalizacion, formComFechaInicio, formComFechaFinalizacon', 'safe'),
+			
 			array('formAcaFechaFinalizacion','compare','compareAttribute'=>'formAcaFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio')),
+			array('formAcaFechaObtencionTitulo','compare','compareAttribute'=>'formAcaFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de obtención del titulo debe ser mayor que la fecha de inicio')),
+			
+			array('formComFechaFinalizacon','compare','compareAttribute'=>'formComFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio de la formación complementaria')),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idFormacionAcademica, formAcaIntensidadHoraria, formAcaFechaObtencionTitulo, formAcaBecado, formAcaInstitucionOfreceBeca, formAcaNivelFormacion, formAcaInstitucion, formAcaProgramaAcademico, formAcaFechaInicio, formAcaFechaFinalizacion, formAcaTiempoFormacion, formAcaUnidadTiempoFormacion, formAcaPromedioPeriodos, formAcaCiudad_idCiudad, nombreIdioma, nivelEscritura, nivelLectura, nivelHabla, nivelEscucha, formComTituloObtenido, formComNivelFormacion, formComInstitucion, formComProgramaAcademico, formComFechaInicio, formComFechaFinalizacon, formComTiempoFormacion, formComUnidadTiempoFormacion, formComPromedioPeriodos, formComCiudad_idCiudad, Persona_idPersona', 'safe', 'on'=>'search'),

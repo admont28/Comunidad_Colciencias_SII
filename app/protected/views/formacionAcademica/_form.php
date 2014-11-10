@@ -354,7 +354,10 @@
 	<div class="columna2">
 		<div class="row">
 			<?php echo $form->labelEx($model,'formComFechaInicio'); ?>
+
 			<?php
+				$cedulaPersona = Yii::app()->user->id;
+				$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 			  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 			   'model'=>$model,
 			   'attribute'=>'formComFechaInicio',
@@ -375,7 +378,7 @@
 			    'showOtherMonths'=>true, 
 			    'changeMonth' => 'true', 
 			    'changeYear' => 'true', 
-			    'minDate'=>'1900-01-01', 
+			    'minDate'=>$modelPersona->fechaNacimientoPersona, 
 			    'maxDate'=> '0',
 			    ),
 			  )); 
@@ -462,6 +465,39 @@
 		<?php echo $form->error($model,'Persona_idPersona'); ?>
 	</div>
 	-->
+
+
+	<div class="columna1">
+		<div class="row">
+			<label> Palabras clave</label>
+			<textarea name="textarea" style="border-radius: 7px; border-color: rgb(211,211,211);" maxlenght="300" rows="5" cols="30"></textarea>
+			<div class="row buttons" style="text-align: right; ">
+	 			<?php echo CHtml::Button('Añadir'); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="columna1">
+		<div class="row">
+			<label> Areas de conocimiento</label>
+			<textarea name="textarea" style="border-radius: 7px; border-color: rgb(211,211,211);" maxlenght="300" rows="5" cols="30"></textarea>
+			<div class="row buttons" style="text-align: right; ">
+	 			<?php echo CHtml::Button('Añadir'); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="columna1">
+		<div class="row">
+			<label> Sectores de aplicación</label>
+			<textarea name="textarea" style="border-radius: 7px; border-color: rgb(211,211,211);" maxlenght="300" rows="5" cols="30"></textarea>
+			<div class="row buttons" style="text-align: right; ">
+	 			<?php echo CHtml::Button('Añadir'); ?>
+			</div>
+		</div>
+	</div>
+
+	
 
 	<div class="separador"> </div>
 

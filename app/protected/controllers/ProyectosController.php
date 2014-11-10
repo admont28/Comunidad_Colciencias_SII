@@ -49,14 +49,12 @@ class ProyectosController extends Controller{
 
 
 		if(isset($_POST['ParticipantesForm'])){
-			//$modelParticipantes->attributes =$_POST['ParticipantesForm'];
 			$modelParticipantes->idParticipante = $_POST['ParticipantesForm']['idParticipante'];
 			if($modelParticipantes->idParticipante != null){
 			$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
-			//$id =  $modelPersona->idPersona;
 			$modelPersona->participacionProyectos_idProyectos = $id;
-			if($modelPersona->update())
-				$this->redirect(array('view','id'=>$id));}}
+			if($modelPersona->update()){
+				$this->redirect(array('view','id'=>$id));}}}
 		
 		if(isset($_POST['volver']))
 			$this->redirect(array('/proyectos/admin'));
@@ -85,14 +83,13 @@ class ProyectosController extends Controller{
 			$model->duenoPersona_idPersona = $usuario->idPersona;
 			if($model->save()){
 				if(isset($_POST['ParticipantesForm'])){
-				//$modelParticipantes->attributes =$_POST['ParticipantesForm'];
 					$modelParticipantes->idParticipante = $_POST['ParticipantesForm']['idParticipante'];
 					if($modelParticipantes->idParticipante != null){
 						$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
 						$id =  $model->idProyectos;
 						$modelPersona->participacionProyectos_idProyectos = $id;
-						if($modelPersona->update())
-							$this->redirect(array('view','id'=>$id));}}
+						if($modelPersona->update()){
+							$this->redirect(array('view','id'=>$id));}}}
 				$this->redirect(array('view','id'=>$model->idProyectos));
 				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);}}
 

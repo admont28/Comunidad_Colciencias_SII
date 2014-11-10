@@ -147,7 +147,6 @@
 			<div class="row">
 				<?php echo $form->labelEx($model,'nacimientoDepartamento_idDepartamento'); ?>
 				<?php
-					//$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
 					echo $form->DropDownList($model,'nacimientoDepartamento_idDepartamento',array(), array('empty'=>'--Seleccione una opción--',
 								'ajax'=> array(
 											'type'=>'POST',
@@ -262,7 +261,6 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirPerDepartamento_idDepartamento'); ?>
 			<?php
-				//$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
 				echo $form->DropDownList($model,'dirPerDepartamento_idDepartamento',array(), array('empty'=>'--Seleccione una opción--',
 								'ajax'=> array(
 											'type'=>'POST',
@@ -296,8 +294,7 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirPerCiudad_idCiudad'); ?>
-			<?php
-				//$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
+			<?php 
 				echo $form->DropDownList($model,'dirPerCiudad_idCiudad',array(), array('empty'=>'--Seleccione una opción--')); ?>
 			<!-- <?php echo $form->textField($model,'dirPerCiudad_idCiudad'); ?> -->
 			<?php echo $form->error($model,'dirPerCiudad_idCiudad'); ?>
@@ -362,8 +359,7 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirProDepartamento_idDepartamento'); ?>
-			<?php
-				//$datos = CHtml::listData(Departamento::model()->findAll(),'idDepartamento','nombreDepartamento'); 
+			<?php 
 				echo $form->DropDownList($model,'dirProDepartamento_idDepartamento',array(), array('empty'=>'--Seleccione una opción--',
 								'ajax'=> array(
 											'type'=>'POST',
@@ -399,7 +395,6 @@
 		<div class="row">
 			<?php echo $form->labelEx($model,'dirProCiudad_idCiudad'); ?>
 			<?php
-				//$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
 				echo $form->DropDownList($model,'dirProCiudad_idCiudad',array(), array('empty'=>'--Seleccione una opción--')); ?>
 			<!-- <?php echo $form->textField($model,'dirProCiudad_idCiudad'); ?> -->
 			<?php echo $form->error($model,'dirProCiudad_idCiudad'); ?>

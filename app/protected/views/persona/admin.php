@@ -7,12 +7,6 @@ $this->breadcrumbs=array(
 	'Administrar',
 );
 
-/*
-$this->menu=array(
-	array('label'=>'List Persona', 'url'=>array('index')),
-	array('label'=>'Create Persona', 'url'=>array('create')),
-);
-*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

@@ -238,7 +238,7 @@
 		<div class="row">
 					<?php echo $form->labelEx($model,'integrantesProyecto'); ?>
 					<?php 
-					//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+					
 					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
 					?>
 					<?php echo $form->textArea($modelParticipantes,'idParticipante',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>

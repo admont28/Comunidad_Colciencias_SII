@@ -73,11 +73,13 @@ class ProyectosController extends Controller
 		if(isset($_POST['Proyectos']))
 		{
 			$model->attributes=$_POST['Proyectos'];
+			$model->certificado=CUploadedFile::getInstance($model,'image');
 			$cedulaPersona = Yii::app()->user->id;
 			$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 			$model->duenoPersona_idPersona = $usuario->idPersona;
 			if($model->save()){
 				$this->redirect(array('view','id'=>$model->idProyectos));
+				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);
 			}
 		}
 
@@ -101,8 +103,10 @@ class ProyectosController extends Controller
 		if(isset($_POST['Proyectos']))
 		{
 			$model->attributes=$_POST['Proyectos'];
+			$model->certificado=CUploadedFile::getInstance($model,'image');
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idProyectos));
+				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);
 		}
 
 		$this->render('update',array(

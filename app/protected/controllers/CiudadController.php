@@ -82,7 +82,7 @@ class CiudadController extends Controller{
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+
 
 		if(isset($_POST['Ciudad'])){
 			$model->attributes=$_POST['Ciudad'];
@@ -155,8 +155,7 @@ class CiudadController extends Controller{
 	 * @param Ciudad $model the model to be validated
 	 */
 	protected function performAjaxValidation($model){
-		if(isset($_POST['ajax']) && $_POST['ajax']==='ciudad-form')
-		{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='ciudad-form'){
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}

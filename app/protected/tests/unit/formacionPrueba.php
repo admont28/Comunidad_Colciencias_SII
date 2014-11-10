@@ -1,8 +1,6 @@
 <?php
-class personaTest extends PHPUnit_Framework_TestCase
-{
-    public function testPersona()
-    {
+class personaTest extends PHPUnit_Framework_TestCase{
+    public function testPersona(){
         $this->assertTrue(true);
         $this->assertTrue(true);
         $this->assertTrue(true);
@@ -21,8 +19,7 @@ class personaTest extends PHPUnit_Framework_TestCase
 
     }
 
-    public function testUpdate()
-    {
+    public function testUpdate(){
         $this->assertTrue(true);
         $this->assertTrue(true);
         $this->assertTrue(true);
@@ -40,8 +37,7 @@ class personaTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(true);
     }
 
-    public function testDelete()
-    {
+    public function testDelete(){
         $this->assertTrue(true);
         $this->assertTrue(true);
         $this->assertTrue(true);
@@ -59,8 +55,7 @@ class personaTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(true);
     }
 
-    public function testIndex()
-    {
+    public function testIndex(){
        $this->assertTrue(true);
         $this->assertTrue(true);
         $this->assertTrue(true);
@@ -78,8 +73,7 @@ class personaTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(true);
     }
 
-    public function testView()
-    {
+    public function testView(){
         $this->assertTrue(false);
        $this->assertTrue(false);
        $this->assertTrue(false);

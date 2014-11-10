@@ -7,11 +7,6 @@ $this->breadcrumbs=array(
 	'create',
 );
 
-/*$this->menu=array(
-	array('label'=>'Lista de proyectos', 'url'=>array('index')),
-	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
-);
-*/
 ?>
 <div class = "titulo1">
 	<h1>Proyectos</h1>

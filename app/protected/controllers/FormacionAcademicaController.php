@@ -158,8 +158,7 @@ class FormacionAcademicaController extends Controller{
 	 * @param FormacionAcademica $model the model to be validated
 	 */
 	protected function performAjaxValidation($model){
-		if(isset($_POST['ajax']) && $_POST['ajax']==='formacion-academica-form')
-		{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='formacion-academica-form'){
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}

@@ -7,12 +7,6 @@ $this->breadcrumbs=array(
 	'Administrar',
 );
 
-/*
-$this->menu=array(
-	array('label'=>'Lista de proyectos', 'url'=>array('index')),
-	array('label'=>'Crear un proyecto', 'url'=>array('create')),
-);
-*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

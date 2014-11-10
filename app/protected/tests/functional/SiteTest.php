@@ -1,15 +1,12 @@
 <?php
 
-class SiteTest extends WebTestCase
-{
-	public function testIndex()
-	{
+class SiteTest extends WebTestCase{
+	public function testIndex(){
 		$this->open('');
 		$this->assertTextPresent('Welcome');
 	}
 
-	public function testContact()
-	{
+	public function testContact(){
 		$this->open('?r=site/contact');
 		$this->assertTextPresent('Contact Us');
 		$this->assertElementPresent('name=ContactForm[name]');
@@ -21,12 +18,12 @@ class SiteTest extends WebTestCase
 		$this->waitForTextPresent('Body cannot be blank.');
 	}
 
-	public function testLoginLogout()
-	{
+	public function testLoginLogout(){
 		$this->open('');
 		// ensure the user is logged out
-		if($this->isTextPresent('Logout'))
+		if($this->isTextPresent('Logout')){
 			$this->clickAndWait('link=Logout (demo)');
+		}	
 
 		// test login process, including validation
 		$this->clickAndWait('link=Login');

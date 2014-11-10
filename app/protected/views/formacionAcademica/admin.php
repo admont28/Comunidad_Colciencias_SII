@@ -7,12 +7,6 @@ $this->breadcrumbs=array(
 	'Administrar',
 );
 
-/*
-$this->menu=array(
-	array('label'=>'Listar Formación Académica', 'url'=>array('admin')),
-	array('label'=>'Crear Formación Académica', 'url'=>array('create')),
-);
-*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

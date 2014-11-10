@@ -231,11 +231,7 @@
 		<div class="row">
 			<?php $form=$this->beginWidget("CActiveForm",array("action"=>Yii::app()->createUrl("proyectos/view"))); ?>
 						<?php 
-						//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
-						//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
-						?>
-						<?php 
-						//$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
+				
 						$datos = CHtml::listData(Persona::model()->find('participacionProyectos_idProyectos=:proyectos', array(':proyectos'=>$model->idProyectos)),'idPersona','nombrePersona'); ?>
 						<?php 
 							$texto = implode(", ", $datos);
@@ -286,7 +282,7 @@
 			<!--
 			<?php $form=$this->beginWidget("CActiveForm",array("action"=>Yii::app()->createUrl("proyectos/view"))); ?>
 					<?php 
-					//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+				
 					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
 					?>
 					<?php echo $form->textField($modelParticipantes,'idParticipante'); ?>
@@ -296,12 +292,12 @@
 
 			
 			<?php
-			//echo $this->renderPartial('_formParticipantes', array('modelParticipantes'=>$modelParticipantes));
+			
 			/*
 			?>
 				<?php echo $form->labelEx($modelPersona,'cedulaPersona'); ?>
 				<?php 
-				$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
+				
 					echo $form->dropDownList($modelPersona, 'cedulaPersona', $datos);
 				?>
 				<!--

@@ -7,15 +7,6 @@ $this->breadcrumbs=array(
 	$model->idFormacionAcademica,
 );
 
-/*
-$this->menu=array(
-	array('label'=>'Listar Formación Académica', 'url'=>array('admin')),
-	array('label'=>'Crear Formación Académica', 'url'=>array('create')),
-	array('label'=>'Actualizar Formación Académica', 'url'=>array('update', 'id'=>$model->idFormacionAcademica)),
-	array('label'=>'Eliminar Formación Académica', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idFormacionAcademica),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Administrar Formación Académica', 'url'=>array('admin')),
-);
-*/
 ?>
 
 <div class="titulo1">

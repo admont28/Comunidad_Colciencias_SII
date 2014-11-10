@@ -3,9 +3,9 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
-
+<!--
 <h1>Bienvenido a <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
+-->
 <!--
 <p>Congratulations! You have successfully created your Yii application.</p>
 
@@ -20,7 +20,7 @@ the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
 -->
-
+<!--
 <h1>
 <?php
 
@@ -33,6 +33,6 @@ should you have any questions.</p>
 	}
 ?>
 </h1>
-
-<?php echo CHtml::image(Yii::app()->request->baseUrl . '/images/ComunidadColciencias.png'); ?>
+-->
+<?php echo CHtml::image(Yii::app()->request->baseUrl . '/images/inicio.png'); ?>
 

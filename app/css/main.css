@@ -44,7 +44,6 @@ body
 
 #logo
 {
-	padding: 10px 20px;
 	font-size: 200%;
 }
 
@@ -79,8 +78,8 @@ body
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
+	color: rgb(17,55,61);
+	background-color: white;
 	text-decoration:none;
 }
 

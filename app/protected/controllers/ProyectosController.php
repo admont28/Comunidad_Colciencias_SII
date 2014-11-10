@@ -56,8 +56,8 @@ class ProyectosController extends Controller{
 			if($modelPersona->update()){
 				$this->redirect(array('view','id'=>$id));}}}
 		
-		if(isset($_POST['volver']))
-			$this->redirect(array('/proyectos/admin'));
+		if(isset($_POST['volver'])){
+			$this->redirect(array('/proyectos/admin'))};
 		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -112,9 +112,9 @@ class ProyectosController extends Controller{
 		if(isset($_POST['Proyectos'])){
 			$model->attributes=$_POST['Proyectos'];
 			$model->certificado=CUploadedFile::getInstance($model,'image');
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idProyectos));
-				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);}
+			if($model->save()){
+				$this->redirect(array('view','id'=>$model->idProyectos))};
+			$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);}
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -129,8 +129,8 @@ class ProyectosController extends Controller{
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));}
+		if(!isset($_GET['ajax'])){
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));}}
 
 	/**
 	 * Lists all models.
@@ -147,8 +147,8 @@ class ProyectosController extends Controller{
 	public function actionAdmin(){
 		$model=new Proyectos('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Proyectos']))
-			$model->attributes=$_GET['Proyectos'];
+		if(isset($_GET['Proyectos'])){
+			$model->attributes=$_GET['Proyectos']};
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -163,8 +163,8 @@ class ProyectosController extends Controller{
 	 */
 	public function loadModel($id){
 		$model=Proyectos::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+		if($model===null){
+			throw new CHttpException(404,'The requested page does not exist.')};
 		return $model;}
 
 	/**
@@ -185,5 +185,5 @@ class ProyectosController extends Controller{
 			$modelParticipantes->attributes =$_POST['ParticipantesForm'];
 			$modelPersona = Persona::model()->findByPk($modelParticipantes->id);
 			$modelPersona->participacionProyectos_idProyectos = $modelPersona->$id;
-			if($modelPersona->update())
-				$this->redirect(array('/proyectos/admin'));}}}
+			if($modelPersona->update()){
+				$this->redirect(array('/proyectos/admin'));}}}}

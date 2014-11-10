@@ -71,7 +71,7 @@
 			<?php echo $form->labelEx($model,'formAcaCiudad_idCiudad'); ?>
 			<?php
 				$datos = CHtml::listData(Ciudad::model()->findAll(),'idCiudad','nombreCiudad'); 
-				echo $form->DropDownList($model,'formAcaCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opcion--')); ?>
+				echo $form->DropDownList($model,'formAcaCiudad_idCiudad',$datos, array('empty'=>'--Seleccione una opción--')); ?>
 			<!-- <?php echo $form->textField($model,'formAcaCiudad_idCiudad'); ?> -->
 			<?php echo $form->error($model,'formAcaCiudad_idCiudad'); ?>
 		</div>

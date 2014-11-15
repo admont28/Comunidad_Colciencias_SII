@@ -52,6 +52,7 @@ body
 	/*background:white url(bg.gif) repeat-x left top;*/
 	background: linear-gradient(top, rgb(74,139,145), rgb(15,66,72));
 	background: -webkit-linear-gradient(top, rgb(74,139,145), rgb(15,66,72));
+	background: -moz-linear-gradient(top, rgb(74,139,145), rgb(15,66,72));
 	padding: 10px;
 }
 

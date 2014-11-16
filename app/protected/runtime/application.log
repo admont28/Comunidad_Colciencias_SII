@@ -3401,3 +3401,105 @@ Stack trace:
 REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/
 in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\SiteController.php (3)
 in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:10:38 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:10:39 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:10:40 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:10:52 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:10:54 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:11:05 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:11:44 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (76)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:12:12 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (114)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:12:12 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (204)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (111)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/11 00:12:51 [warning] [application] Failed to set unsafe attribute "image" of "Proyectos".
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\ProyectosController.php (114)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/11/16 20:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/index
+---
+2014/11/16 20:55:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app/index.php".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app/index.php')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app/index.php
+---
+2014/11/16 20:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app/index.php".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app/index.php')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app/index.php
+---
+2014/11/16 21:02:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app/index.php".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app/index.php')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app/index.php
+---
+2014/11/16 21:02:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app/index.php".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app/index.php')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app/index.php
+---
+2014/11/16 21:11:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app/index.php".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app/index.php')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app/index.php
+---
+2014/11/16 21:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app
+---
+2014/11/16 21:12:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/app/index
+---

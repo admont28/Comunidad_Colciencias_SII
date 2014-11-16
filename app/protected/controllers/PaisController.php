@@ -59,7 +59,10 @@ class PaisController extends Controller{
 		if(isset($_POST['Pais'])){
 			$model->attributes=$_POST['Pais'];
 			if($model->save()){
-				$this->redirect(array('view','id'=>$model->idPais))};}
+				$this->redirect(array('view','id'=>$model->idPais));
+                                
+                        }
+                }
 
 		$this->render('create',array(
 			'model'=>$model,

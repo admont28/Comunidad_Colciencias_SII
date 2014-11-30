@@ -76,6 +76,9 @@ class ProyectosController extends Controller{
 		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Proyectos'])){
+			if ($_POST['Proyectos']['idProyectos']!=null) {
+				$model->scenario='create';
+			}
 			$model->attributes=$_POST['Proyectos'];
 			$model->certificado=CUploadedFile::getInstance($model,'image');
 			$cedulaPersona = Yii::app()->user->id;
@@ -121,12 +124,13 @@ class ProyectosController extends Controller{
 						$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
 						$id =  $model->idProyectos;
 						$modelPersona->participacionProyectos_idProyectos = $id;
+						$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'certificado')->name);
 						if($modelPersona->update())
 							$this->redirect(array('view','id'=>$id));
 					}
 				}
 				$this->redirect(array('view','id'=>$model->idProyectos));
-				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);
+				
 			}
 		}
 		$this->render('update',array(

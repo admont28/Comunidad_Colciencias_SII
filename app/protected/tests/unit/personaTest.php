@@ -1,9 +1,4 @@
 <?php
-
-//include '/../../conrtollers/PersonaController.php';
-//include '/../../models/Persona.php';
-
-//require_once(dirname(__FILE__).'/../../controllers/PersonaController.php');
 require_once(dirname(__FILE__).'/../../models/Persona.php');
 
 class personaTest extends PHPUnit_Framework_TestCase
@@ -43,9 +38,9 @@ class personaTest extends PHPUnit_Framework_TestCase
 	 	$persona->dirPerCiudad_idCiudad=24;
 
 	 	$this->assertTrue($persona->save());
-	 	$persona->delete();
+	 	//$persona->delete();
 	 }
-
+/*
 	 public function testBuscar(){
 	 	$persona = new Persona;
 	 	$persona->idPersona=4;
@@ -169,6 +164,6 @@ class personaTest extends PHPUnit_Framework_TestCase
 	 	$this->assertTrue($persona->save());
 
 	 	$this->assertTrue($persona->delete());
-	 }
+	 }*/
 }
 ?>

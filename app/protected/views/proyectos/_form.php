@@ -18,7 +18,7 @@
 
 	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
-	<?php echo $form->errorSummary(array($model,$modelParticipantes)); ?>
+	<!--<?php echo $form->errorSummary(array($model,$modelParticipantes)); ?>-->
 	
 	<div style="margin-left: 5px;">
 		<div class="row">
@@ -38,7 +38,7 @@
 		
 		<div class="row">
 			<?php echo $form->labelEx($model,'nombreProyecto'); ?>
-			<?php echo $form->textField($model,'nombreProyecto',array('size'=>60,'maxlength'=>100, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+			<?php echo $form->textField($model,'nombreProyecto',array('text','size'=>60,'maxlength'=>100, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 			<?php echo $form->error($model,'nombreProyecto'); ?>
 		</div>
 
@@ -126,13 +126,13 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'valorContrapartida'); ?>
-			<?php echo $form->textField($model,'valorContrapartida',array('style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+			<?php echo $form->textField($model,'valorContrapartida',array('maxlength'=>25,'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 			<?php echo $form->error($model,'valorContrapartida'); ?>
 		</div>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'numeroActoAdministrativo'); ?>
-			<?php echo $form->textField($model,'numeroActoAdministrativo', array('style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>		
+			<?php echo $form->textField($model,'numeroActoAdministrativo', array('maxlength'=>25,'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>		
 			<?php echo $form->error($model,'numeroActoAdministrativo'); ?>
 		</div>
 
@@ -144,7 +144,7 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'certificado'); ?>
-			<?php echo CHtml::activeFileField($model,'image'); ?>
+			<?php echo CHtml::activeFileField($model,'certificado'); ?>
 			<?php echo $form->error($model,'certificado'); ?>
 		</div>
 	</div>
@@ -152,7 +152,7 @@
 	<div class="columna2">
 		<div class="row">
 			<?php echo $form->labelEx($model,'idProyectos'); ?>
-			<?php echo $form->textField($model,'idProyectos', array('size'=>45,'maxlength'=>45,'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+			<?php echo $form->textField($model,'idProyectos', array('size'=>45,'maxlength'=>20,'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
 			<?php echo $form->error($model,'idProyectos'); ?>
 		</div>
 

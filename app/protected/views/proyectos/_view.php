@@ -152,7 +152,7 @@
 	<div class="columna2">
 		<div class="row">
 			<?php echo $form->labelEx($model,'idProyectos'); ?>
-			<?php echo $form->textField($model,'idProyectos', array('size'=>45,'maxlength'=>45,'style'=>'border-radius: 7px; border-color: rgb(211,211,211);','readonly'=>'readonly')); ?>
+			<?php echo $form->textField($model,'idProyectos', array('size'=>45,'maxlength'=>20,'style'=>'border-radius: 7px; border-color: rgb(211,211,211);','readonly'=>'readonly')); ?>
 			<?php echo $form->error($model,'idProyectos'); ?>
 		</div>
 

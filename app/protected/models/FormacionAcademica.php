@@ -55,20 +55,22 @@ class FormacionAcademica extends CActiveRecord{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('formAcaCiudad_idCiudad, formComCiudad_idCiudad, Persona_idPersona', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
+			array('formAcaCiudad_idCiudad, formAcaIntensidadHoraria, formComInstitucion, formComProgramaAcademico, formComFechaInicio, formAcaInstitucionOfreceBeca, formAcaPromedioPeriodos, formAcaFechaInicio, formComCiudad_idCiudad, Persona_idPersona, formAcaInstitucion, formAcaProgramaAcademico, ', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
 			array('formAcaIntensidadHoraria, formAcaTiempoFormacion, formAcaCiudad_idCiudad, formComTiempoFormacion, formComCiudad_idCiudad, Persona_idPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
-			array('formAcaBecado, formAcaPromedioPeriodos, formComPromedioPeriodos', 'length', 'max'=>2),
+			array('formAcaBecado', 'length', 'max'=>2),
 			array('formAcaInstitucionOfreceBeca, formAcaInstitucion, formAcaProgramaAcademico, formComInstitucion, formComProgramaAcademico', 'length', 'max'=>100),
 			array('formAcaNivelFormacion, formComNivelFormacion', 'length', 'max'=>25),
 			array('formAcaUnidadTiempoFormacion, nivelEscritura, nivelLectura, nivelHabla, nivelEscucha, formComUnidadTiempoFormacion', 'length', 'max'=>10),
 			array('nombreIdioma', 'length', 'max'=>45,'message'=>  Yii::t('es', 'El campo no puede exceder los 45 caracteres')),
+			array('formAcaIntensidadHoraria,formAcaPromedioPeriodos, formComPromedioPeriodos', 'length', 'max'=>3,'message'=>  Yii::t('es', 'El campo no puede exceder los 3 caracteres')),
 			array('formComTituloObtenido', 'length', 'max'=>30,'message'=>  Yii::t('es', 'El campo no puede exceder los 30 caracteres')),
 			array('formAcaFechaObtencionTitulo, formAcaFechaInicio, formAcaFechaFinalizacion, formComFechaInicio, formComFechaFinalizacon', 'safe'),
+			array('formAcaTiempoFormacion', 'length', 'max'=>2,'message'=>  Yii::t('es', 'El campo no puede exceder los 2 caracteres')),
+			//array('formAcaFechaFinalizacion', 'comparacionFecha', 'compareAttribute' => 'formAcaFechaInicio'),
+			array('formAcaFechaFinalizacion','compare','compareAttribute'=>'formAcaFechaInicio','operator'=>'>', 'on'=>'fecha','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio')),
+			array('formAcaFechaObtencionTitulo','compare','compareAttribute'=>'formAcaFechaFinalizacion','operator'=>'>', 'on'=>'fecha','message'=>  Yii::t('es', 'La fecha de obtención del titulo debe ser mayor que la fecha de finalización')),
 			
-			array('formAcaFechaFinalizacion','compare','compareAttribute'=>'formAcaFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio')),
-			array('formAcaFechaObtencionTitulo','compare','compareAttribute'=>'formAcaFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de obtención del titulo debe ser mayor que la fecha de inicio')),
-			
-			array('formComFechaFinalizacon','compare','compareAttribute'=>'formComFechaInicio','operator'=>'>','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio de la formación complementaria')),
+			array('formComFechaFinalizacon','compare','compareAttribute'=>'formComFechaInicio','operator'=>'>', 'on' => 'fecha2','message'=>  Yii::t('es', 'La fecha de finalización debe ser mayor que la fecha de inicio de la formación complementaria')),
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

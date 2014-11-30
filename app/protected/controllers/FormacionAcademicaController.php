@@ -65,8 +65,18 @@ class FormacionAcademicaController extends Controller{
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
-
 		if(isset($_POST['FormacionAcademica'])){
+			
+			if($_POST['FormacionAcademica']['formAcaFechaFinalizacion']!='' || $_POST['FormacionAcademica']['formAcaFechaObtencionTitulo']!=''){
+         		$model->scenario='fecha';
+         		$model->validate(); 
+      		}
+
+      		if($_POST['FormacionAcademica']['formComFechaFinalizacon']!=''){
+         		$model->scenario='fecha2';
+         		$model->validate(); 
+      		}
+
 			$model->attributes=$_POST['FormacionAcademica'];
 			$cedulaPersona = Yii::app()->user->id;
 			$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));

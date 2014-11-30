@@ -17,7 +17,7 @@
 
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<!--<?php echo $form->errorSummary($model); ?>-->
 
 	<h2 class="titulo2"> Formación Académica </h2>
 
@@ -173,7 +173,7 @@
 			    'showOtherMonths'=>true, 
 			    'changeMonth' => 'true', 
 			    'changeYear' => 'true', 
-			    'minDate'=> $model->formAcaFechaInicio, 
+			    'minDate'=> $model->formAcaFechaFinalizacion, 
 			    'maxDate'=> '0',
 			    ),
 			  )); 

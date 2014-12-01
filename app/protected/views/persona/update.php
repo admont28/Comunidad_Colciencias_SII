@@ -2,11 +2,13 @@
 /* @var $this PersonaController */
 /* @var $model Persona */
 
+/*
 $this->breadcrumbs=array(
 	'Personas'=>array('admin'),
 	$model->idPersona=>array('view','id'=>$model->idPersona),
 	'Actualizar',
 );
+*/
 ?>
 
 <div class="titulo1">

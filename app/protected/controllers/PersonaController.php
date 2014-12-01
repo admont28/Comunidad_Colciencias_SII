@@ -25,7 +25,7 @@ class PersonaController extends Controller{
 	public function accessRules(){
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','selectdepartamentos','selectciudades','selectdepartamentospersonal','selectciudadespersonal','selectdepartamentosprofesional','selectciudadesprofesional'),
+				'actions'=>array('index','view','selectdepartamentos','selectciudades','selectdepartamentospersonal','selectciudadespersonal','selectdepartamentosprofesional','selectciudadesprofesional','inicio'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -33,7 +33,7 @@ class PersonaController extends Controller{
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','update'),
 				'users'=>array('admin', '1094'),
 			),
 			array('deny',  // deny all users
@@ -85,6 +85,12 @@ class PersonaController extends Controller{
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
+		if(isset($_POST['Borrar'])){
+			$id = $model->idPersona;
+			$model = new Persona; 
+			$model->idPersona=$id;
+		}
+
 		if(isset($_POST['Persona'])){
 			$model->attributes=$_POST['Persona'];
 			if($model->save()){
@@ -121,9 +127,9 @@ class PersonaController extends Controller{
 		));
 	}
 
-	/**
+	/*
 	 * Manages all models.
-	 */
+	 *
 	public function actionAdmin(){
 		$model=new Persona('search');
 		$model->unsetAttributes();  // clear any default values
@@ -135,6 +141,7 @@ class PersonaController extends Controller{
 			'model'=>$model,
 		));
 	}
+	*/
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -239,4 +246,13 @@ class PersonaController extends Controller{
 			echo CHtml::tag('option',array('value'=>$valor), CHtml::encode($nombre), true);
 		}
 	}
+
+
+	public function actionInicio(){
+		$cedulaPersona = Yii::app()->user->id;
+		$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
+		$id = $usuario->idPersona;
+		$this->actionUpdate($id);
+	}
+	
 }

@@ -83,11 +83,14 @@ class Persona extends CActiveRecord{
 			array('cedulaPersona, primerApellidoPersona, segundoApellidoPersona, tipoDocumentoPersona', 'length', 'max'=>25),
 			array('nombrePersona, usuarioSIICPersona, contraseñaSIICPersona, dirProBarrio, dirPerBarrio', 'length', 'max'=>50),
 			array('nombreCitasBliblioPersona', 'length', 'max'=>80),
+			array('cedulaPersona', 'length', 'max'=>16, 'message'=>  Yii::t('es', 'El campo no debe superar los 16 caracteres')),
 			array('fechaExpedicionDoc, estadoCivilPersona', 'length', 'max'=>45),
 			array('sexoPersona', 'length', 'max'=>9),
 			array('dirProInstitucion, dirProEmailInstitucional, dirProPaginaInstitucional, dirPerEmail, dirPerSitioWeb', 'length', 'max'=>100),
 			array('dirProDireccionInstitucion, dirPerDireccion', 'length', 'max'=>35),
 			array('dirProEmailInstitucional, dirPerEmail','email','message'=>  Yii::t('es', 'El campo debe ser un correo electrónico válido')),
+			array('nombrePersona, primerApellidoPersona, segundoApellidoPersona, nombreCitasBliblioPersona', 'match','pattern' => '/^[0-9a-zA-Z\sñÑ]*$/','message'=>'El campo sólo puede ser texto (letras de la A a la Z).'),
+			array('cedulaPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('cedulaPersona, nombrePersona, primerApellidoPersona, segundoApellidoPersona, nombreCitasBliblioPersona', 'safe', 'on'=>'search'),

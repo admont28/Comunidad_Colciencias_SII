@@ -229,8 +229,11 @@
 
 	<div class="columna2">
 		<div class="row">
+
 			<?php $form=$this->beginWidget("CActiveForm",array("action"=>Yii::app()->createUrl("proyectos/view"))); ?>
 						<?php echo $form->labelEx($model,'integrantesProyecto'); ?>
+						<?php echo $form->textArea($model,'integrantesProyecto',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);','readonly'=>'readonly')); ?>
+			
 						<?php 
 						//$datos = CHtml::listData(Persona::model()->findAll(),'idPersona','nombrePersona');
 						//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
@@ -238,11 +241,11 @@
 						<?php 
 						//$datos = CHtml::listData(Pais::model()->findAll(),'idPais','nombrePais'); 
 						//$datos = CHtml::listData(Persona::model()->find('participacionProyectos_idProyectos=:proyectos', array(':proyectos'=>$model->idProyectos)),'idPersona','nombrePersona'); ?>
-						<?php 
+						<!--<?php 
 							//$texto = implode(", ", $datos);
-						echo $form->textArea($modelParticipantes,'idParticipante',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+						echo $form->textArea($modelParticipantes,'idParticipante',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);','readonly'=>'readonly')); ?>
 						<?php echo $form->error($modelParticipantes,'idParticipante'); ?>
-						<?php echo CHtml::submitButton("Agregar")?>
+						<!--<?php echo CHtml::submitButton("Agregar")?>-->
 			<?php $this->endWidget();?>
 		</div>
 

@@ -48,14 +48,22 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'cssFile'=> Yii::app()->request->baseUrl.'/css/gridview.css',
+	'summaryText' => 'Mostrando {start} – {end} de {count} resultados',
+	'pager'=>array(
+			'header' => 'Ir a la pagina:',
+			'firstPageLabel' => '< <',
+			'prevPageLabel' => 'Anterior',
+			'nextPageLabel' => 'Siguiente',
+			'lastPageLabel' => '>>',),
 	'columns'=>array(
-		'idPersona',
+		
 		'cedulaPersona',
 		'nombrePersona',
 		'primerApellidoPersona',
 		'segundoApellidoPersona',
 		'nombreCitasBliblioPersona',
 		/*
+		'idPersona',
 		'tipoDocumentoPersona',
 		'nacionalidadPais_idPais',
 		'expediciónPais_idPais',

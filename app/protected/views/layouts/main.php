@@ -31,13 +31,13 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Acerca', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contacto', 'url'=>array('/site/contact')),
+				//array('label'=>'Acerca', 'url'=>array('/site/page', 'view'=>'about')),
+				//array('label'=>'Contacto', 'url'=>array('/site/contact')),
 				array('label'=>'Mi Información Básica', 'url'=>array('/persona/admin')),
 				array('label'=>'Mi Formación', 'url'=>array('/formacionAcademica/admin')),
 				array('label'=>'Mis Proyectos', 'url'=>array('/proyectos/admin')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Iniciar Sesión', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

@@ -144,7 +144,13 @@
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'certificado'); ?>
-			<?php echo CHtml::activeFileField($model,'certificado'); ?>
+			<?php 
+				if($model->certificado == null)
+					echo CHtml::activeFileField($model,'certificado');
+				else{
+					echo $form->textField($model,'certificado',array('size'=>60,'maxlength'=>100, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);'));
+				}
+			 ?>
 			<?php echo $form->error($model,'certificado'); ?>
 		</div>
 	</div>
@@ -237,8 +243,8 @@
 		-->
 		<div class="row">
 					<?php echo $form->labelEx($model,'integrantesProyecto'); ?>
-					<?php 
-					
+					<?php echo $form->textArea($model,'integrantesProyecto',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>
+					<!--<?php 
 					//	echo $form->dropDownList($modelParticipantes, 'id', $datos);
 					?>
 					<?php echo $form->textArea($modelParticipantes,'idParticipante',array('maxlength' => 300, 'rows' => 5, 'cols' => 30, 'style'=>'border-radius: 7px; border-color: rgb(211,211,211);')); ?>

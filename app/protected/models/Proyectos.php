@@ -44,7 +44,7 @@ class Proyectos extends CActiveRecord{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('participacionInst, nombreProyecto, institucion', 'match','pattern' => '/^[a-zA-Z\s]+$/','message'=>'El campo sólo puede ser texto.'),
+			array('participacionInst, nombreProyecto, institucion', 'match','pattern' => '/^[a-zA-Z\sñÑ]*$/','message'=>'El campo sólo puede ser texto.'),
 			array('idProyectos, nombreProyecto, tipoProyecto, tipoFinanciacion, fuentesFinanciacion, participacionProyecto, institucion, participacionInst, valorContrapartida, numeroActoAdministrativo, anioInicio, mesInicio, anioFin, mesFin, resumen', 'required','message'=>  Yii::t('es', 'El campo no puede quedar en blanco')),
 			array('idProyectos, valorContrapartida, numeroActoAdministrativo, duenoPersona_idPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			array('nombreProyecto, institucion, certificado, institucionesVinculadas, produccionCTI', 'length', 'max'=>100),
@@ -58,6 +58,10 @@ class Proyectos extends CActiveRecord{
 		);
 	}
 
+	/**
+	 * Fundion que verifica una llave primaria duplicada.
+	 * @return array relational rules.
+	 */
 	public function verificacion($attribute, $params){
 		$idProyectos = $this->$attribute;
 		$proyecto = Proyectos::model()->findBypk($idProyectos);

@@ -5,13 +5,13 @@
 
 $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	'Login',
+	'Inicio de sesión',
 );
 ?>
 
 <h1>Inicio de Sesión</h1>
 
-<p>Por favor diligenie sus datos en los campos:</p>
+<p>Por favor diligencie sus datos en los campos:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -46,7 +46,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+		<?php echo CHtml::submitButton('Iniciar Sesión'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

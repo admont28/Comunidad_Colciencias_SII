@@ -81,6 +81,7 @@ class ProyectosController extends Controller{
 			}
 			$model->attributes=$_POST['Proyectos'];
 			$model->certificado=CUploadedFile::getInstance($model,'image');
+			$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);
 			$cedulaPersona = Yii::app()->user->id;
 			$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 			$model->duenoPersona_idPersona = $usuario->idPersona;
@@ -94,7 +95,7 @@ class ProyectosController extends Controller{
 						if($modelPersona->update()){
 							$this->redirect(array('view','id'=>$id));}}}
 				$this->redirect(array('view','id'=>$model->idProyectos));
-				$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);}}
+				}}
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -115,7 +116,8 @@ class ProyectosController extends Controller{
 
 		if(isset($_POST['Proyectos'])){
 			$model->attributes=$_POST['Proyectos'];
-			$model->certificado=CUploadedFile::getInstance($model,'image');
+			$model->certificado=CUploadedFile::getInstance($model,'certificado');
+			//$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'image')->name);
 			if($model->save()){
 				if(isset($_POST['ParticipantesForm'])){
 				//$modelParticipantes->attributes =$_POST['ParticipantesForm'];
@@ -124,7 +126,6 @@ class ProyectosController extends Controller{
 						$modelPersona = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$modelParticipantes->idParticipante));
 						$id =  $model->idProyectos;
 						$modelPersona->participacionProyectos_idProyectos = $id;
-						$model->certificado->saveAs('/proyectoYII/images/'.CUploadedFile::getInstance($model,'certificado')->name);
 						if($modelPersona->update())
 							$this->redirect(array('view','id'=>$id));
 					}

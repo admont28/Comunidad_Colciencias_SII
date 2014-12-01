@@ -6291,3 +6291,31 @@ Stack trace:
 REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/persona/inicio
 HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/
 ---
+2014/12/01 04:16:12 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#1 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\views\persona\view.php(54): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php(52): CController->render('view', Array)
+#7 [internal function]: PersonaController->actionView('1')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonaController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonaController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('persona/view')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/persona/1
+HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/inicio
+---

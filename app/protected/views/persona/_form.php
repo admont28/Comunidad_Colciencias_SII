@@ -17,7 +17,7 @@
 
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<!--<?php echo $form->errorSummary($model); ?>-->
 		
 	<h2 class="titulo2"> Datos personales </h2>
 	
@@ -206,6 +206,11 @@
 	</div>
 
 	<div class="separador"> </div>
+	<div class="row buttons" style="text-align: right; ">
+		<?php 
+				echo  CHtml::button('Borrar', array('id' => 'borrarDatosPersonales','class'=> 'button')); 
+		?>
+	</div>
 
 	<div class="separador"> </div>
 
@@ -312,6 +317,12 @@
 	</div>
 
 	<div class="separador"> </div>
+
+	<div class="row buttons" style="text-align: right; ">
+		<?php 
+				echo  CHtml::button('Borrar', array('id' => 'borrarDatosDireccionPersonal','class'=> 'button')); 
+		?>
+	</div>
 
 	<div class="separador"> </div>
 
@@ -444,7 +455,7 @@
 	<div class="columna1">
 
 		<label> Confirmar clave SIIC *</label>
-		<input type="password"  style="border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);" value="<?php echo $model->contraseñaSIICPersona; ?>">
+		<input type="password"  id="Persona_confirmarClave" style="border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);" value="<?php echo $model->contraseñaSIICPersona; ?>">
 		<!--
 		<?php echo $form->labelEx($model,'contraseñaSIICPersona'); ?>
 		<?php echo $form->passwordField($model,'contraseñaSIICPersona',array('size'=>25,'maxlength'=>50,'style'=>'border-radius: 7px;  border-style: dotted; border-color: rgb(211,211,211);')); ?>
@@ -457,11 +468,59 @@
 
 	<div class="row buttons" style="text-align: right; ">
 		<?php 
-			if($model->isNewRecord == true)
-				echo  CHtml::button('Borrar', array('type' => 'reset', 'class' => 'button')); 
-			else
-				echo CHtml::submitButton('Borrar', array('submit' => array('Persona/update')));
+			echo CHtml::button('Borrar', array('id' => 'borrarDatosDireccionProfesional','class'=> 'button')); 
 		?>
+		<script> 
+			document.getElementById("borrarDatosPersonales").onclick = function(){
+				$('#Persona_nombrePersona').val("");
+				$('#Persona_primerApellidoPersona').val("");
+				$('#Persona_fechaExpedicionDoc').val("");
+				$('#Persona_nacimientoCiudad_idCiudad').val("");
+				$('#Persona_segundoApellidoPersona').val("");
+				$('#Persona_nacionalidadPais_idPais').val("");
+				$('#Persona_expediciónPais_idPais').val("");
+				$('#Persona_fechaNacimientoPersona').val("");
+				$('#Persona_nacimientoPais_idPais').val("");
+				$('#Persona_cedulaPersona').val("");
+				$('#Persona_nacimientoDepartamento_idDepartamento').val("");
+				$('#Persona_nombreCitasBliblioPersona').val("");
+			};
+
+			document.getElementById("borrarDatosDireccionPersonal").onclick = function(){
+				$('#Persona_dirPerPais_idPais').val("");
+				$('#Persona_dirPerDireccion').val("");
+				$('#Persona_dirPerTelefonoFijo').val("");
+				$('#Persona_dirPerApartadoPostal').val("");
+				$('#Persona_dirPerSitioWeb').val("");
+				$('#Persona_dirPerDepartamento_idDepartamento').val("");
+				$('#Persona_dirPerTelefonoMovil').val("");
+				$('#Persona_dirPerBarrio').val("");
+				$('#Persona_dirPerCodigoPostal').val("");
+				$('#Persona_dirPerCiudad_idCiudad').val("");
+				$('#Persona_dirPerEmail').val("");
+			};
+
+			document.getElementById("borrarDatosDireccionProfesional").onclick = function(){
+				$('#Persona_dirProPais_idPais').val("");
+				$('#Persona_dirProInstitucion').val("");
+				$('#Persona_dirProTelefonoFijo').val("");
+				$('#Persona_dirProExtension').val("");
+				$('#Persona_dirProEmailInstitucional').val("");
+				$('#Persona_dirProDepartamento_idDepartamento').val("");
+				$('#Persona_dirProDireccionInstitucion').val("");
+				$('#Persona_dirProApartadoPostal').val("");
+				$('#Persona_dirProPaginaInstitucional').val("");
+				$('#Persona_dirProCiudad_idCiudad').val("");
+				$('#Persona_dirProBarrio').val("");
+				$('#Persona_dirProCodigoPostal').val("");
+
+				$('#Persona_usuarioSIICPersona').val("")
+				$('#Persona_contraseñaSIICPersona').val("")
+				$('#Persona_confirmarClave').val("")
+			};
+
+		</script>
+
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 

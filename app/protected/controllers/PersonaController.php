@@ -25,7 +25,7 @@ class PersonaController extends Controller{
 	public function accessRules(){
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','selectdepartamentos','selectciudades','selectdepartamentospersonal','selectciudadespersonal','selectdepartamentosprofesional','selectciudadesprofesional','inicio'),
+				'actions'=>array('index','view','selectdepartamentos','selectciudades','selectdepartamentospersonal','selectciudadespersonal','selectdepartamentosprofesional','selectciudadesprofesional','inicio','borrar'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -85,16 +85,10 @@ class PersonaController extends Controller{
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Borrar'])){
-			$id = $model->idPersona;
-			$model = new Persona; 
-			$model->idPersona=$id;
-		}
-
 		if(isset($_POST['Persona'])){
 			$model->attributes=$_POST['Persona'];
 			if($model->save()){
-				$this->redirect(array('admin'));
+				$this->redirect(array('inicio'));
 			}
 		}
 
@@ -130,6 +124,7 @@ class PersonaController extends Controller{
 	/*
 	 * Manages all models.
 	 *
+	 */
 	public function actionAdmin(){
 		$model=new Persona('search');
 		$model->unsetAttributes();  // clear any default values
@@ -141,7 +136,7 @@ class PersonaController extends Controller{
 			'model'=>$model,
 		));
 	}
-	*/
+	
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -252,7 +247,12 @@ class PersonaController extends Controller{
 		$cedulaPersona = Yii::app()->user->id;
 		$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 		$id = $usuario->idPersona;
+		$this->performAjaxValidation($usuario);
 		$this->actionUpdate($id);
+	}
+
+	public function actionBorrar(){
+		$form.reset().trigger('reset');
 	}
 	
 }

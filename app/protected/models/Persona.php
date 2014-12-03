@@ -89,7 +89,7 @@ class Persona extends CActiveRecord{
 			array('dirProInstitucion, dirProEmailInstitucional, dirProPaginaInstitucional, dirPerEmail, dirPerSitioWeb', 'length', 'max'=>100),
 			array('dirProDireccionInstitucion, dirPerDireccion', 'length', 'max'=>35),
 			array('dirProEmailInstitucional, dirPerEmail','email','message'=>  Yii::t('es', 'El campo debe ser un correo electrónico válido')),
-			array('nombrePersona, primerApellidoPersona, segundoApellidoPersona, nombreCitasBliblioPersona', 'match','pattern' => '/^[a-zA-Z\sñÑ]*$/','message'=>'El campo sólo puede ser texto (letras de la A a la Z).'),
+			array('nombrePersona, primerApellidoPersona, segundoApellidoPersona, nombreCitasBliblioPersona', 'match','pattern' => '/^[a-zA-Z\sñÑóÓáÁéÉíÍúÚ]*$/','message'=>'El campo sólo puede ser texto (letras de la A a la Z).'),
 			array('cedulaPersona', 'numerical', 'integerOnly'=>true,'message'=>  Yii::t('es', 'El campo debe ser un número entero')),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

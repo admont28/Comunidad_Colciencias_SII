@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	'Inicio de sesión',
 );
 ?>
-
+<center>
 <h1>Inicio de Sesión</h1>
 
 <p>Por favor diligencie sus datos en los campos:</p>
@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
-	<p class="note">Los campos con <span class="">*</span> son obligatorios.</p>
+	<p class="note">Todos los campos son obligatorios</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'usuario'); ?>
@@ -34,9 +34,11 @@ $this->breadcrumbs=array(
 		<?php echo $form->labelEx($model,'Contrase&#241a'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
+		<!--
 		<p class="hint">
-			Observaciones: Debe iniciar sesión con: <kbd>admin</kbd>/<kbd>admin</kbd>.
+			Observaciones: Debe iniciar sesión con: <kbd>1094</kbd>/<kbd>123456</kbd>.
 		</p>
+		-->
 	</div>
 
 	<div class="row rememberMe">
@@ -51,3 +53,5 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+
+</center>

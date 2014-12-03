@@ -245,6 +245,8 @@ class PersonaController extends Controller{
 
 	public function actionInicio(){
 		$cedulaPersona = Yii::app()->user->id;
+		if($cedulaPersona == null)
+			$this->redirect(array('site/login'));
 		$usuario = Persona::model()->find('cedulaPersona=:cedulaPersona', array(':cedulaPersona'=>$cedulaPersona));
 		$id = $usuario->idPersona;
 		$this->performAjaxValidation($usuario);

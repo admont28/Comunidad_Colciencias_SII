@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Proyectos'=>array('admin'),
-	'create',
+	'crear',
 );
 
 ?>

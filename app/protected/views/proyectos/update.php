@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	'Proyectos'=>array('admin'),
 	$model->idProyectos=>array('view','id'=>$model->idProyectos),
-	'Update',
+	'actualizar',
 );
 ?>
 

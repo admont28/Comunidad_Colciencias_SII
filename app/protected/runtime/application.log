@@ -6319,3 +6319,35 @@ Stack trace:
 REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/persona/1
 HTTP_REFERER=http://localhost/yii/Comunidad_Colciencias_SII/app/persona/inicio
 ---
+2014/12/03 18:21:58 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php:249)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PersonaController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PersonaController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): PersonaController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PersonaController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/persona/inicio
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php (249)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
+2014/12/03 18:25:29 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php:249)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PersonaController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PersonaController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): PersonaController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PersonaController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/Comunidad_Colciencias_SII/app/persona/inicio
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\protected\controllers\PersonaController.php (249)
+in C:\xampp\htdocs\yii\Comunidad_Colciencias_SII\app\index.php (13)
